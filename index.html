@@ -1,1 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <!-- Makes the website fit phones, tablets, and computers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JR Web & IT Solutions</title>
+
+    <style>
+        /* ------------------------------
+           BASIC PAGE SETTINGS
+        ------------------------------ */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050b16;
+            color: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* ------------------------------
+           NAVIGATION
+        ------------------------------ */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 11, 22, 0.95);
+            border-bottom: 1px solid #00d9ff;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            min-height: 75px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.45rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00d9ff;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00d9ff;
+        }
+
+        .menu-button {
+            display: none;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* ------------------------------
+           HERO SECTION
+        ------------------------------ */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at top right,
+                rgba(0, 217, 255, 0.18),
+                transparent 35%),
+                linear-gradient(135deg, #050b16, #08162a);
+            overflow: hidden;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 25px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .small-heading {
+            color: #00d9ff;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #00d9ff;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #c6d4e1;
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary-button {
+            background: #00d9ff;
+            color: #04101d;
+            box-shadow: 0 0 22px rgba(0, 217, 255, 0.35);
+        }
+
+        .primary-button:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .secondary-button {
+            border: 2px solid #00d9ff;
+            color: #00d9ff;
+        }
+
+        .secondary-button:hover {
+            background: #00d9ff;
+            color: #04101d;
+            transform: translateY(-3px);
+        }
+
+        .hero-photo {
+            position: relative;
+            max-width: 475px;
+            margin: auto;
+        }
+
+        .hero-photo::before {
+            content: "";
+            position: absolute;
+            inset: -12px;
+            border: 2px solid #00d9ff;
+            border-radius: 25px;
+            transform: rotate(3deg);
+            z-index: 0;
+        }
+
+        .hero-photo img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            border-radius: 22px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+        }
+
+        /* ------------------------------
+           TECHNOLOGY BAR
+        ------------------------------ */
+
+        .technology-bar {
+            background: #00d9ff;
+            color: #04101d;
+            padding: 16px;
+            text-align: center;
+            font-weight: bold;
+            word-spacing: 12px;
+        }
+
+        /* ------------------------------
+           SHARED SECTION SETTINGS
+        ------------------------------ */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading p {
+            color: #00d9ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-top: 5px;
+        }
+
+        .section-heading h2 span {
+            color: #00d9ff;
+        }
+
+        /* ------------------------------
+           ABOUT SECTION
+        ------------------------------ */
+
+        .about {
+            background: #08111f;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .code-box {
+            background: #02070e;
+            border: 1px solid #18334b;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            font-family: "Courier New", monospace;
+            overflow: hidden;
+        }
+
+        .code-top {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #00d9ff;
+        }
+
+        .code-box p {
+            margin-bottom: 10px;
+        }
+
+        .code-blue {
+            color: #00d9ff;
+        }
+
+        .code-green {
+            color: #70ffb1;
+        }
+
+        .code-purple {
+            color: #c28cff;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 span {
+            color: #00d9ff;
+        }
+
+        .about-text p {
+            color: #bdc9d6;
+            margin-bottom: 18px;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .highlight {
+            background: #0c1c30;
+            padding: 15px;
+            border-left: 4px solid #00d9ff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* ------------------------------
+           SERVICES
+        ------------------------------ */
+
+        .services {
+            background: #050b16;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, #0a1626, #07101c);
+            border: 1px solid #17334d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #00d9ff;
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.12);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: rgba(0, 217, 255, 0.12);
+            border: 1px solid #00d9ff;
+            border-radius: 12px;
+            color: #00d9ff;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #aebdca;
+        }
+
+        /* ------------------------------
+           SKILLS
+        ------------------------------ */
+
+        .skills {
+            background: #08111f;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-item {
+            background: #0b192a;
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .skill-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .skill-title span:last-child {
+            color: #00d9ff;
+        }
+
+        .skill-bar {
+            height: 9px;
+            background: #172b3e;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, #00d9ff, #6b77ff);
+            border-radius: 20px;
+        }
+
+        /* ------------------------------
+           PROCESS
+        ------------------------------ */
+
+        .process {
+            background: #050b16;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .process-number {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 18px;
+            background: #00d9ff;
+            color: #04101d;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .process-card p {
+            color: #aebdca;
+            margin-top: 10px;
+        }
+
+        /* ------------------------------
+           CONTACT
+        ------------------------------ */
+
+        .contact {
+            background:
+                linear-gradient(rgba(5, 11, 22, 0.92),
+                rgba(5, 11, 22, 0.92)),
+                radial-gradient(circle, #0c4d62, #050b16);
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+            padding: 45px;
+            background: #091728;
+            border: 1px solid #00d9ff;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0, 217, 255, 0.12);
+        }
+
+        .contact-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-box h2 span {
+            color: #00d9ff;
+        }
+
+        .contact-box p {
+            color: #becbd7;
+            margin-bottom: 25px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .contact-details a {
+            color: white;
+            background: #0e2237;
+            padding: 13px 18px;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: #00d9ff;
+        }
+
+        /* ------------------------------
+           FOOTER
+        ------------------------------ */
+
+        footer {
+            background: #02060c;
+            text-align: center;
+            padding: 25px;
+            color: #91a1af;
+            border-top: 1px solid #14283a;
+        }
+
+        footer span {
+            color: #00d9ff;
+        }
+
+        /* ------------------------------
+           PHONE AND TABLET SETTINGS
+        ------------------------------ */
+
+        @media (max-width: 900px) {
+            .hero-container,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                padding: 25px;
+                background: #050b16;
+                border-bottom: 1px solid #00d9ff;
+                flex-direction: column;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .service-grid,
+            .skills-grid,
+            .process-grid,
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-container {
+                padding-top: 55px;
+            }
+
+            .contact-box {
+                padding: 30px 18px;
+            }
+
+            .technology-bar {
+                font-size: 0.82rem;
+                word-spacing: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">
+                JR <span>WEB & IT</span>
+            </a>
+
+            <button class="menu-button" id="menuButton"
+                    aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+
+                <div class="hero-text">
+                    <p class="small-heading">
+                        Web Designer • IT Student • Problem Solver
+                    </p>
+
+                    <h1>
+                        Building modern websites with an
+                        <span>IT mindset.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        I help individuals and small businesses build
+                        professional websites while providing dependable
+                        technology support. My background combines hands-on
+                        work experience, technical education, creativity,
+                        and problem-solving.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#services"
+                           class="button primary-button">
+                            View My Services
+                        </a>
+
+                        <a href="#contact"
+                           class="button secondary-button">
+                            Start a Project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <!-- Place your picture in the same folder -->
+                    <img
+                        src="jermaine-reading.png"
+                        alt="Jermaine Robinson reading in a professional office">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technology Bar -->
+        <div class="technology-bar">
+            HTML • CSS • JAVASCRIPT • SQL • GITHUB • NETWORKING •
+            CYBERSECURITY • WINDOWS • LINUX
+        </div>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="code-box">
+                        <div class="code-top">
+                            <div class="code-dot"></div>
+                            <div class="code-dot"></div>
+                            <div class="code-dot"></div>
+                        </div>
+
+                        <p>
+                            <span class="code-purple">const</span>
+                            professional =
+                            <span class="code-blue">{</span>
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;name:
+                            <span class="code-green">
+                                "Jermaine Robinson"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;role:
+                            <span class="code-green">
+                                "Web Designer & IT Professional"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;education:
+                            <span class="code-green">
+                                "Information Technology"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;gpa:
+                            <span class="code-green">3.9</span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;mission:
+                            <span class="code-green">
+                                "Build. Solve. Improve."
+                            </span>
+                        </p>
+
+                        <p>
+                            <span class="code-blue">};</span>
+                        </p>
+                    </div>
+
+                    <div class="about-text">
+                        <p class="small-heading">About Me</p>
+
+                        <h2>
+                            Real-world experience meets
+                            <span>technology.</span>
+                        </h2>
+
+                        <p>
+                            My name is Jermaine Robinson. I am an Information
+                            Technology student with a 3.9 GPA and experience
+                            building websites with HTML, CSS, JavaScript,
+                            GitHub, and responsive design.
+                        </p>
+
+                        <p>
+                            Before entering the technology field, I worked in
+                            welding and industrial environments. That
+                            experience taught me discipline, safety,
+                            teamwork, attention to detail, and how to solve
+                            problems under pressure.
+                        </p>
+
+                        <p>
+                            I now bring that same work ethic into web design,
+                            databases, networking, cybersecurity, computer
+                            troubleshooting, and technical support.
+                        </p>
+
+                        <div class="highlights">
+                            <div class="highlight">Responsive Websites</div>
+                            <div class="highlight">Technical Support</div>
+                            <div class="highlight">Database Fundamentals</div>
+                            <div class="highlight">Security Awareness</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p>What I Provide</p>
+                    <h2>Web and <span>IT Services</span></h2>
+                </div>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon">&lt;/&gt;</div>
+                        <h3>Website Design</h3>
+                        <p>
+                            Professional websites for small businesses,
+                            personal brands, restaurants, portfolios,
+                            organizations, and community projects.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Mobile-Friendly Design</h3>
+                        <p>
+                            Responsive layouts that adjust properly across
+                            smartphones, tablets, laptops, and desktop
+                            computers.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">⚙</div>
+                        <h3>Website Maintenance</h3>
+                        <p>
+                            Updates to pictures, text, pages, buttons,
+                            contact information, colors, navigation menus,
+                            and website content.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🗄</div>
+                        <h3>Database Fundamentals</h3>
+                        <p>
+                            Basic SQL database creation, data entry,
+                            SELECT queries, updates, deletes, table
+                            relationships, and data organization.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>Networking Support</h3>
+                        <p>
+                            Basic assistance with networks, IP addresses,
+                            DNS, DHCP, routers, switches, device
+                            connectivity, and troubleshooting.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🔒</div>
+                        <h3>Cybersecurity Awareness</h3>
+                        <p>
+                            Help with password safety, phishing awareness,
+                            software updates, secure browsing, backups,
+                            antivirus protection, and account security.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Computer Support</h3>
+                        <p>
+                            Basic Windows support, software installation,
+                            storage cleanup, file organization, browser
+                            assistance, and device troubleshooting.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">⌨</div>
+                        <h3>Windows and Linux</h3>
+                        <p>
+                            Experience using Windows, Linux commands,
+                            terminals, user accounts, permissions, files,
+                            folders, and system settings.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">◆</div>
+                        <h3>GitHub Publishing</h3>
+                        <p>
+                            Organizing website files, uploading code,
+                            committing changes, managing repositories,
+                            and publishing sites with GitHub Pages.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p>Technical Knowledge</p>
+                    <h2>My Growing <span>IT Skill Set</span></h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>HTML & CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>Responsive Web Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>JavaScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>GitHub & GitHub Pages</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>SQL & Databases</span>
+                            <span>72%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 72%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>Networking & Security</span>
+                            <span>68%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 68%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Process -->
+        <section class="process">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p>My Process</p>
+                    <h2>From Idea to <span>Finished Website</span></h2>
+                </div>
+
+                <div class="process-grid">
+
+                    <div class="process-card">
+                        <div class="process-number">1</div>
+                        <h3>Plan</h3>
+                        <p>
+                            We discuss your business, audience, services,
+                            goals, colors, pages, and website style.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-number">2</div>
+                        <h3>Design</h3>
+                        <p>
+                            I create an organized design that represents
+                            your brand and looks professional.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-number">3</div>
+                        <h3>Build</h3>
+                        <p>
+                            I develop the website, add your information,
+                            connect the pages, and test the features.
+                        </p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-number">4</div>
+                        <h3>Launch</h3>
+                        <p>
+                            The completed website is published and tested
+                            on computers, tablets, and smartphones.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+
+                <div class="contact-box">
+                    <p class="small-heading">
+                        Let's Build Something
+                    </p>
+
+                    <h2>
+                        Ready to improve your
+                        <span>online presence?</span>
+                    </h2>
+
+                    <p>
+                        Contact JR Web & IT Solutions to discuss your
+                        website, technology problem, or upcoming project.
+                    </p>
+
+                    <div class="contact-details">
+                        <a href="tel:17573670471">
+                            📞 757-367-0471
+                        </a>
+
+                        <a href="mailto:Jermainerobinson815@gmail.com">
+                            ✉ Jermainerobinson815@gmail.com
+                        </a>
+                    </div>
+
+                    <a href="mailto:Jermainerobinson815@gmail.com"
+                       class="button primary-button">
+                        Request a Website
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © <span id="year"></span>
+            <span>JR Web & IT Solutions</span>.
+            Designed and developed by Jermaine Robinson.
+        </p>
+    </footer>
+
+    <script>
+        // Opens and closes the phone navigation menu
+        const menuButton = document.getElementById("menuButton");
+        const navLinks = document.getElementById("navLinks");
+
+        menuButton.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+        // Closes the menu after a link is selected
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+            });
+        });
+
+        // Automatically displays the current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
