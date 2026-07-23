@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Makes the website fit phones, tablets, and computers -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>JR Web & IT Solutions</title>
 
     <style>
-        /* ------------------------------
-           BASIC PAGE SETTINGS
-        ------------------------------ */
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -30,23 +26,33 @@
             line-height: 1.6;
         }
 
+        body.modal-open {
+            overflow: hidden;
+        }
+
         a {
             text-decoration: none;
         }
 
         img {
+            display: block;
             max-width: 100%;
         }
 
-        /* ------------------------------
-           NAVIGATION
-        ------------------------------ */
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+        /* NAVIGATION */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(5, 11, 22, 0.95);
+            background: rgba(5, 11, 22, 0.96);
             border-bottom: 1px solid #00d9ff;
             backdrop-filter: blur(10px);
         }
@@ -63,7 +69,7 @@
 
         .logo {
             color: white;
-            font-size: 1.45rem;
+            font-size: 1.4rem;
             font-weight: bold;
             letter-spacing: 1px;
         }
@@ -98,18 +104,18 @@
             cursor: pointer;
         }
 
-        /* ------------------------------
-           HERO SECTION
-        ------------------------------ */
+        /* HERO SECTION */
 
         .hero {
             min-height: 88vh;
             display: flex;
             align-items: center;
             background:
-                radial-gradient(circle at top right,
-                rgba(0, 217, 255, 0.18),
-                transparent 35%),
+                radial-gradient(
+                    circle at top right,
+                    rgba(0, 217, 255, 0.18),
+                    transparent 35%
+                ),
                 linear-gradient(135deg, #050b16, #08162a);
             overflow: hidden;
         }
@@ -160,11 +166,15 @@
             display: inline-block;
             padding: 14px 24px;
             border-radius: 7px;
+            font-size: 1rem;
             font-weight: bold;
+            text-align: center;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .primary-button {
+            border: none;
             background: #00d9ff;
             color: #04101d;
             box-shadow: 0 0 22px rgba(0, 217, 255, 0.35);
@@ -177,6 +187,7 @@
 
         .secondary-button {
             border: 2px solid #00d9ff;
+            background: transparent;
             color: #00d9ff;
         }
 
@@ -199,21 +210,17 @@
             border: 2px solid #00d9ff;
             border-radius: 25px;
             transform: rotate(3deg);
-            z-index: 0;
         }
 
         .hero-photo img {
             position: relative;
-            z-index: 1;
             width: 100%;
             border-radius: 22px;
             border: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
         }
 
-        /* ------------------------------
-           TECHNOLOGY BAR
-        ------------------------------ */
+        /* TECHNOLOGY BAR */
 
         .technology-bar {
             background: #00d9ff;
@@ -221,12 +228,9 @@
             padding: 16px;
             text-align: center;
             font-weight: bold;
-            word-spacing: 12px;
         }
 
-        /* ------------------------------
-           SHARED SECTION SETTINGS
-        ------------------------------ */
+        /* SHARED SECTION SETTINGS */
 
         section {
             padding: 90px 25px;
@@ -258,9 +262,7 @@
             color: #00d9ff;
         }
 
-        /* ------------------------------
-           ABOUT SECTION
-        ------------------------------ */
+        /* ABOUT SECTION */
 
         .about {
             background: #08111f;
@@ -341,9 +343,7 @@
             font-weight: bold;
         }
 
-        /* ------------------------------
-           SERVICES
-        ------------------------------ */
+        /* SERVICES */
 
         .services {
             background: #050b16;
@@ -391,9 +391,7 @@
             color: #aebdca;
         }
 
-        /* ------------------------------
-           SKILLS
-        ------------------------------ */
+        /* SKILLS */
 
         .skills {
             background: #08111f;
@@ -435,9 +433,7 @@
             border-radius: 20px;
         }
 
-        /* ------------------------------
-           PROCESS
-        ------------------------------ */
+        /* PROCESS */
 
         .process {
             background: #050b16;
@@ -472,14 +468,14 @@
             margin-top: 10px;
         }
 
-        /* ------------------------------
-           CONTACT
-        ------------------------------ */
+        /* CONTACT SECTION */
 
         .contact {
             background:
-                linear-gradient(rgba(5, 11, 22, 0.92),
-                rgba(5, 11, 22, 0.92)),
+                linear-gradient(
+                    rgba(5, 11, 22, 0.92),
+                    rgba(5, 11, 22, 0.92)
+                ),
                 radial-gradient(circle, #0c4d62, #050b16);
         }
 
@@ -528,9 +524,112 @@
             color: #00d9ff;
         }
 
-        /* ------------------------------
-           FOOTER
-        ------------------------------ */
+        /* POPUP FORM */
+
+        .contact-modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            inset: 0;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.84);
+            overflow-y: auto;
+        }
+
+        .contact-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            background: #091728;
+            border: 1px solid #00d9ff;
+            border-radius: 18px;
+            box-shadow: 0 20px 70px rgba(0, 217, 255, 0.25);
+        }
+
+        .modal-content h2 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .modal-description {
+            margin-bottom: 25px;
+            color: #becbd7;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 2.2rem;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #00d9ff;
+        }
+
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .modal-content label {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        .modal-content input,
+        .modal-content select,
+        .modal-content textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #29445e;
+            border-radius: 7px;
+            background: #050b16;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .modal-content input::placeholder,
+        .modal-content textarea::placeholder {
+            color: #8fa1b2;
+        }
+
+        .modal-content input:focus,
+        .modal-content select:focus,
+        .modal-content textarea:focus {
+            outline: none;
+            border-color: #00d9ff;
+            box-shadow: 0 0 10px rgba(0, 217, 255, 0.25);
+        }
+
+        .modal-content select option {
+            background: #050b16;
+            color: white;
+        }
+
+        .modal-content textarea {
+            resize: vertical;
+        }
+
+        .submit-request {
+            width: 100%;
+            margin-top: 18px;
+        }
+
+        /* FOOTER */
 
         footer {
             background: #02060c;
@@ -544,9 +643,7 @@
             color: #00d9ff;
         }
 
-        /* ------------------------------
-           PHONE AND TABLET SETTINGS
-        ------------------------------ */
+        /* TABLETS */
 
         @media (max-width: 900px) {
             .hero-container,
@@ -576,7 +673,18 @@
             }
         }
 
+        /* PHONES */
+
         @media (max-width: 650px) {
+            nav {
+                padding: 15px 18px;
+            }
+
+            .logo {
+                max-width: 260px;
+                font-size: 1.05rem;
+            }
+
             .menu-button {
                 display: block;
             }
@@ -612,13 +720,20 @@
                 padding-top: 55px;
             }
 
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
             .contact-box {
                 padding: 30px 18px;
             }
 
+            .modal-content {
+                padding: 35px 20px 25px;
+            }
+
             .technology-bar {
                 font-size: 0.82rem;
-                word-spacing: 3px;
             }
         }
     </style>
@@ -626,14 +741,15 @@
 
 <body>
 
-    <!-- Navigation -->
     <header>
         <nav>
             <a href="#home" class="logo">
-                JR <span>WEB & I.T. SOLUTIONS</span>
+                JR <span>WEB &amp; IT SOLUTIONS</span>
             </a>
 
-            <button class="menu-button" id="menuButton"
+            <button class="menu-button"
+                    id="menuButton"
+                    type="button"
                     aria-label="Open navigation menu">
                 ☰
             </button>
@@ -650,7 +766,6 @@
 
     <main>
 
-        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-container">
 
@@ -667,9 +782,9 @@
                     <p class="hero-description">
                         I help individuals and small businesses build
                         professional websites while providing dependable
-                        technology support. My background combines hands-on
-                        work experience, technical education, creativity,
-                        and problem-solving.
+                        technology support. My background combines technical
+                        education, creativity, hands-on experience, and
+                        problem-solving.
                     </p>
 
                     <div class="hero-buttons">
@@ -678,33 +793,28 @@
                             View My Services
                         </a>
 
-                        <a href="#contact"
-                           class="button secondary-button">
-                            Start a Project
-                        </a>
+                        <button type="button"
+                                class="button secondary-button open-contact-form">
+                            Request a Website
+                        </button>
                     </div>
                 </div>
 
                 <div class="hero-photo">
-                    <!-- Place your picture in the same folder -->
-                    <img
-                        src="jermaine-reading.png"
-                        alt="Jermaine Robinson reading in a professional office">
+                    <img src="jermaine-reading.png"
+                         alt="Jermaine Robinson reading in a professional office">
                 </div>
 
             </div>
         </section>
 
-        <!-- Technology Bar -->
         <div class="technology-bar">
             HTML • CSS • JAVASCRIPT • SQL • GITHUB • NETWORKING •
             CYBERSECURITY • WINDOWS • LINUX
         </div>
 
-        <!-- About Section -->
         <section class="about" id="about">
             <div class="container">
-
                 <div class="about-grid">
 
                     <div class="code-box">
@@ -730,7 +840,7 @@
                         <p>
                             &nbsp;&nbsp;role:
                             <span class="code-green">
-                                "Web Designer & IT Professional"
+                                "Web Designer &amp; IT Professional"
                             </span>,
                         </p>
 
@@ -743,7 +853,7 @@
 
                         <p>
                             &nbsp;&nbsp;gpa:
-                            <span class="code-green">4.0</span>,
+                            <span class="code-green">3.9</span>,
                         </p>
 
                         <p>
@@ -768,16 +878,16 @@
 
                         <p>
                             My name is Jermaine Robinson. I am an Information
-                            Technology student with experience
-                            in web design with HTML, CSS, JavaScript,
-                            and responsive design.
+                            Technology student with a 3.9 GPA and experience
+                            building websites with HTML, CSS, JavaScript,
+                            GitHub, and responsive design.
                         </p>
 
                         <p>
                             Before entering the technology field, I worked in
                             welding and industrial environments. That
-                            experience taught me discipline, safety,
-                            teamwork, attention to detail, and how to solve
+                            experience taught me discipline, teamwork,
+                            attention to detail, safety, and how to solve
                             problems under pressure.
                         </p>
 
@@ -788,10 +898,21 @@
                         </p>
 
                         <div class="highlights">
-                            <div class="highlight">Responsive Websites</div>
-                            <div class="highlight">Technical Support</div>
-                            <div class="highlight">Database Fundamentals</div>
-                            <div class="highlight">Security Awareness</div>
+                            <div class="highlight">
+                                Responsive Websites
+                            </div>
+
+                            <div class="highlight">
+                                Technical Support
+                            </div>
+
+                            <div class="highlight">
+                                Database Fundamentals
+                            </div>
+
+                            <div class="highlight">
+                                Security Awareness
+                            </div>
                         </div>
                     </div>
 
@@ -799,20 +920,24 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section class="services" id="services">
             <div class="container">
 
                 <div class="section-heading">
                     <p>What I Provide</p>
-                    <h2>Web and <span>IT Services</span></h2>
+
+                    <h2>
+                        Web and <span>IT Services</span>
+                    </h2>
                 </div>
 
                 <div class="service-grid">
 
                     <article class="service-card">
                         <div class="service-icon">&lt;/&gt;</div>
+
                         <h3>Website Design</h3>
+
                         <p>
                             Professional websites for small businesses,
                             personal brands, restaurants, portfolios,
@@ -822,7 +947,9 @@
 
                     <article class="service-card">
                         <div class="service-icon">📱</div>
+
                         <h3>Mobile-Friendly Design</h3>
+
                         <p>
                             Responsive layouts that adjust properly across
                             smartphones, tablets, laptops, and desktop
@@ -832,7 +959,9 @@
 
                     <article class="service-card">
                         <div class="service-icon">⚙</div>
+
                         <h3>Website Maintenance</h3>
+
                         <p>
                             Updates to pictures, text, pages, buttons,
                             contact information, colors, navigation menus,
@@ -842,7 +971,9 @@
 
                     <article class="service-card">
                         <div class="service-icon">🗄</div>
+
                         <h3>Database Fundamentals</h3>
+
                         <p>
                             Basic SQL database creation, data entry,
                             SELECT queries, updates, deletes, table
@@ -852,7 +983,9 @@
 
                     <article class="service-card">
                         <div class="service-icon">🌐</div>
+
                         <h3>Networking Support</h3>
+
                         <p>
                             Basic assistance with networks, IP addresses,
                             DNS, DHCP, routers, switches, device
@@ -862,17 +995,21 @@
 
                     <article class="service-card">
                         <div class="service-icon">🔒</div>
+
                         <h3>Cybersecurity Awareness</h3>
+
                         <p>
                             Help with password safety, phishing awareness,
-                            software updates, secure browsing, backups,
-                            antivirus protection, and account security.
+                            secure browsing, backups, antivirus protection,
+                            software updates, and account security.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">💻</div>
+
                         <h3>Computer Support</h3>
+
                         <p>
                             Basic Windows support, software installation,
                             storage cleanup, file organization, browser
@@ -882,7 +1019,9 @@
 
                     <article class="service-card">
                         <div class="service-icon">⌨</div>
+
                         <h3>Windows and Linux</h3>
+
                         <p>
                             Experience using Windows, Linux commands,
                             terminals, user accounts, permissions, files,
@@ -892,7 +1031,9 @@
 
                     <article class="service-card">
                         <div class="service-icon">◆</div>
+
                         <h3>GitHub Publishing</h3>
+
                         <p>
                             Organizing website files, uploading code,
                             committing changes, managing repositories,
@@ -904,80 +1045,94 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section class="skills" id="skills">
             <div class="container">
 
                 <div class="section-heading">
                     <p>Technical Knowledge</p>
-                    <h2>My Growing <span>IT Skill Set</span></h2>
+
+                    <h2>
+                        My Growing <span>IT Skill Set</span>
+                    </h2>
                 </div>
 
                 <div class="skills-grid">
 
                     <div class="skill-item">
                         <div class="skill-title">
-                            <span>HTML & CSS</span>
-                            <span>98%</span>
+                            <span>HTML &amp; CSS</span>
+                            <span>96%</span>
                         </div>
+
                         <div class="skill-bar">
                             <div class="skill-level"
-                                 style="width: 98%;"></div>
+                                 style="width: 96%;">
+                            </div>
                         </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-title">
                             <span>Responsive Web Design</span>
-                            <span>97%</span>
+                            <span>95%</span>
                         </div>
+
                         <div class="skill-bar">
                             <div class="skill-level"
-                                 style="width: 97%;"></div>
+                                 style="width: 95%;">
+                            </div>
                         </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-title">
                             <span>JavaScript</span>
+                            <span>92%</span>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 92%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>GitHub &amp; GitHub Pages</span>
+                            <span>94%</span>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-level"
+                                 style="width: 94%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-title">
+                            <span>SQL &amp; Databases</span>
                             <span>93%</span>
                         </div>
+
                         <div class="skill-bar">
                             <div class="skill-level"
-                                 style="width: 93%;"></div>
+                                 style="width: 93%;">
+                            </div>
                         </div>
                     </div>
 
                     <div class="skill-item">
                         <div class="skill-title">
-                            <span>GitHub & GitHub Pages</span>
-                            <span>97%</span>
+                            <span>Networking &amp; Security</span>
+                            <span>91%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level"
-                                 style="width: 97%;"></div>
-                        </div>
-                    </div>
 
-                    <div class="skill-item">
-                        <div class="skill-title">
-                            <span>SQL & Databases</span>
-                            <span>90%</span>
-                        </div>
                         <div class="skill-bar">
                             <div class="skill-level"
-                                 style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-title">
-                            <span>Networking & Security</span>
-                            <span>100%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level"
-                                 style="width: 100%;"></div>
+                                 style="width: 91%;">
+                            </div>
                         </div>
                     </div>
 
@@ -985,20 +1140,25 @@
             </div>
         </section>
 
-        <!-- Work Process -->
         <section class="process">
             <div class="container">
 
                 <div class="section-heading">
                     <p>My Process</p>
-                    <h2>From Idea to <span>Finished Website</span></h2>
+
+                    <h2>
+                        From Idea to
+                        <span>Finished Website</span>
+                    </h2>
                 </div>
 
                 <div class="process-grid">
 
                     <div class="process-card">
                         <div class="process-number">1</div>
+
                         <h3>Plan</h3>
+
                         <p>
                             We discuss your business, audience, services,
                             goals, colors, pages, and website style.
@@ -1007,7 +1167,9 @@
 
                     <div class="process-card">
                         <div class="process-number">2</div>
+
                         <h3>Design</h3>
+
                         <p>
                             I create an organized design that represents
                             your brand and looks professional.
@@ -1016,7 +1178,9 @@
 
                     <div class="process-card">
                         <div class="process-number">3</div>
+
                         <h3>Build</h3>
+
                         <p>
                             I develop the website, add your information,
                             connect the pages, and test the features.
@@ -1025,7 +1189,9 @@
 
                     <div class="process-card">
                         <div class="process-number">4</div>
+
                         <h3>Launch</h3>
+
                         <p>
                             The completed website is published and tested
                             on computers, tablets, and smartphones.
@@ -1036,13 +1202,12 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="container">
 
                 <div class="contact-box">
                     <p class="small-heading">
-                        Let's Build Something
+                        Let’s Build Something
                     </p>
 
                     <h2>
@@ -1051,7 +1216,7 @@
                     </h2>
 
                     <p>
-                        Contact JR Web & IT Solutions to discuss your
+                        Contact JR Web &amp; IT Solutions to discuss your
                         website, technology problem, or upcoming project.
                     </p>
 
@@ -1065,10 +1230,10 @@
                         </a>
                     </div>
 
-                    <a href="mailto:Jermainerobinson815@gmail.com"
-                       class="button primary-button">
+                    <button type="button"
+                            class="button primary-button open-contact-form">
                         Request a Website
-                    </a>
+                    </button>
                 </div>
 
             </div>
@@ -1076,34 +1241,211 @@
 
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>
             © <span id="year"></span>
-            <span>JR Web & IT Solutions</span>.
+            <span>JR Web &amp; IT Solutions</span>.
             Designed and developed by Jermaine Robinson.
         </p>
     </footer>
 
+    <!-- WEBSITE REQUEST POPUP -->
+
+    <div class="contact-modal"
+         id="contactModal"
+         aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button type="button"
+                    class="close-modal"
+                    id="closeContactForm"
+                    aria-label="Close contact form">
+                ×
+            </button>
+
+            <p class="small-heading">
+                Website Request
+            </p>
+
+            <h2>
+                Tell Me About Your Project
+            </h2>
+
+            <p class="modal-description">
+                Enter your information below, and I will contact you
+                about your website or IT project.
+            </p>
+
+            <!-- Correct Formspree connection -->
+
+            <form action="https://formspree.io/f/mjgneJgq"
+                  method="POST">
+
+                <label for="customerName">
+                    Full Name
+                </label>
+
+                <input type="text"
+                       id="customerName"
+                       name="name"
+                       placeholder="Enter your full name"
+                       required>
+
+                <label for="customerPhone">
+                    Phone Number
+                </label>
+
+                <input type="tel"
+                       id="customerPhone"
+                       name="phone"
+                       placeholder="Enter your phone number"
+                       required>
+
+                <label for="customerEmail">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       id="customerEmail"
+                       name="email"
+                       placeholder="Enter your email address"
+                       required>
+
+                <label for="businessName">
+                    Business Name
+                </label>
+
+                <input type="text"
+                       id="businessName"
+                       name="business"
+                       placeholder="Enter your business name">
+
+                <label for="projectType">
+                    What Do You Need?
+                </label>
+
+                <select id="projectType"
+                        name="project_type"
+                        required>
+
+                    <option value="">
+                        Choose a service
+                    </option>
+
+                    <option value="New business website">
+                        New Business Website
+                    </option>
+
+                    <option value="Personal website">
+                        Personal Website
+                    </option>
+
+                    <option value="Website redesign">
+                        Website Redesign
+                    </option>
+
+                    <option value="Website updates">
+                        Website Updates
+                    </option>
+
+                    <option value="IT support">
+                        IT Support
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+                </select>
+
+                <label for="projectMessage">
+                    Tell Me About Your Project
+                </label>
+
+                <textarea id="projectMessage"
+                          name="message"
+                          rows="6"
+                          placeholder="Describe the website or IT help you need"
+                          required></textarea>
+
+                <input type="hidden"
+                       name="_subject"
+                       value="New JR Web and IT Website Request">
+
+                <input type="hidden"
+                       name="_replyto"
+                       value="">
+
+                <button type="submit"
+                        class="button primary-button submit-request">
+                    Send My Request
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
     <script>
-        // Opens and closes the phone navigation menu
-        const menuButton = document.getElementById("menuButton");
-        const navLinks = document.getElementById("navLinks");
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const navLinks =
+            document.getElementById("navLinks");
 
         menuButton.addEventListener("click", function () {
             navLinks.classList.toggle("active");
         });
 
-        // Closes the menu after a link is selected
-        document.querySelectorAll(".nav-links a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("active");
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function (link) {
+                link.addEventListener("click", function () {
+                    navLinks.classList.remove("active");
+                });
             });
-        });
 
-        // Automatically displays the current year
         document.getElementById("year").textContent =
             new Date().getFullYear();
+
+        const contactModal =
+            document.getElementById("contactModal");
+
+        const openContactButtons =
+            document.querySelectorAll(".open-contact-form");
+
+        const closeContactForm =
+            document.getElementById("closeContactForm");
+
+        function openModal() {
+            contactModal.classList.add("active");
+            contactModal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open");
+        }
+
+        function closeModal() {
+            contactModal.classList.remove("active");
+            contactModal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+        }
+
+        openContactButtons.forEach(function (button) {
+            button.addEventListener("click", openModal);
+        });
+
+        closeContactForm.addEventListener("click", closeModal);
+
+        contactModal.addEventListener("click", function (event) {
+            if (event.target === contactModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
     </script>
 
 </body>
