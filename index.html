@@ -7,13 +7,17 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="JR Web & IT Solutions provides professional website design, responsive development, website maintenance, and dependable IT support.">
+          content="JR Web & IT Solutions provides website design, responsive development, website maintenance, and general IT support.">
 
     <title>JR Web & IT Solutions</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
+        /* =====================================
+           BASIC SETTINGS
+        ===================================== */
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -51,7 +55,9 @@
             font-family: inherit;
         }
 
-        /* NAVIGATION */
+        /* =====================================
+           NAVIGATION
+        ===================================== */
 
         header {
             position: sticky;
@@ -109,7 +115,9 @@
             cursor: pointer;
         }
 
-        /* BUTTONS */
+        /* =====================================
+           BUTTONS
+        ===================================== */
 
         .button {
             display: inline-block;
@@ -146,7 +154,9 @@
             transform: translateY(-3px);
         }
 
-        /* HERO */
+        /* =====================================
+           HERO
+        ===================================== */
 
         .hero {
             min-height: 88vh;
@@ -239,7 +249,6 @@
             background: rgba(4, 16, 29, 0.93);
             border: 1px solid #00d9ff;
             border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
         }
 
         .co-owner-label strong {
@@ -253,7 +262,9 @@
             font-size: 0.9rem;
         }
 
-        /* TECHNOLOGY BAR */
+        /* =====================================
+           TECHNOLOGY BAR
+        ===================================== */
 
         .technology-bar {
             padding: 16px 20px;
@@ -263,7 +274,9 @@
             font-weight: bold;
         }
 
-        /* SHARED SECTIONS */
+        /* =====================================
+           SHARED SECTIONS
+        ===================================== */
 
         section {
             padding: 90px 25px;
@@ -295,7 +308,9 @@
             color: #00d9ff;
         }
 
-        /* DESTINY CO-OWNER SECTION */
+        /* =====================================
+           DESTINY SECTION
+        ===================================== */
 
         .destiny-section {
             background: #08111f;
@@ -306,10 +321,6 @@
             grid-template-columns: 0.9fr 1.1fr;
             align-items: center;
             gap: 55px;
-        }
-
-        .destiny-image {
-            position: relative;
         }
 
         .destiny-image img {
@@ -343,6 +354,16 @@
             margin-bottom: 18px;
         }
 
+        .assistant-notice {
+            padding: 14px 16px;
+            margin-top: 18px;
+            background: rgba(0, 217, 255, 0.08);
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            border-radius: 8px;
+            color: #d7f8ff;
+            font-size: 0.9rem;
+        }
+
         .destiny-features {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -358,7 +379,9 @@
             font-weight: bold;
         }
 
-        /* ABOUT */
+        /* =====================================
+           ABOUT
+        ===================================== */
 
         .about {
             background: #050b16;
@@ -377,7 +400,6 @@
             background: #02070e;
             border: 1px solid #18334b;
             border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
             font-family: "Courier New", monospace;
         }
 
@@ -439,7 +461,9 @@
             font-weight: bold;
         }
 
-        /* SERVICES */
+        /* =====================================
+           SERVICES
+        ===================================== */
 
         .services {
             background: #08111f;
@@ -487,7 +511,9 @@
             color: #aebdca;
         }
 
-        /* SKILLS */
+        /* =====================================
+           SKILLS
+        ===================================== */
 
         .skills {
             background: #050b16;
@@ -529,7 +555,9 @@
             border-radius: 20px;
         }
 
-        /* PROCESS */
+        /* =====================================
+           PROCESS
+        ===================================== */
 
         .process {
             background: #08111f;
@@ -564,7 +592,9 @@
             color: #aebdca;
         }
 
-        /* CONTACT */
+        /* =====================================
+           CONTACT
+        ===================================== */
 
         .contact {
             background:
@@ -583,7 +613,6 @@
             border: 1px solid #00d9ff;
             border-radius: 18px;
             text-align: center;
-            box-shadow: 0 15px 50px rgba(0, 217, 255, 0.12);
         }
 
         .contact-box h2 {
@@ -613,19 +642,20 @@
             background: #0e2237;
             color: white;
             border-radius: 7px;
-            transition: 0.3s;
         }
 
         .contact-details a:hover {
             color: #00d9ff;
         }
 
-        /* POPUP FORM */
+        /* =====================================
+           CONTACT FORM POPUP
+        ===================================== */
 
         .contact-modal {
             display: none;
             position: fixed;
-            z-index: 3000;
+            z-index: 4000;
             inset: 0;
             padding: 25px;
             background: rgba(0, 0, 0, 0.84);
@@ -647,7 +677,6 @@
             background: #091728;
             border: 1px solid #00d9ff;
             border-radius: 18px;
-            box-shadow: 0 20px 70px rgba(0, 217, 255, 0.25);
         }
 
         .modal-content h2 {
@@ -669,10 +698,6 @@
             color: white;
             font-size: 2.2rem;
             cursor: pointer;
-        }
-
-        .close-modal:hover {
-            color: #00d9ff;
         }
 
         .modal-content form {
@@ -698,22 +723,11 @@
             font-size: 1rem;
         }
 
-        .modal-content input::placeholder,
-        .modal-content textarea::placeholder {
-            color: #8fa1b2;
-        }
-
         .modal-content input:focus,
         .modal-content select:focus,
         .modal-content textarea:focus {
             outline: none;
             border-color: #00d9ff;
-            box-shadow: 0 0 10px rgba(0, 217, 255, 0.25);
-        }
-
-        .modal-content select option {
-            background: #050b16;
-            color: white;
         }
 
         .modal-content textarea {
@@ -725,7 +739,247 @@
             margin-top: 18px;
         }
 
-        /* FOOTER */
+        /* =====================================
+           DESTINY CHAT
+        ===================================== */
+
+        .chat-launcher {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 3000;
+            width: 68px;
+            height: 68px;
+            border: 2px solid white;
+            border-radius: 50%;
+            background: #00d9ff;
+            color: #04101d;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 10px 35px rgba(0, 217, 255, 0.45);
+            transition: 0.3s;
+        }
+
+        .chat-launcher:hover {
+            transform: translateY(-4px) scale(1.04);
+            background: white;
+        }
+
+        .chat-notification {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 20px;
+            height: 20px;
+            display: grid;
+            place-items: center;
+            background: #ff334f;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .chat-box {
+            display: none;
+            position: fixed;
+            right: 22px;
+            bottom: 104px;
+            z-index: 3000;
+            width: min(390px, calc(100% - 30px));
+            max-height: 680px;
+            overflow: hidden;
+            background: #091728;
+            border: 1px solid #00d9ff;
+            border-radius: 18px;
+            box-shadow: 0 22px 70px rgba(0, 0, 0, 0.6);
+        }
+
+        .chat-box.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background: linear-gradient(135deg, #073252, #00a8cc);
+        }
+
+        .chat-profile {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .chat-avatar {
+            width: 46px;
+            height: 46px;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        .chat-header strong {
+            display: block;
+            font-size: 1.04rem;
+        }
+
+        .chat-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #e3faff;
+            font-size: 0.75rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #70ffb1;
+            border-radius: 50%;
+        }
+
+        .chat-header-close {
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .chat-disclosure {
+            padding: 8px 14px;
+            background: #07111e;
+            color: #aebdcc;
+            border-bottom: 1px solid #17334d;
+            text-align: center;
+            font-size: 0.72rem;
+        }
+
+        .chat-messages {
+            min-height: 220px;
+            max-height: 290px;
+            padding: 18px;
+            overflow-y: auto;
+            background: #050b16;
+        }
+
+        .message {
+            max-width: 88%;
+            margin-bottom: 12px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            animation: messageIn 0.25s ease;
+        }
+
+        @keyframes messageIn {
+            from {
+                opacity: 0;
+                transform: translateY(7px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .destiny-message {
+            margin-right: auto;
+            background: #102941;
+            color: white;
+            border-bottom-left-radius: 4px;
+        }
+
+        .customer-message {
+            margin-left: auto;
+            background: #00d9ff;
+            color: #04101d;
+            border-bottom-right-radius: 4px;
+        }
+
+        .typing-message {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            width: auto;
+        }
+
+        .typing-dot {
+            width: 7px;
+            height: 7px;
+            background: #b8c9d7;
+            border-radius: 50%;
+            animation: typingBounce 1.2s infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes typingBounce {
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .quick-questions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            max-height: 255px;
+            padding: 14px;
+            overflow-y: auto;
+            background: #091728;
+            border-top: 1px solid #17334d;
+        }
+
+        .quick-questions button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #29445e;
+            border-radius: 8px;
+            background: #0e2237;
+            color: white;
+            text-align: left;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .quick-questions button:hover {
+            border-color: #00d9ff;
+            color: #00d9ff;
+        }
+
+        .quick-questions .consultation-chat-button {
+            grid-column: 1 / -1;
+            background: #00d9ff;
+            color: #04101d;
+            border-color: #00d9ff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* =====================================
+           FOOTER
+        ===================================== */
 
         footer {
             padding: 25px;
@@ -739,7 +993,9 @@
             color: #00d9ff;
         }
 
-        /* TABLETS */
+        /* =====================================
+           TABLETS
+        ===================================== */
 
         @media (max-width: 900px) {
             .hero-container,
@@ -771,7 +1027,9 @@
             }
         }
 
-        /* PHONES */
+        /* =====================================
+           PHONES
+        ===================================== */
 
         @media (max-width: 650px) {
             nav {
@@ -840,11 +1098,33 @@
                 right: 12px;
                 bottom: 12px;
             }
+
+            .chat-launcher {
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .chat-box {
+                right: 15px;
+                bottom: 94px;
+                width: calc(100% - 30px);
+                max-height: 72vh;
+            }
+
+            .quick-questions {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-questions .consultation-chat-button {
+                grid-column: auto;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- NAVIGATION -->
 
     <header>
         <nav>
@@ -872,7 +1152,7 @@
 
     <main>
 
-        <!-- HERO: FIRST DESTINY IMAGE -->
+        <!-- HERO -->
 
         <section class="hero" id="home">
             <div class="hero-container">
@@ -909,11 +1189,11 @@
 
                 <div class="hero-photo">
                     <img src="destiny.png"
-                         alt="Destiny, AI business assistant and co-owner of JR Web and IT Solutions">
+                         alt="Destiny representing JR Web and IT Solutions">
 
                     <div class="co-owner-label">
                         <strong>Destiny</strong>
-                        <span>AI Business Assistant &amp; Co-Owner</span>
+                        <span>Virtual Co-Owner &amp; Business Assistant</span>
                     </div>
                 </div>
 
@@ -925,7 +1205,7 @@
             CYBERSECURITY • WINDOWS • LINUX
         </div>
 
-        <!-- MEET DESTINY: SECOND IMAGE -->
+        <!-- DESTINY -->
 
         <section class="destiny-section" id="destiny">
             <div class="container">
@@ -934,7 +1214,7 @@
 
                     <div class="destiny-image">
                         <img src="destiny-working.png"
-                             alt="Destiny working on a computer for JR Web and IT Solutions">
+                             alt="Destiny working on a computer">
                     </div>
 
                     <div class="destiny-text">
@@ -947,37 +1227,41 @@
                         </h2>
 
                         <p class="destiny-role">
-                            AI Business Assistant and Co-Owner of
+                            Virtual Co-Owner and Business Assistant for
                             JR Web &amp; IT Solutions
                         </p>
 
                         <p>
-                            Destiny serves as the AI business assistant and
-                            co-owner of JR Web &amp; IT Solutions. She
-                            represents professionalism, creativity,
-                            dependable customer support, and the future of
-                            modern technology.
+                            Destiny represents professionalism, creativity,
+                            dependable customer communication, and the future
+                            of modern technology at JR Web &amp; IT Solutions.
                         </p>
 
                         <p>
-                            Destiny helps communicate the company’s mission
-                            of helping individuals and small businesses
-                            improve their online presence through smart
-                            websites, responsive design, dependable service,
-                            and reliable IT support.
+                            Visitors can use Destiny’s automated chat for
+                            immediate answers about website services, IT
+                            support, payment plans, project timelines, and
+                            free consultations.
                         </p>
 
-                        <div class="destiny-features">
-                            <div class="destiny-feature">
-                                Business Leadership
-                            </div>
+                        <div class="assistant-notice">
+                            Destiny is an AI-generated virtual business
+                            character. Her website chat provides automated
+                            preset answers. Jermaine personally handles
+                            consultations and customer projects.
+                        </div>
 
+                        <div class="destiny-features">
                             <div class="destiny-feature">
                                 Customer Assistance
                             </div>
 
                             <div class="destiny-feature">
-                                Responsive Design
+                                Website Information
+                            </div>
+
+                            <div class="destiny-feature">
+                                Quick Answers
                             </div>
 
                             <div class="destiny-feature">
@@ -1025,7 +1309,7 @@
                         </p>
 
                         <p>
-                            &nbsp;&nbsp;Co-Owner:
+                            &nbsp;&nbsp;co-owner:
                             <span class="code-green">
                                 "Destiny"
                             </span>,
@@ -1069,18 +1353,10 @@
                         </p>
 
                         <p>
-                            Jermaine leads website development and technical
-                            services, while Destiny serves as the AI business
-                            assistant and co-owner, supporting the company’s
-                            brand, customer communication, and technology-
-                            focused mission.
-                        </p>
-
-                        <p>
-                            The company combines technical education,
-                            creativity, problem-solving, responsive web
-                            design, database fundamentals, networking,
-                            cybersecurity awareness, and computer support.
+                            The business combines technical education,
+                            creativity, responsive web design, database
+                            fundamentals, networking, cybersecurity
+                            awareness, and computer support.
                         </p>
 
                         <div class="highlights">
@@ -1123,91 +1399,101 @@
 
                     <article class="service-card">
                         <div class="service-icon">&lt;/&gt;</div>
+
                         <h3>Website Design</h3>
+
                         <p>
                             Professional websites for small businesses,
                             personal brands, restaurants, portfolios,
-                            organizations, and community projects.
+                            organizations, and other projects.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">📱</div>
+
                         <h3>Mobile-Friendly Design</h3>
+
                         <p>
                             Responsive layouts designed to work properly on
-                            smartphones, tablets, laptops, and desktop
-                            computers.
+                            phones, tablets, laptops, and desktop computers.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">⚙</div>
+
                         <h3>Website Maintenance</h3>
+
                         <p>
                             Updates to pictures, text, pages, buttons,
-                            contact information, colors, navigation menus,
-                            and website content.
+                            contact information, colors, menus, and content.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">🗄</div>
+
                         <h3>Database Fundamentals</h3>
+
                         <p>
-                            Basic SQL data entry, SELECT queries, updates,
-                            deletes, table relationships, and organized data
-                            management.
+                            Basic SQL data entry, queries, updates, deletes,
+                            table relationships, and data organization.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">🌐</div>
+
                         <h3>Networking Support</h3>
+
                         <p>
                             Basic assistance with networks, IP addresses,
-                            DNS, DHCP, routers, switches, connectivity, and
-                            troubleshooting.
+                            DNS, DHCP, routers, switches, and connectivity.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">🔒</div>
+
                         <h3>Cybersecurity Awareness</h3>
+
                         <p>
-                            Assistance with password safety, phishing
-                            awareness, secure browsing, updates, backups,
-                            antivirus protection, and account security.
+                            Assistance with passwords, phishing awareness,
+                            secure browsing, updates, backups, and security.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">💻</div>
+
                         <h3>Computer Support</h3>
+
                         <p>
-                            Basic Windows support, software installation,
-                            file organization, storage cleanup, browser
-                            assistance, and device troubleshooting.
+                            Basic Windows support, software help, file
+                            organization, cleanup, and troubleshooting.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">⌨</div>
+
                         <h3>Windows and Linux</h3>
+
                         <p>
-                            Experience with Windows, Linux commands,
-                            terminals, user accounts, permissions, files,
-                            folders, and system settings.
+                            Experience with user accounts, permissions,
+                            commands, files, folders, and system settings.
                         </p>
                     </article>
 
                     <article class="service-card">
                         <div class="service-icon">◆</div>
+
                         <h3>GitHub Publishing</h3>
+
                         <p>
-                            Organizing files, uploading code, committing
-                            changes, managing repositories, custom domains,
-                            and publishing through GitHub Pages.
+                            Uploading code, managing repositories, connecting
+                            domains, and publishing with GitHub Pages.
                         </p>
                     </article>
 
@@ -1332,8 +1618,8 @@
                         <div class="process-number">1</div>
                         <h3>Plan</h3>
                         <p>
-                            We discuss your business, audience, services,
-                            goals, colors, pages, and preferred website style.
+                            We discuss your business, services, goals,
+                            colors, pages, and preferred style.
                         </p>
                     </div>
 
@@ -1342,7 +1628,7 @@
                         <h3>Design</h3>
                         <p>
                             We create an organized design that represents
-                            your brand and provides a professional appearance.
+                            your brand professionally.
                         </p>
                     </div>
 
@@ -1350,8 +1636,8 @@
                         <div class="process-number">3</div>
                         <h3>Build</h3>
                         <p>
-                            We develop the website, add your information,
-                            connect the pages, and test every feature.
+                            We build the website, add your information,
+                            connect the pages, and test the features.
                         </p>
                     </div>
 
@@ -1359,8 +1645,8 @@
                         <div class="process-number">4</div>
                         <h3>Launch</h3>
                         <p>
-                            The finished website is published and tested on
-                            computers, tablets, and smartphones.
+                            The finished website is published and tested
+                            across different devices.
                         </p>
                     </div>
 
@@ -1385,7 +1671,8 @@
 
                     <p>
                         Contact JR Web &amp; IT Solutions to discuss your
-                        website, technology problem, or upcoming project.
+                        website, technology issue, or upcoming project.
+                        Initial consultations are free.
                     </p>
 
                     <div class="contact-details">
@@ -1400,7 +1687,7 @@
 
                     <button type="button"
                             class="button primary-button open-contact-form">
-                        Request a Consultation
+                        Request a Free Consultation
                     </button>
                 </div>
 
@@ -1414,11 +1701,10 @@
             © <span id="year"></span>
             <span>JR Web &amp; IT Solutions</span>.
             Founded by Jermaine Robinson.
-            Destiny serves as AI Business Assistant and Co-Owner.
         </p>
     </footer>
 
-    <!-- CONTACT POPUP -->
+    <!-- CONTACT FORM POPUP -->
 
     <div class="contact-modal"
          id="contactModal"
@@ -1434,7 +1720,7 @@
             </button>
 
             <p class="small-heading">
-                Consultation Request
+                Free Consultation
             </p>
 
             <h2>
@@ -1442,14 +1728,16 @@
             </h2>
 
             <p class="modal-description">
-                Enter your information below, and JR Web &amp; IT Solutions
-                will contact you about your website or IT project.
+                Enter your information below, and Jermaine will contact you
+                to discuss your website or IT needs.
             </p>
 
             <form action="https://formspree.io/f/mjgnejgq"
                   method="POST">
 
-                <label for="customerName">Full Name</label>
+                <label for="customerName">
+                    Full Name
+                </label>
 
                 <input type="text"
                        id="customerName"
@@ -1457,7 +1745,9 @@
                        placeholder="Enter your full name"
                        required>
 
-                <label for="customerPhone">Phone Number</label>
+                <label for="customerPhone">
+                    Phone Number
+                </label>
 
                 <input type="tel"
                        id="customerPhone"
@@ -1465,7 +1755,9 @@
                        placeholder="Enter your phone number"
                        required>
 
-                <label for="customerEmail">Email Address</label>
+                <label for="customerEmail">
+                    Email Address
+                </label>
 
                 <input type="email"
                        id="customerEmail"
@@ -1473,14 +1765,18 @@
                        placeholder="Enter your email address"
                        required>
 
-                <label for="businessName">Business Name</label>
+                <label for="businessName">
+                    Business Name
+                </label>
 
                 <input type="text"
                        id="businessName"
                        name="business"
                        placeholder="Enter your business name">
 
-                <label for="projectType">What Do You Need?</label>
+                <label for="projectType">
+                    What Do You Need?
+                </label>
 
                 <select id="projectType"
                         name="project_type"
@@ -1514,7 +1810,7 @@
                         Networking Support
                     </option>
 
-                    <option value="IT support">
+                    <option value="General IT support">
                         General IT Support
                     </option>
 
@@ -1547,7 +1843,160 @@
         </div>
     </div>
 
+    <!-- DESTINY CHAT BUTTON -->
+
+    <button class="chat-launcher"
+            id="chatLauncher"
+            type="button"
+            aria-label="Open Destiny automated chat">
+
+        💬
+
+        <span class="chat-notification"
+              id="chatNotification">
+            1
+        </span>
+    </button>
+
+    <!-- DESTINY CHAT WINDOW -->
+
+    <div class="chat-box"
+         id="chatBox"
+         aria-hidden="true">
+
+        <div class="chat-header">
+
+            <div class="chat-profile">
+
+                <img src="destiny.png"
+                     alt=""
+                     class="chat-avatar">
+
+                <div>
+                    <strong>Destiny</strong>
+
+                    <span class="chat-status">
+                        <span class="status-dot"></span>
+                        Automated virtual assistant
+                    </span>
+                </div>
+
+            </div>
+
+            <button type="button"
+                    class="chat-header-close"
+                    id="closeChat"
+                    aria-label="Close chat">
+                ×
+            </button>
+
+        </div>
+
+        <div class="chat-disclosure">
+            Quick automated answers from Destiny. Jermaine personally
+            handles consultations.
+        </div>
+
+        <div class="chat-messages"
+             id="chatMessages">
+
+            <div class="message destiny-message">
+                Hi, I’m Destiny with JR Web &amp; IT Solutions. I can answer
+                common questions and help you request a free consultation.
+                What would you like to know?
+            </div>
+
+        </div>
+
+        <div class="quick-questions">
+
+            <button type="button"
+                    data-question="What kind of websites do you build?"
+                    data-answer="We build professional, mobile-friendly websites for small businesses, personal brands, restaurants, portfolios, organizations, and other projects.">
+                Website services
+            </button>
+
+            <button type="button"
+                    data-question="How much does a website cost?"
+                    data-answer="Pricing depends on the number of pages, features, design, and content needed. Your consultation is free, and Jermaine can provide a personalized estimate after discussing your project.">
+                Website pricing
+            </button>
+
+            <button type="button"
+                    data-question="Do you offer payment plans?"
+                    data-answer="Yes, payment plans are available depending on the project. Please call us so Jermaine can discuss your needs, timeline, budget, and the best payment arrangement. The consultation is completely free.">
+                Payment plans
+            </button>
+
+            <button type="button"
+                    data-question="How long does a website take?"
+                    data-answer="A basic website may take several days, while a larger project may take longer. The timeline depends on the number of pages, features, and how quickly the project information is provided.">
+                Completion time
+            </button>
+
+            <button type="button"
+                    data-question="Can you update an existing website?"
+                    data-answer="Yes. We can update pictures, text, contact details, colors, buttons, pages, navigation menus, and other website content.">
+                Website updates
+            </button>
+
+            <button type="button"
+                    data-question="Will my website work on phones?"
+                    data-answer="Yes. Our websites are designed to work properly on smartphones, tablets, laptops, and desktop computers.">
+                Mobile-friendly design
+            </button>
+
+            <button type="button"
+                    data-question="What IT help do you provide?"
+                    data-answer="We provide basic computer support, software help, file organization, browser assistance, GitHub support, networking assistance, and general technology troubleshooting.">
+                IT support
+            </button>
+
+            <button type="button"
+                    data-question="Can you help publish my website?"
+                    data-answer="Yes. We can organize your files, publish your website with GitHub Pages, and help connect a professional custom domain such as a .com address.">
+                Domain and publishing
+            </button>
+
+            <button type="button"
+                    data-question="What information do you need from me?"
+                    data-answer="Please provide your business name, services, contact information, preferred colors, pictures, logo, page ideas, and any written content you want included.">
+                What you need
+            </button>
+
+            <button type="button"
+                    data-question="Do you provide ongoing support?"
+                    data-answer="Yes. Ongoing support may include website updates, content changes, basic maintenance, and troubleshooting after your website launches.">
+                Ongoing support
+            </button>
+
+            <button type="button"
+                    data-question="Do you work outside Virginia?"
+                    data-answer="Yes. Website design and many IT services can be provided remotely, depending on the type of assistance needed.">
+                Service area
+            </button>
+
+            <button type="button"
+                    data-question="How can I contact Jermaine?"
+                    data-answer="You can call 757-367-0471, email Jermainerobinson815@gmail.com, or use the free consultation form on this website.">
+                Talk to Jermaine
+            </button>
+
+            <button type="button"
+                    class="consultation-chat-button"
+                    id="chatConsultationButton">
+                Request a Free Consultation
+            </button>
+
+        </div>
+
+    </div>
+
     <script>
+        /* =====================================
+           MOBILE MENU
+        ===================================== */
+
         const menuButton =
             document.getElementById("menuButton");
 
@@ -1568,6 +2017,10 @@
 
         document.getElementById("year").textContent =
             new Date().getFullYear();
+
+        /* =====================================
+           CONSULTATION FORM
+        ===================================== */
 
         const contactModal =
             document.getElementById("contactModal");
@@ -1602,11 +2055,154 @@
             }
         });
 
+        /* =====================================
+           DESTINY CHAT
+        ===================================== */
+
+        const chatLauncher =
+            document.getElementById("chatLauncher");
+
+        const chatNotification =
+            document.getElementById("chatNotification");
+
+        const chatBox =
+            document.getElementById("chatBox");
+
+        const closeChat =
+            document.getElementById("closeChat");
+
+        const chatMessages =
+            document.getElementById("chatMessages");
+
+        const quickQuestionButtons =
+            document.querySelectorAll(
+                ".quick-questions button[data-answer]"
+            );
+
+        const chatConsultationButton =
+            document.getElementById("chatConsultationButton");
+
+        let destinyIsResponding = false;
+
+        function openChat() {
+            chatBox.classList.add("active");
+            chatBox.setAttribute("aria-hidden", "false");
+            chatNotification.style.display = "none";
+        }
+
+        function closeDestinyChat() {
+            chatBox.classList.remove("active");
+            chatBox.setAttribute("aria-hidden", "true");
+        }
+
+        function addChatMessage(text, className) {
+            const message =
+                document.createElement("div");
+
+            message.className =
+                "message " + className;
+
+            message.textContent = text;
+
+            chatMessages.appendChild(message);
+            chatMessages.scrollTop =
+                chatMessages.scrollHeight;
+
+            return message;
+        }
+
+        function showTypingIndicator() {
+            const typingMessage =
+                document.createElement("div");
+
+            typingMessage.className =
+                "message destiny-message typing-message";
+
+            typingMessage.innerHTML = `
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+            `;
+
+            chatMessages.appendChild(typingMessage);
+            chatMessages.scrollTop =
+                chatMessages.scrollHeight;
+
+            return typingMessage;
+        }
+
+        chatLauncher.addEventListener("click", function () {
+            if (chatBox.classList.contains("active")) {
+                closeDestinyChat();
+            } else {
+                openChat();
+            }
+        });
+
+        closeChat.addEventListener("click", closeDestinyChat);
+
+        quickQuestionButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                if (destinyIsResponding) {
+                    return;
+                }
+
+                destinyIsResponding = true;
+
+                const question =
+                    button.dataset.question;
+
+                const answer =
+                    button.dataset.answer;
+
+                addChatMessage(
+                    question,
+                    "customer-message"
+                );
+
+                const typingIndicator =
+                    showTypingIndicator();
+
+                window.setTimeout(function () {
+                    typingIndicator.remove();
+
+                    addChatMessage(
+                        answer,
+                        "destiny-message"
+                    );
+
+                    destinyIsResponding = false;
+                }, 900);
+            });
+        });
+
+        chatConsultationButton.addEventListener(
+            "click",
+            function () {
+                closeDestinyChat();
+                openModal();
+            }
+        );
+
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
                 closeModal();
+                closeDestinyChat();
             }
         });
+
+        /* Show Destiny chat automatically once */
+
+        window.setTimeout(function () {
+            if (!sessionStorage.getItem("destinyChatShown")) {
+                openChat();
+
+                sessionStorage.setItem(
+                    "destinyChatShown",
+                    "yes"
+                );
+            }
+        }, 3500);
     </script>
 
 </body>
