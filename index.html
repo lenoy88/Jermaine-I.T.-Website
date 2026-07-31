@@ -11,14 +11,9 @@
 
     <title>JR Web & IT Solutions</title>
 
-    <!-- Add a square logo named favicon.png later -->
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
-        /* =====================================
-           BASIC PAGE SETTINGS
-        ===================================== */
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -56,9 +51,7 @@
             font-family: inherit;
         }
 
-        /* =====================================
-           NAVIGATION
-        ===================================== */
+        /* NAVIGATION */
 
         header {
             position: sticky;
@@ -116,9 +109,7 @@
             cursor: pointer;
         }
 
-        /* =====================================
-           BUTTONS
-        ===================================== */
+        /* BUTTONS */
 
         .button {
             display: inline-block;
@@ -155,9 +146,7 @@
             transform: translateY(-3px);
         }
 
-        /* =====================================
-           HERO SECTION
-        ===================================== */
+        /* HERO */
 
         .hero {
             min-height: 88vh;
@@ -241,32 +230,30 @@
             box-shadow: 0 24px 75px rgba(0, 0, 0, 0.55);
         }
 
-        .mascot-label {
+        .co-owner-label {
             position: absolute;
             z-index: 3;
             left: 22px;
             bottom: 22px;
             padding: 12px 18px;
-            background: rgba(4, 16, 29, 0.92);
+            background: rgba(4, 16, 29, 0.93);
             border: 1px solid #00d9ff;
             border-radius: 10px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
         }
 
-        .mascot-label strong {
+        .co-owner-label strong {
             display: block;
             color: #00d9ff;
             font-size: 1.15rem;
         }
 
-        .mascot-label span {
+        .co-owner-label span {
             color: white;
             font-size: 0.9rem;
         }
 
-        /* =====================================
-           TECHNOLOGY BAR
-        ===================================== */
+        /* TECHNOLOGY BAR */
 
         .technology-bar {
             padding: 16px 20px;
@@ -276,9 +263,7 @@
             font-weight: bold;
         }
 
-        /* =====================================
-           SHARED SECTION SETTINGS
-        ===================================== */
+        /* SHARED SECTIONS */
 
         section {
             padding: 90px 25px;
@@ -310,9 +295,7 @@
             color: #00d9ff;
         }
 
-        /* =====================================
-           DESTINY MASCOT SECTION
-        ===================================== */
+        /* DESTINY CO-OWNER SECTION */
 
         .destiny-section {
             background: #08111f;
@@ -331,6 +314,9 @@
 
         .destiny-image img {
             width: 100%;
+            max-height: 720px;
+            object-fit: cover;
+            object-position: center top;
             border-radius: 20px;
             border: 2px solid #00d9ff;
             box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
@@ -372,9 +358,7 @@
             font-weight: bold;
         }
 
-        /* =====================================
-           ABOUT SECTION
-        ===================================== */
+        /* ABOUT */
 
         .about {
             background: #050b16;
@@ -455,9 +439,7 @@
             font-weight: bold;
         }
 
-        /* =====================================
-           SERVICES
-        ===================================== */
+        /* SERVICES */
 
         .services {
             background: #08111f;
@@ -505,9 +487,7 @@
             color: #aebdca;
         }
 
-        /* =====================================
-           SKILLS
-        ===================================== */
+        /* SKILLS */
 
         .skills {
             background: #050b16;
@@ -549,9 +529,7 @@
             border-radius: 20px;
         }
 
-        /* =====================================
-           PROCESS
-        ===================================== */
+        /* PROCESS */
 
         .process {
             background: #08111f;
@@ -586,9 +564,7 @@
             color: #aebdca;
         }
 
-        /* =====================================
-           CONTACT
-        ===================================== */
+        /* CONTACT */
 
         .contact {
             background:
@@ -644,9 +620,7 @@
             color: #00d9ff;
         }
 
-        /* =====================================
-           POPUP CONTACT FORM
-        ===================================== */
+        /* POPUP FORM */
 
         .contact-modal {
             display: none;
@@ -751,9 +725,7 @@
             margin-top: 18px;
         }
 
-        /* =====================================
-           FOOTER
-        ===================================== */
+        /* FOOTER */
 
         footer {
             padding: 25px;
@@ -767,9 +739,7 @@
             color: #00d9ff;
         }
 
-        /* =====================================
-           TABLETS
-        ===================================== */
+        /* TABLETS */
 
         @media (max-width: 900px) {
             .hero-container,
@@ -778,7 +748,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero-text {
+            .hero-text,
+            .destiny-text {
                 text-align: center;
             }
 
@@ -798,15 +769,9 @@
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .destiny-text {
-                text-align: center;
-            }
         }
 
-        /* =====================================
-           PHONES
-        ===================================== */
+        /* PHONES */
 
         @media (max-width: 650px) {
             nav {
@@ -870,7 +835,7 @@
                 padding: 36px 20px 25px;
             }
 
-            .mascot-label {
+            .co-owner-label {
                 left: 12px;
                 right: 12px;
                 bottom: 12px;
@@ -880,10 +845,6 @@
 </head>
 
 <body>
-
-    <!-- =====================================
-         NAVIGATION
-    ====================================== -->
 
     <header>
         <nav>
@@ -911,9 +872,7 @@
 
     <main>
 
-        <!-- =====================================
-             HERO
-        ====================================== -->
+        <!-- HERO: FIRST DESTINY IMAGE -->
 
         <section class="hero" id="home">
             <div class="hero-container">
@@ -950,27 +909,23 @@
 
                 <div class="hero-photo">
                     <img src="destiny.png"
-                         alt="Destiny, the official AI business assistant and mascot for JR Web and IT Solutions">
+                         alt="Destiny, AI business assistant and co-owner of JR Web and IT Solutions">
 
-                    <div class="mascot-label">
-                        <strong>Meet Destiny</strong>
-                        <span>Official AI Business Assistant &amp; Mascot</span>
+                    <div class="co-owner-label">
+                        <strong>Destiny</strong>
+                        <span>AI Business Assistant &amp; Co-Owner</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- Technology Bar -->
-
         <div class="technology-bar">
             HTML • CSS • JAVASCRIPT • SQL • GITHUB • NETWORKING •
             CYBERSECURITY • WINDOWS • LINUX
         </div>
 
-        <!-- =====================================
-             DESTINY
-        ====================================== -->
+        <!-- MEET DESTINY: SECOND IMAGE -->
 
         <section class="destiny-section" id="destiny">
             <div class="container">
@@ -978,13 +933,13 @@
                 <div class="destiny-grid">
 
                     <div class="destiny-image">
-                        <img src="destiny.png"
-                             alt="Destiny representing JR Web and IT Solutions">
+                        <img src="destiny-working.png"
+                             alt="Destiny working on a computer for JR Web and IT Solutions">
                     </div>
 
                     <div class="destiny-text">
                         <p class="small-heading">
-                            Official Brand Mascot
+                            Business Leadership
                         </p>
 
                         <h2>
@@ -992,27 +947,33 @@
                         </h2>
 
                         <p class="destiny-role">
-                            AI Business Assistant for JR Web &amp; IT Solutions
+                            AI Business Assistant and Co-Owner of
+                            JR Web &amp; IT Solutions
                         </p>
 
                         <p>
-                            Destiny is the official mascot and AI business
-                            assistant for JR Web &amp; IT Solutions. She
+                            Destiny serves as the AI business assistant and
+                            co-owner of JR Web &amp; IT Solutions. She
                             represents professionalism, creativity,
-                            dependable support, and the future of modern
-                            technology.
+                            dependable customer support, and the future of
+                            modern technology.
                         </p>
 
                         <p>
-                            Destiny helps communicate the company’s mission:
-                            helping individuals and small businesses improve
-                            their online presence through smart websites,
-                            responsive design, and reliable IT support.
+                            Destiny helps communicate the company’s mission
+                            of helping individuals and small businesses
+                            improve their online presence through smart
+                            websites, responsive design, dependable service,
+                            and reliable IT support.
                         </p>
 
                         <div class="destiny-features">
                             <div class="destiny-feature">
-                                Custom Websites
+                                Business Leadership
+                            </div>
+
+                            <div class="destiny-feature">
+                                Customer Assistance
                             </div>
 
                             <div class="destiny-feature">
@@ -1020,11 +981,7 @@
                             </div>
 
                             <div class="destiny-feature">
-                                Ongoing Support
-                            </div>
-
-                            <div class="destiny-feature">
-                                Professional Service
+                                Technology Support
                             </div>
                         </div>
                     </div>
@@ -1033,9 +990,7 @@
             </div>
         </section>
 
-        <!-- =====================================
-             ABOUT
-        ====================================== -->
+        <!-- ABOUT -->
 
         <section class="about" id="about">
             <div class="container">
@@ -1063,14 +1018,14 @@
                         </p>
 
                         <p>
-                            &nbsp;&nbsp;owner:
+                            &nbsp;&nbsp;founder:
                             <span class="code-green">
                                 "Jermaine Robinson"
                             </span>,
                         </p>
 
                         <p>
-                            &nbsp;&nbsp;mascot:
+                            &nbsp;&nbsp;coOwner:
                             <span class="code-green">
                                 "Destiny"
                             </span>,
@@ -1106,7 +1061,7 @@
                         </h2>
 
                         <p>
-                            JR Web &amp; IT Solutions was created by
+                            JR Web &amp; IT Solutions was founded by
                             Information Technology student Jermaine Robinson
                             to help individuals and small businesses build
                             professional websites and improve their use of
@@ -1114,16 +1069,18 @@
                         </p>
 
                         <p>
+                            Jermaine leads website development and technical
+                            services, while Destiny serves as the AI business
+                            assistant and co-owner, supporting the company’s
+                            brand, customer communication, and technology-
+                            focused mission.
+                        </p>
+
+                        <p>
                             The company combines technical education,
                             creativity, problem-solving, responsive web
                             design, database fundamentals, networking,
                             cybersecurity awareness, and computer support.
-                        </p>
-
-                        <p>
-                            Our goal is to provide clear, dependable, and
-                            affordable technology solutions while continuing
-                            to grow and improve our services.
                         </p>
 
                         <div class="highlights">
@@ -1149,9 +1106,7 @@
             </div>
         </section>
 
-        <!-- =====================================
-             SERVICES
-        ====================================== -->
+        <!-- SERVICES -->
 
         <section class="services" id="services">
             <div class="container">
@@ -1168,9 +1123,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">&lt;/&gt;</div>
-
                         <h3>Website Design</h3>
-
                         <p>
                             Professional websites for small businesses,
                             personal brands, restaurants, portfolios,
@@ -1180,9 +1133,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">📱</div>
-
                         <h3>Mobile-Friendly Design</h3>
-
                         <p>
                             Responsive layouts designed to work properly on
                             smartphones, tablets, laptops, and desktop
@@ -1192,9 +1143,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">⚙</div>
-
                         <h3>Website Maintenance</h3>
-
                         <p>
                             Updates to pictures, text, pages, buttons,
                             contact information, colors, navigation menus,
@@ -1204,9 +1153,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">🗄</div>
-
                         <h3>Database Fundamentals</h3>
-
                         <p>
                             Basic SQL data entry, SELECT queries, updates,
                             deletes, table relationships, and organized data
@@ -1216,9 +1163,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">🌐</div>
-
                         <h3>Networking Support</h3>
-
                         <p>
                             Basic assistance with networks, IP addresses,
                             DNS, DHCP, routers, switches, connectivity, and
@@ -1228,9 +1173,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">🔒</div>
-
                         <h3>Cybersecurity Awareness</h3>
-
                         <p>
                             Assistance with password safety, phishing
                             awareness, secure browsing, updates, backups,
@@ -1240,9 +1183,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">💻</div>
-
                         <h3>Computer Support</h3>
-
                         <p>
                             Basic Windows support, software installation,
                             file organization, storage cleanup, browser
@@ -1252,9 +1193,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">⌨</div>
-
                         <h3>Windows and Linux</h3>
-
                         <p>
                             Experience with Windows, Linux commands,
                             terminals, user accounts, permissions, files,
@@ -1264,9 +1203,7 @@
 
                     <article class="service-card">
                         <div class="service-icon">◆</div>
-
                         <h3>GitHub Publishing</h3>
-
                         <p>
                             Organizing files, uploading code, committing
                             changes, managing repositories, custom domains,
@@ -1278,9 +1215,7 @@
             </div>
         </section>
 
-        <!-- =====================================
-             SKILLS
-        ====================================== -->
+        <!-- SKILLS -->
 
         <section class="skills" id="skills">
             <div class="container">
@@ -1377,9 +1312,7 @@
             </div>
         </section>
 
-        <!-- =====================================
-             PROCESS
-        ====================================== -->
+        <!-- PROCESS -->
 
         <section class="process">
             <div class="container">
@@ -1397,9 +1330,7 @@
 
                     <div class="process-card">
                         <div class="process-number">1</div>
-
                         <h3>Plan</h3>
-
                         <p>
                             We discuss your business, audience, services,
                             goals, colors, pages, and preferred website style.
@@ -1408,9 +1339,7 @@
 
                     <div class="process-card">
                         <div class="process-number">2</div>
-
                         <h3>Design</h3>
-
                         <p>
                             We create an organized design that represents
                             your brand and provides a professional appearance.
@@ -1419,9 +1348,7 @@
 
                     <div class="process-card">
                         <div class="process-number">3</div>
-
                         <h3>Build</h3>
-
                         <p>
                             We develop the website, add your information,
                             connect the pages, and test every feature.
@@ -1430,9 +1357,7 @@
 
                     <div class="process-card">
                         <div class="process-number">4</div>
-
                         <h3>Launch</h3>
-
                         <p>
                             The finished website is published and tested on
                             computers, tablets, and smartphones.
@@ -1443,9 +1368,7 @@
             </div>
         </section>
 
-        <!-- =====================================
-             CONTACT
-        ====================================== -->
+        <!-- CONTACT -->
 
         <section class="contact" id="contact">
             <div class="container">
@@ -1486,22 +1409,16 @@
 
     </main>
 
-    <!-- =====================================
-         FOOTER
-    ====================================== -->
-
     <footer>
         <p>
             © <span id="year"></span>
             <span>JR Web &amp; IT Solutions</span>.
-            Designed and developed by Jermaine Robinson.
-            Destiny is the official AI business assistant and mascot.
+            Founded by Jermaine Robinson.
+            Destiny serves as AI Business Assistant and Co-Owner.
         </p>
     </footer>
 
-    <!-- =====================================
-         CONTACT POPUP
-    ====================================== -->
+    <!-- CONTACT POPUP -->
 
     <div class="contact-modal"
          id="contactModal"
@@ -1532,9 +1449,7 @@
             <form action="https://formspree.io/f/mjgnejgq"
                   method="POST">
 
-                <label for="customerName">
-                    Full Name
-                </label>
+                <label for="customerName">Full Name</label>
 
                 <input type="text"
                        id="customerName"
@@ -1542,9 +1457,7 @@
                        placeholder="Enter your full name"
                        required>
 
-                <label for="customerPhone">
-                    Phone Number
-                </label>
+                <label for="customerPhone">Phone Number</label>
 
                 <input type="tel"
                        id="customerPhone"
@@ -1552,9 +1465,7 @@
                        placeholder="Enter your phone number"
                        required>
 
-                <label for="customerEmail">
-                    Email Address
-                </label>
+                <label for="customerEmail">Email Address</label>
 
                 <input type="email"
                        id="customerEmail"
@@ -1562,18 +1473,14 @@
                        placeholder="Enter your email address"
                        required>
 
-                <label for="businessName">
-                    Business Name
-                </label>
+                <label for="businessName">Business Name</label>
 
                 <input type="text"
                        id="businessName"
                        name="business"
                        placeholder="Enter your business name">
 
-                <label for="projectType">
-                    What Do You Need?
-                </label>
+                <label for="projectType">What Do You Need?</label>
 
                 <select id="projectType"
                         name="project_type"
@@ -1639,10 +1546,6 @@
 
         </div>
     </div>
-
-    <!-- =====================================
-         JAVASCRIPT
-    ====================================== -->
 
     <script>
         const menuButton =
