@@ -6,9 +6,19 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+          content="JR Web & IT Solutions provides professional website design, responsive development, website maintenance, and dependable IT support.">
+
     <title>JR Web & IT Solutions</title>
 
+    <!-- Add a square logo named favicon.png later -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
+        /* =====================================
+           BASIC PAGE SETTINGS
+        ===================================== */
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -30,13 +40,13 @@
             overflow: hidden;
         }
 
-        a {
-            text-decoration: none;
-        }
-
         img {
             display: block;
             max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         button,
@@ -46,7 +56,9 @@
             font-family: inherit;
         }
 
-        /* NAVIGATION */
+        /* =====================================
+           NAVIGATION
+        ===================================== */
 
         header {
             position: sticky;
@@ -59,17 +71,17 @@
 
         nav {
             max-width: 1200px;
-            min-height: 75px;
+            min-height: 76px;
             margin: auto;
             padding: 15px 25px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
             color: white;
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: bold;
             letter-spacing: 1px;
         }
@@ -81,7 +93,7 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 24px;
             list-style: none;
         }
 
@@ -100,84 +112,30 @@
             border: none;
             background: transparent;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             cursor: pointer;
         }
 
-        /* HERO SECTION */
-
-        .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(0, 217, 255, 0.18),
-                    transparent 35%
-                ),
-                linear-gradient(135deg, #050b16, #08162a);
-            overflow: hidden;
-        }
-
-        .hero-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 25px;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            align-items: center;
-            gap: 55px;
-        }
-
-        .small-heading {
-            color: #00d9ff;
-            font-weight: bold;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.7rem, 6vw, 5rem);
-            line-height: 1.05;
-            margin-bottom: 22px;
-        }
-
-        .hero h1 span {
-            color: #00d9ff;
-        }
-
-        .hero-description {
-            max-width: 650px;
-            color: #c6d4e1;
-            font-size: 1.15rem;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+        /* =====================================
+           BUTTONS
+        ===================================== */
 
         .button {
             display: inline-block;
             padding: 14px 24px;
-            border-radius: 7px;
+            border-radius: 8px;
             font-size: 1rem;
             font-weight: bold;
             text-align: center;
-            transition: 0.3s;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .primary-button {
             border: none;
             background: #00d9ff;
             color: #04101d;
-            box-shadow: 0 0 22px rgba(0, 217, 255, 0.35);
+            box-shadow: 0 0 24px rgba(0, 217, 255, 0.32);
         }
 
         .primary-button:hover {
@@ -197,9 +155,69 @@
             transform: translateY(-3px);
         }
 
+        /* =====================================
+           HERO SECTION
+        ===================================== */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(0, 217, 255, 0.2),
+                    transparent 38%
+                ),
+                linear-gradient(135deg, #050b16, #08172b);
+            overflow: hidden;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 25px;
+            display: grid;
+            grid-template-columns: 1fr 0.95fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .small-heading {
+            color: #00d9ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5.2rem);
+            line-height: 1.03;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #00d9ff;
+        }
+
+        .hero-description {
+            max-width: 640px;
+            color: #c5d3df;
+            font-size: 1.14rem;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
         .hero-photo {
             position: relative;
-            max-width: 475px;
+            max-width: 520px;
             margin: auto;
         }
 
@@ -209,28 +227,58 @@
             inset: -12px;
             border: 2px solid #00d9ff;
             border-radius: 25px;
-            transform: rotate(3deg);
+            transform: rotate(2deg);
         }
 
         .hero-photo img {
             position: relative;
             width: 100%;
+            max-height: 670px;
+            object-fit: cover;
+            object-position: center top;
             border-radius: 22px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+            border: 2px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 24px 75px rgba(0, 0, 0, 0.55);
         }
 
-        /* TECHNOLOGY BAR */
+        .mascot-label {
+            position: absolute;
+            z-index: 3;
+            left: 22px;
+            bottom: 22px;
+            padding: 12px 18px;
+            background: rgba(4, 16, 29, 0.92);
+            border: 1px solid #00d9ff;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .mascot-label strong {
+            display: block;
+            color: #00d9ff;
+            font-size: 1.15rem;
+        }
+
+        .mascot-label span {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* =====================================
+           TECHNOLOGY BAR
+        ===================================== */
 
         .technology-bar {
+            padding: 16px 20px;
             background: #00d9ff;
             color: #04101d;
-            padding: 16px;
             text-align: center;
             font-weight: bold;
         }
 
-        /* SHARED SECTION SETTINGS */
+        /* =====================================
+           SHARED SECTION SETTINGS
+        ===================================== */
 
         section {
             padding: 90px 25px;
@@ -254,18 +302,82 @@
         }
 
         .section-heading h2 {
+            margin-top: 6px;
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-top: 5px;
         }
 
         .section-heading h2 span {
             color: #00d9ff;
         }
 
-        /* ABOUT SECTION */
+        /* =====================================
+           DESTINY MASCOT SECTION
+        ===================================== */
+
+        .destiny-section {
+            background: #08111f;
+        }
+
+        .destiny-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .destiny-image {
+            position: relative;
+        }
+
+        .destiny-image img {
+            width: 100%;
+            border-radius: 20px;
+            border: 2px solid #00d9ff;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+        }
+
+        .destiny-text h2 {
+            margin-bottom: 8px;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+        }
+
+        .destiny-text h2 span {
+            color: #00d9ff;
+        }
+
+        .destiny-role {
+            margin-bottom: 20px;
+            color: #70ffb1;
+            font-weight: bold;
+            font-size: 1.15rem;
+        }
+
+        .destiny-text p {
+            color: #bdc9d6;
+            margin-bottom: 18px;
+        }
+
+        .destiny-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .destiny-feature {
+            padding: 17px;
+            background: #0c1c30;
+            border-left: 4px solid #00d9ff;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        /* =====================================
+           ABOUT SECTION
+        ===================================== */
 
         .about {
-            background: #08111f;
+            background: #050b16;
         }
 
         .about-grid {
@@ -276,13 +388,13 @@
         }
 
         .code-box {
+            overflow: hidden;
+            padding: 26px;
             background: #02070e;
             border: 1px solid #18334b;
-            border-radius: 14px;
-            padding: 25px;
+            border-radius: 15px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
             font-family: "Courier New", monospace;
-            overflow: hidden;
         }
 
         .code-top {
@@ -315,8 +427,8 @@
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
             margin-bottom: 20px;
+            font-size: 2.5rem;
         }
 
         .about-text h2 span {
@@ -336,17 +448,19 @@
         }
 
         .highlight {
+            padding: 16px;
             background: #0c1c30;
-            padding: 15px;
             border-left: 4px solid #00d9ff;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
         }
 
-        /* SERVICES */
+        /* =====================================
+           SERVICES
+        ===================================== */
 
         .services {
-            background: #050b16;
+            background: #08111f;
         }
 
         .service-grid {
@@ -356,10 +470,10 @@
         }
 
         .service-card {
+            padding: 30px;
             background: linear-gradient(145deg, #0a1626, #07101c);
             border: 1px solid #17334d;
             border-radius: 15px;
-            padding: 30px;
             transition: 0.3s;
         }
 
@@ -370,31 +484,33 @@
         }
 
         .service-icon {
-            width: 55px;
-            height: 55px;
+            width: 56px;
+            height: 56px;
             display: grid;
             place-items: center;
+            margin-bottom: 20px;
             background: rgba(0, 217, 255, 0.12);
             border: 1px solid #00d9ff;
             border-radius: 12px;
             color: #00d9ff;
             font-size: 1.6rem;
-            margin-bottom: 20px;
         }
 
         .service-card h3 {
-            font-size: 1.3rem;
             margin-bottom: 12px;
+            font-size: 1.3rem;
         }
 
         .service-card p {
             color: #aebdca;
         }
 
-        /* SKILLS */
+        /* =====================================
+           SKILLS
+        ===================================== */
 
         .skills {
-            background: #08111f;
+            background: #050b16;
         }
 
         .skills-grid {
@@ -404,9 +520,9 @@
         }
 
         .skill-item {
+            padding: 22px;
             background: #0b192a;
             border-radius: 12px;
-            padding: 22px;
         }
 
         .skill-title {
@@ -422,9 +538,9 @@
 
         .skill-bar {
             height: 9px;
+            overflow: hidden;
             background: #172b3e;
             border-radius: 20px;
-            overflow: hidden;
         }
 
         .skill-level {
@@ -433,10 +549,12 @@
             border-radius: 20px;
         }
 
-        /* PROCESS */
+        /* =====================================
+           PROCESS
+        ===================================== */
 
         .process {
-            background: #050b16;
+            background: #08111f;
         }
 
         .process-grid {
@@ -446,13 +564,13 @@
         }
 
         .process-card {
-            text-align: center;
             padding: 25px;
+            text-align: center;
         }
 
         .process-number {
-            width: 55px;
-            height: 55px;
+            width: 56px;
+            height: 56px;
             display: grid;
             place-items: center;
             margin: 0 auto 18px;
@@ -464,11 +582,13 @@
         }
 
         .process-card p {
-            color: #aebdca;
             margin-top: 10px;
+            color: #aebdca;
         }
 
-        /* CONTACT SECTION */
+        /* =====================================
+           CONTACT
+        ===================================== */
 
         .contact {
             background:
@@ -480,7 +600,7 @@
         }
 
         .contact-box {
-            max-width: 850px;
+            max-width: 860px;
             margin: auto;
             padding: 45px;
             background: #091728;
@@ -491,8 +611,8 @@
         }
 
         .contact-box h2 {
-            font-size: 2.5rem;
             margin-bottom: 15px;
+            font-size: 2.5rem;
         }
 
         .contact-box h2 span {
@@ -500,8 +620,8 @@
         }
 
         .contact-box p {
-            color: #becbd7;
             margin-bottom: 25px;
+            color: #becbd7;
         }
 
         .contact-details {
@@ -513,9 +633,9 @@
         }
 
         .contact-details a {
-            color: white;
-            background: #0e2237;
             padding: 13px 18px;
+            background: #0e2237;
+            color: white;
             border-radius: 7px;
             transition: 0.3s;
         }
@@ -524,7 +644,9 @@
             color: #00d9ff;
         }
 
-        /* POPUP FORM */
+        /* =====================================
+           POPUP CONTACT FORM
+        ===================================== */
 
         .contact-modal {
             display: none;
@@ -545,7 +667,7 @@
         .modal-content {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 610px;
             margin: auto;
             padding: 40px;
             background: #091728;
@@ -595,10 +717,10 @@
         .modal-content textarea {
             width: 100%;
             padding: 14px;
-            border: 1px solid #29445e;
-            border-radius: 7px;
             background: #050b16;
             color: white;
+            border: 1px solid #29445e;
+            border-radius: 7px;
             font-size: 1rem;
         }
 
@@ -629,24 +751,29 @@
             margin-top: 18px;
         }
 
-        /* FOOTER */
+        /* =====================================
+           FOOTER
+        ===================================== */
 
         footer {
-            background: #02060c;
-            text-align: center;
             padding: 25px;
+            background: #02060c;
             color: #91a1af;
             border-top: 1px solid #14283a;
+            text-align: center;
         }
 
         footer span {
             color: #00d9ff;
         }
 
-        /* TABLETS */
+        /* =====================================
+           TABLETS
+        ===================================== */
 
         @media (max-width: 900px) {
             .hero-container,
+            .destiny-grid,
             .about-grid {
                 grid-template-columns: 1fr;
             }
@@ -671,9 +798,15 @@
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .destiny-text {
+                text-align: center;
+            }
         }
 
-        /* PHONES */
+        /* =====================================
+           PHONES
+        ===================================== */
 
         @media (max-width: 650px) {
             nav {
@@ -681,8 +814,8 @@
             }
 
             .logo {
-                max-width: 260px;
-                font-size: 1.05rem;
+                max-width: 250px;
+                font-size: 1rem;
             }
 
             .menu-button {
@@ -692,7 +825,7 @@
             .nav-links {
                 display: none;
                 position: absolute;
-                top: 75px;
+                top: 76px;
                 left: 0;
                 width: 100%;
                 padding: 25px;
@@ -705,13 +838,6 @@
                 display: flex;
             }
 
-            .service-grid,
-            .skills-grid,
-            .process-grid,
-            .highlights {
-                grid-template-columns: 1fr;
-            }
-
             .hero {
                 min-height: auto;
             }
@@ -721,7 +847,19 @@
             }
 
             .hero h1 {
-                font-size: 2.6rem;
+                font-size: 2.65rem;
+            }
+
+            .service-grid,
+            .skills-grid,
+            .process-grid,
+            .highlights,
+            .destiny-features {
+                grid-template-columns: 1fr;
+            }
+
+            .technology-bar {
+                font-size: 0.8rem;
             }
 
             .contact-box {
@@ -729,11 +867,13 @@
             }
 
             .modal-content {
-                padding: 35px 20px 25px;
+                padding: 36px 20px 25px;
             }
 
-            .technology-bar {
-                font-size: 0.82rem;
+            .mascot-label {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
             }
         }
     </style>
@@ -741,10 +881,14 @@
 
 <body>
 
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
     <header>
         <nav>
             <a href="#home" class="logo">
-                JR <span>WEB &amp; I.T. SOLUTIONS</span>
+                JR <span>WEB &amp; IT SOLUTIONS</span>
             </a>
 
             <button class="menu-button"
@@ -756,6 +900,7 @@
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#destiny">Destiny</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -766,55 +911,135 @@
 
     <main>
 
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
         <section class="hero" id="home">
             <div class="hero-container">
 
                 <div class="hero-text">
                     <p class="small-heading">
-                        Web Designer • IT Student • Problem Solver
+                        Smart Websites • Stronger Business
                     </p>
 
                     <h1>
-                        Building modern websites with an
-                        <span>I.T. mindset.</span>
+                        Modern websites with an
+                        <span>IT mindset.</span>
                     </h1>
 
                     <p class="hero-description">
-                        I help individuals and small businesses build
-                        professional websites while providing dependable
-                        technology support. My background combines technical
-                        education, creativity, hands-on experience, and
-                        problem-solving.
+                        JR Web &amp; IT Solutions helps individuals and
+                        small businesses build professional websites while
+                        providing dependable technology support, responsive
+                        design, and ongoing assistance.
                     </p>
 
                     <div class="hero-buttons">
                         <a href="#services"
                            class="button primary-button">
-                            View My Services
+                            View Our Services
                         </a>
 
                         <button type="button"
                                 class="button secondary-button open-contact-form">
-                            Request a Consulation
+                            Request a Consultation
                         </button>
                     </div>
                 </div>
 
                 <div class="hero-photo">
-                    <img src="jermaine-reading.png"
-                         alt="Jermaine Robinson reading in a professional office">
+                    <img src="destiny.png"
+                         alt="Destiny, the official AI business assistant and mascot for JR Web and IT Solutions">
+
+                    <div class="mascot-label">
+                        <strong>Meet Destiny</strong>
+                        <span>Official AI Business Assistant &amp; Mascot</span>
+                    </div>
                 </div>
 
             </div>
         </section>
+
+        <!-- Technology Bar -->
 
         <div class="technology-bar">
             HTML • CSS • JAVASCRIPT • SQL • GITHUB • NETWORKING •
             CYBERSECURITY • WINDOWS • LINUX
         </div>
 
+        <!-- =====================================
+             DESTINY
+        ====================================== -->
+
+        <section class="destiny-section" id="destiny">
+            <div class="container">
+
+                <div class="destiny-grid">
+
+                    <div class="destiny-image">
+                        <img src="destiny.png"
+                             alt="Destiny representing JR Web and IT Solutions">
+                    </div>
+
+                    <div class="destiny-text">
+                        <p class="small-heading">
+                            Official Brand Mascot
+                        </p>
+
+                        <h2>
+                            Meet <span>Destiny</span>
+                        </h2>
+
+                        <p class="destiny-role">
+                            AI Business Assistant for JR Web &amp; IT Solutions
+                        </p>
+
+                        <p>
+                            Destiny is the official mascot and AI business
+                            assistant for JR Web &amp; IT Solutions. She
+                            represents professionalism, creativity,
+                            dependable support, and the future of modern
+                            technology.
+                        </p>
+
+                        <p>
+                            Destiny helps communicate the company’s mission:
+                            helping individuals and small businesses improve
+                            their online presence through smart websites,
+                            responsive design, and reliable IT support.
+                        </p>
+
+                        <div class="destiny-features">
+                            <div class="destiny-feature">
+                                Custom Websites
+                            </div>
+
+                            <div class="destiny-feature">
+                                Responsive Design
+                            </div>
+
+                            <div class="destiny-feature">
+                                Ongoing Support
+                            </div>
+
+                            <div class="destiny-feature">
+                                Professional Service
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
         <section class="about" id="about">
             <div class="container">
+
                 <div class="about-grid">
 
                     <div class="code-box">
@@ -826,40 +1051,42 @@
 
                         <p>
                             <span class="code-purple">const</span>
-                            professional =
+                            business =
                             <span class="code-blue">{</span>
                         </p>
 
                         <p>
                             &nbsp;&nbsp;name:
                             <span class="code-green">
+                                "JR Web & IT Solutions"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;owner:
+                            <span class="code-green">
                                 "Jermaine Robinson"
                             </span>,
                         </p>
 
                         <p>
-                            &nbsp;&nbsp;role:
+                            &nbsp;&nbsp;mascot:
                             <span class="code-green">
-                                "Web Designer &amp; IT Professional"
+                                "Destiny"
                             </span>,
-                        </p>
-
-                        <p>
-                            &nbsp;&nbsp;education:
-                            <span class="code-green">
-                                "Information Technology"
-                            </span>,
-                        </p>
-
-                        <p>
-                            &nbsp;&nbsp;gpa:
-                            <span class="code-green">3.9</span>,
                         </p>
 
                         <p>
                             &nbsp;&nbsp;mission:
                             <span class="code-green">
                                 "Build. Solve. Improve."
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;website:
+                            <span class="code-green">
+                                "jrwebitsolutions.com"
                             </span>
                         </p>
 
@@ -869,7 +1096,9 @@
                     </div>
 
                     <div class="about-text">
-                        <p class="small-heading">About Me</p>
+                        <p class="small-heading">
+                            About the Business
+                        </p>
 
                         <h2>
                             Real-world experience meets
@@ -877,24 +1106,24 @@
                         </h2>
 
                         <p>
-                            My name is Jermaine Robinson. I am an Information
-                            Technology student with a 3.9 GPA and experience
-                            building websites with HTML, CSS, JavaScript,
-                            GitHub, and responsive design.
+                            JR Web &amp; IT Solutions was created by
+                            Information Technology student Jermaine Robinson
+                            to help individuals and small businesses build
+                            professional websites and improve their use of
+                            technology.
                         </p>
 
                         <p>
-                            Before entering the technology field, I worked in
-                            welding and industrial environments. That
-                            experience taught me discipline, teamwork,
-                            attention to detail, safety, and how to solve
-                            problems under pressure.
+                            The company combines technical education,
+                            creativity, problem-solving, responsive web
+                            design, database fundamentals, networking,
+                            cybersecurity awareness, and computer support.
                         </p>
 
                         <p>
-                            I now bring that same work ethic into web design,
-                            databases, networking, cybersecurity, computer
-                            troubleshooting, and technical support.
+                            Our goal is to provide clear, dependable, and
+                            affordable technology solutions while continuing
+                            to grow and improve our services.
                         </p>
 
                         <div class="highlights">
@@ -920,11 +1149,15 @@
             </div>
         </section>
 
+        <!-- =====================================
+             SERVICES
+        ====================================== -->
+
         <section class="services" id="services">
             <div class="container">
 
                 <div class="section-heading">
-                    <p>What I Provide</p>
+                    <p>What We Provide</p>
 
                     <h2>
                         Web and <span>IT Services</span>
@@ -951,7 +1184,7 @@
                         <h3>Mobile-Friendly Design</h3>
 
                         <p>
-                            Responsive layouts that adjust properly across
+                            Responsive layouts designed to work properly on
                             smartphones, tablets, laptops, and desktop
                             computers.
                         </p>
@@ -975,9 +1208,9 @@
                         <h3>Database Fundamentals</h3>
 
                         <p>
-                            Basic SQL database creation, data entry,
-                            SELECT queries, updates, deletes, table
-                            relationships, and data organization.
+                            Basic SQL data entry, SELECT queries, updates,
+                            deletes, table relationships, and organized data
+                            management.
                         </p>
                     </article>
 
@@ -988,8 +1221,8 @@
 
                         <p>
                             Basic assistance with networks, IP addresses,
-                            DNS, DHCP, routers, switches, device
-                            connectivity, and troubleshooting.
+                            DNS, DHCP, routers, switches, connectivity, and
+                            troubleshooting.
                         </p>
                     </article>
 
@@ -999,9 +1232,9 @@
                         <h3>Cybersecurity Awareness</h3>
 
                         <p>
-                            Help with password safety, phishing awareness,
-                            secure browsing, backups, antivirus protection,
-                            software updates, and account security.
+                            Assistance with password safety, phishing
+                            awareness, secure browsing, updates, backups,
+                            antivirus protection, and account security.
                         </p>
                     </article>
 
@@ -1012,7 +1245,7 @@
 
                         <p>
                             Basic Windows support, software installation,
-                            storage cleanup, file organization, browser
+                            file organization, storage cleanup, browser
                             assistance, and device troubleshooting.
                         </p>
                     </article>
@@ -1023,7 +1256,7 @@
                         <h3>Windows and Linux</h3>
 
                         <p>
-                            Experience using Windows, Linux commands,
+                            Experience with Windows, Linux commands,
                             terminals, user accounts, permissions, files,
                             folders, and system settings.
                         </p>
@@ -1035,15 +1268,19 @@
                         <h3>GitHub Publishing</h3>
 
                         <p>
-                            Organizing website files, uploading code,
-                            committing changes, managing repositories,
-                            and publishing sites with GitHub Pages.
+                            Organizing files, uploading code, committing
+                            changes, managing repositories, custom domains,
+                            and publishing through GitHub Pages.
                         </p>
                     </article>
 
                 </div>
             </div>
         </section>
+
+        <!-- =====================================
+             SKILLS
+        ====================================== -->
 
         <section class="skills" id="skills">
             <div class="container">
@@ -1052,7 +1289,7 @@
                     <p>Technical Knowledge</p>
 
                     <h2>
-                        My Growing <span>IT Skill Set</span>
+                        Growing <span>IT Skills</span>
                     </h2>
                 </div>
 
@@ -1140,11 +1377,15 @@
             </div>
         </section>
 
+        <!-- =====================================
+             PROCESS
+        ====================================== -->
+
         <section class="process">
             <div class="container">
 
                 <div class="section-heading">
-                    <p>My Process</p>
+                    <p>Our Process</p>
 
                     <h2>
                         From Idea to
@@ -1161,7 +1402,7 @@
 
                         <p>
                             We discuss your business, audience, services,
-                            goals, colors, pages, and website style.
+                            goals, colors, pages, and preferred website style.
                         </p>
                     </div>
 
@@ -1171,8 +1412,8 @@
                         <h3>Design</h3>
 
                         <p>
-                            I create an organized design that represents
-                            your brand and looks professional.
+                            We create an organized design that represents
+                            your brand and provides a professional appearance.
                         </p>
                     </div>
 
@@ -1182,8 +1423,8 @@
                         <h3>Build</h3>
 
                         <p>
-                            I develop the website, add your information,
-                            connect the pages, and test the features.
+                            We develop the website, add your information,
+                            connect the pages, and test every feature.
                         </p>
                     </div>
 
@@ -1193,14 +1434,18 @@
                         <h3>Launch</h3>
 
                         <p>
-                            The completed website is published and tested
-                            on computers, tablets, and smartphones.
+                            The finished website is published and tested on
+                            computers, tablets, and smartphones.
                         </p>
                     </div>
 
                 </div>
             </div>
         </section>
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
 
         <section class="contact" id="contact">
             <div class="container">
@@ -1241,15 +1486,22 @@
 
     </main>
 
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
     <footer>
         <p>
             © <span id="year"></span>
             <span>JR Web &amp; IT Solutions</span>.
             Designed and developed by Jermaine Robinson.
+            Destiny is the official AI business assistant and mascot.
         </p>
     </footer>
 
-    <!-- WEBSITE REQUEST POPUP -->
+    <!-- =====================================
+         CONTACT POPUP
+    ====================================== -->
 
     <div class="contact-modal"
          id="contactModal"
@@ -1265,19 +1517,17 @@
             </button>
 
             <p class="small-heading">
-                Website Request
+                Consultation Request
             </p>
 
             <h2>
-                Tell Me About Your Project
+                Tell Us About Your Project
             </h2>
 
             <p class="modal-description">
-                Enter your information below, and I will contact you
-                about your website or IT project.
+                Enter your information below, and JR Web &amp; IT Solutions
+                will contact you about your website or IT project.
             </p>
-
-            <!-- Correct Formspree connection -->
 
             <form action="https://formspree.io/f/mjgnejgq"
                   method="POST">
@@ -1349,8 +1599,16 @@
                         Website Updates
                     </option>
 
+                    <option value="Computer support">
+                        Computer Support
+                    </option>
+
+                    <option value="Networking support">
+                        Networking Support
+                    </option>
+
                     <option value="IT support">
-                        IT Support
+                        General IT Support
                     </option>
 
                     <option value="Other">
@@ -1359,7 +1617,7 @@
                 </select>
 
                 <label for="projectMessage">
-                    Tell Me About Your Project
+                    Tell Us About Your Project
                 </label>
 
                 <textarea id="projectMessage"
@@ -1370,11 +1628,7 @@
 
                 <input type="hidden"
                        name="_subject"
-                       value="New JR Web and IT Website Request">
-
-                <input type="hidden"
-                       name="_replyto"
-                       value="">
+                       value="New JR Web and IT Consultation Request">
 
                 <button type="submit"
                         class="button primary-button submit-request">
@@ -1385,6 +1639,10 @@
 
         </div>
     </div>
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
 
     <script>
         const menuButton =
