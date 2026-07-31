@@ -10,8 +10,12 @@
           content="JR Web & IT Solutions provides website design, responsive development, website maintenance, and general IT support.">
 
     <title>JR Web & IT Solutions</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00d9ff">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 
-    <link rel="icon" type="image/png" href="favicon.png">
+   
 
     <style>
         /* =====================================
@@ -2204,6 +2208,14 @@
             }
         }, 3500);
     </script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("service-worker.js");
+        });
+    }
+</script>
+    
 
 </body>
 </html>
