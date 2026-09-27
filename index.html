@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="JR Web & IT Solutions provides website design, responsive development, website maintenance, and general IT support.">
+<meta name="description" content="JR Web & IT Solutions provides website design, responsive development, website maintenance, and general IT support.">
 
 <title>JR Web & IT Solutions</title>
 
@@ -17,7 +14,7 @@ content="JR Web & IT Solutions provides website design, responsive development, 
 
 <style>
 
-/* ===============================
+/* ================================
    BASIC SETTINGS
 ================================ */
 
@@ -58,8 +55,7 @@ textarea {
     font-family: inherit;
 }
 
-
-/* ===============================
+/* ================================
    NAVIGATION
 ================================ */
 
@@ -67,7 +63,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(5, 11, 22, 0.96);
+    background: rgba(5,11,22,.96);
     border-bottom: 1px solid #00d9ff;
     backdrop-filter: blur(10px);
 }
@@ -77,7 +73,6 @@ nav {
     min-height: 76px;
     margin: auto;
     padding: 15px 25px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,11 +99,12 @@ nav {
 .nav-links a {
     color: white;
     font-weight: bold;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .nav-links a:hover {
     color: #00d9ff;
+    text-shadow: 0 0 12px #00d9ff;
 }
 
 .menu-button {
@@ -120,8 +116,7 @@ nav {
     cursor: pointer;
 }
 
-
-/* ===============================
+/* ================================
    BUTTONS
 ================================ */
 
@@ -133,19 +128,20 @@ nav {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .primary-button {
     border: none;
     background: #00d9ff;
     color: #04101d;
-    box-shadow: 0 0 24px rgba(0, 217, 255, 0.32);
+    box-shadow: 0 0 24px rgba(0,217,255,.32);
 }
 
 .primary-button:hover {
     background: white;
     transform: translateY(-3px);
+    box-shadow: 0 0 30px #00d9ff;
 }
 
 .secondary-button {
@@ -158,26 +154,29 @@ nav {
     background: #00d9ff;
     color: #04101d;
     transform: translateY(-3px);
+    box-shadow: 0 0 30px #00d9ff;
 }
 
-
-/* ===============================
+/* ================================
    HERO
 ================================ */
 
 .hero {
     min-height: 88vh;
-
     display: flex;
     align-items: center;
 
     background:
         radial-gradient(
             circle at top right,
-            rgba(0, 217, 255, 0.2),
+            rgba(0,217,255,.20),
             transparent 38%
         ),
-        linear-gradient(135deg, #050b16, #08172b);
+        linear-gradient(
+            135deg,
+            #050b16,
+            #08172b
+        );
 
     overflow: hidden;
 }
@@ -189,7 +188,7 @@ nav {
     padding: 70px 25px;
 
     display: grid;
-    grid-template-columns: 1fr 0.95fr;
+    grid-template-columns: 1fr .95fr;
     gap: 55px;
     align-items: center;
 }
@@ -203,7 +202,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-size: clamp(2.8rem,6vw,5.2rem);
     line-height: 1.03;
     margin-bottom: 22px;
 }
@@ -238,6 +237,10 @@ nav {
     border: 2px solid #00d9ff;
     border-radius: 25px;
     transform: rotate(2deg);
+
+    box-shadow:
+        0 0 15px rgba(0,217,255,.7),
+        0 0 40px rgba(0,217,255,.25);
 }
 
 .hero-photo img {
@@ -246,9 +249,12 @@ nav {
     max-height: 670px;
     object-fit: cover;
     object-position: center top;
+
     border-radius: 22px;
-    border: 2px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 24px 75px rgba(0, 0, 0, 0.55);
+    border: 2px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 24px 75px rgba(0,0,0,.55);
 }
 
 .owner-label {
@@ -259,7 +265,7 @@ nav {
 
     padding: 12px 18px;
 
-    background: rgba(4, 16, 29, 0.93);
+    background: rgba(4,16,29,.93);
     border: 1px solid #00d9ff;
     border-radius: 10px;
 }
@@ -272,11 +278,10 @@ nav {
 
 .owner-label span {
     color: white;
-    font-size: 0.9rem;
+    font-size: .9rem;
 }
 
-
-/* ===============================
+/* ================================
    TECHNOLOGY BAR
 ================================ */
 
@@ -288,9 +293,8 @@ nav {
     font-weight: bold;
 }
 
-
-/* ===============================
-   SHARED SECTIONS
+/* ================================
+   GENERAL SECTION
 ================================ */
 
 section {
@@ -316,16 +320,15 @@ section {
 
 .section-heading h2 {
     margin-top: 6px;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem,4vw,3rem);
 }
 
 .section-heading h2 span {
     color: #00d9ff;
 }
 
-
-/* ===============================
-   JERMAINE SECTION
+/* ================================
+   JERMAINE
 ================================ */
 
 .jermaine-section {
@@ -334,7 +337,7 @@ section {
 
 .jermaine-grid {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: .9fr 1.1fr;
     align-items: center;
     gap: 55px;
 }
@@ -344,14 +347,18 @@ section {
     max-height: 720px;
     object-fit: cover;
     object-position: center top;
+
     border-radius: 20px;
     border: 2px solid #00d9ff;
-    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+        0 0 18px rgba(0,217,255,.5),
+        0 20px 55px rgba(0,0,0,.4);
 }
 
 .jermaine-text h2 {
     margin-bottom: 8px;
-    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-size: clamp(2.4rem,5vw,4rem);
 }
 
 .jermaine-text h2 span {
@@ -372,7 +379,7 @@ section {
 
 .jermaine-features {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 15px;
     margin-top: 25px;
 }
@@ -385,8 +392,7 @@ section {
     font-weight: bold;
 }
 
-
-/* ===============================
+/* ================================
    ABOUT
 ================================ */
 
@@ -396,7 +402,7 @@ section {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: .9fr 1.1fr;
     gap: 50px;
     align-items: center;
 }
@@ -404,10 +410,12 @@ section {
 .code-box {
     overflow: hidden;
     padding: 26px;
+
     background: #02070e;
     border: 1px solid #18334b;
     border-radius: 15px;
-    font-family: "Courier New", monospace;
+
+    font-family: "Courier New",monospace;
 }
 
 .code-top {
@@ -455,7 +463,7 @@ section {
 
 .highlights {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 15px;
     margin-top: 25px;
 }
@@ -468,8 +476,7 @@ section {
     font-weight: bold;
 }
 
-
-/* ===============================
+/* ================================
    SERVICES
 ================================ */
 
@@ -479,12 +486,12 @@ section {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
 }
 
 .service-card {
-    padding: 30px;
+    padding: 22px;
 
     background:
         linear-gradient(
@@ -495,30 +502,33 @@ section {
 
     border: 1px solid #17334d;
     border-radius: 15px;
-    transition: 0.3s;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: #00d9ff;
-    box-shadow: 0 15px 40px rgba(0, 217, 255, 0.12);
-}
+.service-picture {
+    width: 100%;
+    height: 190px;
 
-.service-icon {
-    width: 56px;
-    height: 56px;
+    object-fit: cover;
+    object-position: center;
 
-    display: grid;
-    place-items: center;
-
+    border-radius: 12px;
     margin-bottom: 20px;
 
-    background: rgba(0, 217, 255, 0.12);
-    border: 1px solid #00d9ff;
-    border-radius: 12px;
+    border:
+        1px solid rgba(0,217,255,.45);
 
-    color: #00d9ff;
-    font-size: 1.6rem;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
 }
 
 .service-card h3 {
@@ -530,8 +540,49 @@ section {
     color: #aebdca;
 }
 
+/* GLOW */
 
-/* ===============================
+.service-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 12px rgba(0,217,255,.8),
+        0 0 30px rgba(0,217,255,.45),
+        0 15px 45px rgba(0,217,255,.20);
+}
+
+.service-card:hover .service-picture {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 12px #00d9ff,
+        0 0 28px rgba(0,217,255,.7);
+
+    filter: brightness(1.12);
+}
+
+.service-card:active {
+    transform: scale(.98);
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px #00d9ff,
+        0 0 35px rgba(0,217,255,.65);
+}
+
+.service-card:active .service-picture {
+    filter: brightness(1.2);
+
+    box-shadow:
+        0 0 18px #00d9ff,
+        0 0 35px rgba(0,217,255,.75);
+}
+
+/* ================================
    SKILLS
 ================================ */
 
@@ -541,7 +592,7 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 25px;
 }
 
@@ -571,12 +622,18 @@ section {
 
 .skill-level {
     height: 100%;
-    background: linear-gradient(90deg, #00d9ff, #6b77ff);
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d9ff,
+            #6b77ff
+        );
+
     border-radius: 20px;
 }
 
-
-/* ===============================
+/* ================================
    PROCESS
 ================================ */
 
@@ -586,7 +643,7 @@ section {
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
@@ -618,16 +675,15 @@ section {
     color: #aebdca;
 }
 
-
-/* ===============================
+/* ================================
    CONTACT
 ================================ */
 
 .contact {
     background:
         linear-gradient(
-            rgba(5, 11, 22, 0.92),
-            rgba(5, 11, 22, 0.92)
+            rgba(5,11,22,.92),
+            rgba(5,11,22,.92)
         ),
         radial-gradient(
             circle,
@@ -681,8 +737,7 @@ section {
     color: #00d9ff;
 }
 
-
-/* ===============================
+/* ================================
    CONTACT FORM
 ================================ */
 
@@ -695,7 +750,8 @@ section {
 
     padding: 25px;
 
-    background: rgba(0, 0, 0, 0.84);
+    background: rgba(0,0,0,.84);
+
     overflow-y: auto;
 }
 
@@ -715,6 +771,7 @@ section {
     padding: 40px;
 
     background: #091728;
+
     border: 1px solid #00d9ff;
     border-radius: 18px;
 }
@@ -785,8 +842,7 @@ section {
     margin-top: 18px;
 }
 
-
-/* ===============================
+/* ================================
    CHAT
 ================================ */
 
@@ -794,40 +850,60 @@ section {
     position: fixed;
     right: 22px;
     bottom: 22px;
+
     z-index: 3000;
 
-    width: 68px;
-    height: 68px;
+    width: 72px;
+    height: 72px;
 
-    border: 2px solid white;
+    padding: 0;
+
+    overflow: hidden;
+
+    border:
+        3px solid #00d9ff;
+
     border-radius: 50%;
 
-    background: #00d9ff;
-    color: #04101d;
-
-    font-size: 1.8rem;
+    background: #04101d;
 
     cursor: pointer;
 
     box-shadow:
-        0 10px 35px
-        rgba(0, 217, 255, 0.45);
+        0 0 15px #00d9ff,
+        0 0 35px rgba(0,217,255,.55);
 
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .chat-launcher:hover {
-    transform: translateY(-4px) scale(1.04);
-    background: white;
+    transform: scale(1.10);
+
+    box-shadow:
+        0 0 20px #00d9ff,
+        0 0 50px rgba(0,217,255,.85);
+}
+
+.launcher-picture {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 50%;
 }
 
 .chat-notification {
-    position: absolute;
-    top: -2px;
-    right: -2px;
+    position: fixed;
 
-    width: 20px;
-    height: 20px;
+    right: 18px;
+    bottom: 75px;
+
+    z-index: 3002;
+
+    width: 22px;
+    height: 22px;
 
     display: grid;
     place-items: center;
@@ -835,10 +911,13 @@ section {
     background: #ff334f;
     color: white;
 
+    border: 2px solid white;
     border-radius: 50%;
 
-    font-size: 0.7rem;
+    font-size: .7rem;
     font-weight: bold;
+
+    pointer-events: none;
 }
 
 .chat-box {
@@ -846,10 +925,13 @@ section {
 
     position: fixed;
     right: 22px;
-    bottom: 104px;
+    bottom: 110px;
+
     z-index: 3000;
 
-    width: min(390px, calc(100% - 30px));
+    width:
+        min(390px,calc(100% - 30px));
+
     max-height: 680px;
 
     overflow: hidden;
@@ -860,8 +942,8 @@ section {
     border-radius: 18px;
 
     box-shadow:
-        0 22px 70px
-        rgba(0, 0, 0, 0.6);
+        0 22px 70px rgba(0,0,0,.6),
+        0 0 25px rgba(0,217,255,.25);
 }
 
 .chat-box.active {
@@ -891,14 +973,19 @@ section {
 }
 
 .chat-avatar {
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
 
     object-fit: cover;
     object-position: center top;
 
-    border: 2px solid white;
+    border:
+        2px solid white;
+
     border-radius: 50%;
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.7);
 }
 
 .chat-header strong {
@@ -912,7 +999,7 @@ section {
     gap: 6px;
 
     color: #e3faff;
-    font-size: 0.75rem;
+    font-size: .75rem;
 }
 
 .status-dot {
@@ -920,6 +1007,7 @@ section {
     height: 8px;
 
     background: #70ffb1;
+
     border-radius: 50%;
 }
 
@@ -937,12 +1025,15 @@ section {
     padding: 8px 14px;
 
     background: #07111e;
+
     color: #aebdcc;
 
-    border-bottom: 1px solid #17334d;
+    border-bottom:
+        1px solid #17334d;
 
     text-align: center;
-    font-size: 0.72rem;
+
+    font-size: .72rem;
 }
 
 .chat-messages {
@@ -964,7 +1055,7 @@ section {
 
     border-radius: 14px;
 
-    font-size: 0.92rem;
+    font-size: .92rem;
     line-height: 1.45;
 }
 
@@ -999,20 +1090,19 @@ section {
     height: 7px;
 
     background: #b8c9d7;
+
     border-radius: 50%;
 
     animation:
-        typingBounce
-        1.2s
-        infinite;
+        typingBounce 1.2s infinite;
 }
 
 .typing-dot:nth-child(2) {
-    animation-delay: 0.15s;
+    animation-delay: .15s;
 }
 
 .typing-dot:nth-child(3) {
-    animation-delay: 0.3s;
+    animation-delay: .3s;
 }
 
 @keyframes typingBounce {
@@ -1030,7 +1120,7 @@ section {
 
 .quick-questions {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 8px;
 
     max-height: 255px;
@@ -1041,26 +1131,29 @@ section {
 
     background: #091728;
 
-    border-top: 1px solid #17334d;
+    border-top:
+        1px solid #17334d;
 }
 
 .quick-questions button {
     width: 100%;
-
     padding: 10px;
 
-    border: 1px solid #29445e;
+    border:
+        1px solid #29445e;
+
     border-radius: 8px;
 
     background: #0e2237;
     color: white;
 
     text-align: left;
-    font-size: 0.82rem;
+
+    font-size: .82rem;
 
     cursor: pointer;
 
-    transition: 0.25s;
+    transition: .25s;
 }
 
 .quick-questions button:hover {
@@ -1068,8 +1161,9 @@ section {
     color: #00d9ff;
 }
 
-.quick-questions .consultation-chat-button {
-    grid-column: 1 / -1;
+.quick-questions
+.consultation-chat-button {
+    grid-column: 1/-1;
 
     background: #00d9ff;
     color: #04101d;
@@ -1077,11 +1171,11 @@ section {
     border-color: #00d9ff;
 
     text-align: center;
+
     font-weight: bold;
 }
 
-
-/* ===============================
+/* ================================
    FOOTER
 ================================ */
 
@@ -1089,9 +1183,11 @@ footer {
     padding: 25px;
 
     background: #02060c;
+
     color: #91a1af;
 
-    border-top: 1px solid #14283a;
+    border-top:
+        1px solid #14283a;
 
     text-align: center;
 }
@@ -1100,12 +1196,11 @@ footer span {
     color: #00d9ff;
 }
 
-
-/* ===============================
+/* ================================
    TABLET
 ================================ */
 
-@media (max-width: 900px) {
+@media(max-width:900px) {
 
     .hero-container,
     .jermaine-grid,
@@ -1128,20 +1223,21 @@ footer span {
     }
 
     .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 }
 
-
-/* ===============================
+/* ================================
    PHONE
 ================================ */
 
-@media (max-width: 650px) {
+@media(max-width:650px) {
 
     nav {
         padding: 15px 18px;
@@ -1169,7 +1265,8 @@ footer span {
 
         background: #050b16;
 
-        border-bottom: 1px solid #00d9ff;
+        border-bottom:
+            1px solid #00d9ff;
 
         flex-direction: column;
     }
@@ -1198,8 +1295,12 @@ footer span {
         grid-template-columns: 1fr;
     }
 
+    .service-picture {
+        height: 200px;
+    }
+
     .technology-bar {
-        font-size: 0.8rem;
+        font-size: .8rem;
     }
 
     .contact-box {
@@ -1221,11 +1322,18 @@ footer span {
         bottom: 15px;
     }
 
+    .chat-notification {
+        right: 11px;
+        bottom: 68px;
+    }
+
     .chat-box {
         right: 15px;
-        bottom: 94px;
+        bottom: 100px;
 
-        width: calc(100% - 30px);
+        width:
+            calc(100% - 30px);
+
         max-height: 72vh;
     }
 
@@ -1233,7 +1341,8 @@ footer span {
         grid-template-columns: 1fr;
     }
 
-    .quick-questions .consultation-chat-button {
+    .quick-questions
+    .consultation-chat-button {
         grid-column: auto;
     }
 }
@@ -1241,11 +1350,9 @@ footer span {
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ===============================
+<!-- ================================
      NAVIGATION
 ================================ -->
 
@@ -1258,38 +1365,40 @@ JR <span>WEB &amp; IT SOLUTIONS</span>
 </a>
 
 <button
-class="menu-button"
-id="menuButton"
-type="button"
-aria-label="Open navigation menu">
+    class="menu-button"
+    id="menuButton"
+    type="button"
+    aria-label="Open navigation menu">
 ☰
 </button>
 
-<ul class="nav-links" id="navLinks">
+<ul
+    class="nav-links"
+    id="navLinks">
 
-<li>
-<a href="#home">Home</a>
-</li>
+    <li>
+        <a href="#home">Home</a>
+    </li>
 
-<li>
-<a href="#jermaine">Jermaine</a>
-</li>
+    <li>
+        <a href="#jermaine">Jermaine</a>
+    </li>
 
-<li>
-<a href="#about">About</a>
-</li>
+    <li>
+        <a href="#about">About</a>
+    </li>
 
-<li>
-<a href="#services">Services</a>
-</li>
+    <li>
+        <a href="#services">Services</a>
+    </li>
 
-<li>
-<a href="#skills">Skills</a>
-</li>
+    <li>
+        <a href="#skills">Skills</a>
+    </li>
 
-<li>
-<a href="#contact">Contact</a>
-</li>
+    <li>
+        <a href="#contact">Contact</a>
+    </li>
 
 </ul>
 
@@ -1297,18 +1406,17 @@ aria-label="Open navigation menu">
 
 </header>
 
-
 <main>
 
-
-<!-- ===============================
-     HERO
+<!-- ================================
+     HOME
 ================================ -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
 
 <div class="hero-container">
-
 
 <div class="hero-text">
 
@@ -1323,28 +1431,27 @@ Modern websites with an
 
 <p class="hero-description">
 
-JR Web &amp; IT Solutions helps individuals and
-small businesses build professional websites while
-providing dependable technology support, responsive
-design, and ongoing assistance.
+JR Web &amp; IT Solutions helps individuals
+and small businesses build professional
+websites while providing dependable
+technology support, responsive design,
+and ongoing assistance.
 
 </p>
-
 
 <div class="hero-buttons">
 
 <a
-href="#services"
-class="button primary-button">
+    href="#services"
+    class="button primary-button">
 
 View Our Services
 
 </a>
 
-
 <button
-type="button"
-class="button secondary-button open-contact-form">
+    type="button"
+    class="button secondary-button open-contact-form">
 
 Request a Consultation
 
@@ -1354,15 +1461,11 @@ Request a Consultation
 
 </div>
 
-
-<!-- FIRST PICTURE: maine.jpg -->
-
 <div class="hero-photo">
 
 <img
-src="maine.jpg"
-alt="Jermaine Robinson representing JR Web and IT Solutions">
-
+    src="maine.jpg"
+    alt="Jermaine Robinson representing JR Web and IT Solutions">
 
 <div class="owner-label">
 
@@ -1378,58 +1481,46 @@ Owner &amp; IT Specialist
 
 </div>
 
-
 </div>
 
 </section>
 
-
 <div class="technology-bar">
 
-HTML • CSS • JAVASCRIPT • SQL • GITHUB • NETWORKING •
-CYBERSECURITY • WINDOWS • LINUX
+HTML • CSS • JAVASCRIPT • SQL • GITHUB •
+NETWORKING • CYBERSECURITY • WINDOWS • LINUX
 
 </div>
 
-
-<!-- ===============================
+<!-- ================================
      JERMAINE
 ================================ -->
 
 <section
-class="jermaine-section"
-id="jermaine">
-
+    class="jermaine-section"
+    id="jermaine">
 
 <div class="container">
 
-
 <div class="jermaine-grid">
-
-
-<!-- SECOND PICTURE: maine1.jpg -->
 
 <div class="jermaine-image">
 
 <img
-src="maine1.jpg"
-alt="Jermaine Robinson working with technology">
+    src="maine1.jpg"
+    alt="Jermaine Robinson working with technology">
 
 </div>
 
-
 <div class="jermaine-text">
-
 
 <p class="small-heading">
 Business Leadership
 </p>
 
-
 <h2>
 Meet <span>Jermaine</span>
 </h2>
-
 
 <p class="jermaine-role">
 
@@ -1438,25 +1529,24 @@ JR Web &amp; IT Solutions
 
 </p>
 
-
 <p>
 
 Jermaine Robinson founded JR Web &amp; IT Solutions
 to help individuals and small businesses build
-professional websites and improve their use of technology.
+professional websites and improve their use of
+technology.
 
 </p>
-
 
 <p>
 
-JR Web &amp; IT Solutions combines website development,
-technical education, responsive design, database
-fundamentals, networking, cybersecurity awareness,
-GitHub publishing, and computer support.
+JR Web &amp; IT Solutions combines website
+development, technical education, responsive
+design, database fundamentals, networking,
+cybersecurity awareness, GitHub publishing,
+and computer support.
 
 </p>
-
 
 <div class="jermaine-features">
 
@@ -1478,9 +1568,7 @@ Technology Solutions
 
 </div>
 
-
 </div>
-
 
 </div>
 
@@ -1488,147 +1576,93 @@ Technology Solutions
 
 </section>
 
-
-<!-- ===============================
+<!-- ================================
      ABOUT
 ================================ -->
 
 <section
-class="about"
-id="about">
-
+    class="about"
+    id="about">
 
 <div class="container">
 
-
 <div class="about-grid">
-
 
 <div class="code-box">
 
-
 <div class="code-top">
-
 <div class="code-dot"></div>
-
 <div class="code-dot"></div>
-
 <div class="code-dot"></div>
-
 </div>
 
-
 <p>
-
-<span class="code-purple">
-const
-</span>
-
+<span class="code-purple">const</span>
 business =
-
-<span class="code-blue">
-{
-</span>
-
+<span class="code-blue">{</span>
 </p>
 
-
 <p>
-
 &nbsp;&nbsp;name:
-
 <span class="code-green">
 "JR Web & IT Solutions"
 </span>,
-
 </p>
 
-
 <p>
-
 &nbsp;&nbsp;founder:
-
 <span class="code-green">
 "Jermaine Robinson"
 </span>,
-
 </p>
 
-
 <p>
-
 &nbsp;&nbsp;owner:
-
 <span class="code-green">
 "Jermaine Robinson"
 </span>,
-
 </p>
 
-
 <p>
-
 &nbsp;&nbsp;mission:
-
 <span class="code-green">
 "Build. Solve. Improve."
 </span>,
-
 </p>
 
-
 <p>
-
 &nbsp;&nbsp;website:
-
 <span class="code-green">
 "jrwebitsolutions.com"
 </span>
-
 </p>
-
 
 <p>
-
-<span class="code-blue">
-};
-</span>
-
+<span class="code-blue">};</span>
 </p>
-
 
 </div>
 
-
 <div class="about-text">
-
 
 <p class="small-heading">
 About the Business
 </p>
 
-
 <h2>
-
 Real-world experience meets
-
-<span>
-technology.
-</span>
-
+<span>technology.</span>
 </h2>
-
 
 <p>
 
 JR Web &amp; IT Solutions was founded by
 Information Technology student Jermaine Robinson
 to help individuals and small businesses build
-professional websites and improve their use of
-technology.
+professional websites and improve their use
+of technology.
 
 </p>
-
 
 <p>
 
@@ -1639,35 +1673,27 @@ awareness, and computer support.
 
 </p>
 
-
 <div class="highlights">
-
 
 <div class="highlight">
 Responsive Websites
 </div>
 
-
 <div class="highlight">
 Technical Support
 </div>
-
 
 <div class="highlight">
 Database Fundamentals
 </div>
 
-
 <div class="highlight">
 Security Awareness
 </div>
 
-
 </div>
 
-
 </div>
-
 
 </div>
 
@@ -1675,49 +1701,39 @@ Security Awareness
 
 </section>
 
-
-<!-- ===============================
-     SERVICES
+<!-- ================================
+     SERVICES WITH 9 PICTURES
 ================================ -->
 
 <section
-class="services"
-id="services">
-
+    class="services"
+    id="services">
 
 <div class="container">
 
-
 <div class="section-heading">
-
 
 <p>
 What We Provide
 </p>
 
-
 <h2>
-
 Web and
-
-<span>
-IT Services
-</span>
-
+<span>IT Services</span>
 </h2>
 
-
 </div>
-
 
 <div class="service-grid">
 
+<!-- WEBSITE DESIGN -->
 
 <article class="service-card">
 
-<div class="service-icon">
-&lt;/&gt;
-</div>
+<img
+    src="website-design.png"
+    class="service-picture"
+    alt="Website Design">
 
 <h3>
 Website Design
@@ -1733,12 +1749,14 @@ organizations, and other projects.
 
 </article>
 
+<!-- MOBILE DESIGN -->
 
 <article class="service-card">
 
-<div class="service-icon">
-📱
-</div>
+<img
+    src="mobile-design.png"
+    class="service-picture"
+    alt="Mobile-Friendly Design">
 
 <h3>
 Mobile-Friendly Design
@@ -1746,19 +1764,22 @@ Mobile-Friendly Design
 
 <p>
 
-Responsive layouts designed to work properly on
-phones, tablets, laptops, and desktop computers.
+Responsive layouts designed to work properly
+on phones, tablets, laptops, and desktop
+computers.
 
 </p>
 
 </article>
 
+<!-- MAINTENANCE -->
 
 <article class="service-card">
 
-<div class="service-icon">
-⚙
-</div>
+<img
+    src="maintenance.png"
+    class="service-picture"
+    alt="Website Maintenance">
 
 <h3>
 Website Maintenance
@@ -1767,18 +1788,21 @@ Website Maintenance
 <p>
 
 Updates to pictures, text, pages, buttons,
-contact information, colors, menus, and content.
+contact information, colors, menus,
+and content.
 
 </p>
 
 </article>
 
+<!-- DATABASE -->
 
 <article class="service-card">
 
-<div class="service-icon">
-🗄
-</div>
+<img
+    src="database.png"
+    class="service-picture"
+    alt="Database Fundamentals">
 
 <h3>
 Database Fundamentals
@@ -1786,19 +1810,22 @@ Database Fundamentals
 
 <p>
 
-Basic SQL data entry, queries, updates, deletes,
-table relationships, and data organization.
+Basic SQL data entry, queries, updates,
+deletes, table relationships,
+and data organization.
 
 </p>
 
 </article>
 
+<!-- NETWORKING -->
 
 <article class="service-card">
 
-<div class="service-icon">
-🌐
-</div>
+<img
+    src="networking.png"
+    class="service-picture"
+    alt="Networking Support">
 
 <h3>
 Networking Support
@@ -1806,19 +1833,22 @@ Networking Support
 
 <p>
 
-Basic assistance with networks, IP addresses,
-DNS, DHCP, routers, switches, and connectivity.
+Basic assistance with networks,
+IP addresses, DNS, DHCP, routers,
+switches, and connectivity.
 
 </p>
 
 </article>
 
+<!-- CYBERSECURITY -->
 
 <article class="service-card">
 
-<div class="service-icon">
-🔒
-</div>
+<img
+    src="cybersecurity.png"
+    class="service-picture"
+    alt="Cybersecurity Awareness">
 
 <h3>
 Cybersecurity Awareness
@@ -1827,18 +1857,21 @@ Cybersecurity Awareness
 <p>
 
 Assistance with passwords, phishing awareness,
-secure browsing, updates, backups, and security.
+secure browsing, updates, backups,
+and security.
 
 </p>
 
 </article>
 
+<!-- COMPUTER SUPPORT -->
 
 <article class="service-card">
 
-<div class="service-icon">
-💻
-</div>
+<img
+    src="computer-support.png"
+    class="service-picture"
+    alt="Computer Support">
 
 <h3>
 Computer Support
@@ -1846,19 +1879,22 @@ Computer Support
 
 <p>
 
-Basic Windows support, software help, file
-organization, cleanup, and troubleshooting.
+Basic Windows support, software help,
+file organization, cleanup,
+and troubleshooting.
 
 </p>
 
 </article>
 
+<!-- WINDOWS / LINUX -->
 
 <article class="service-card">
 
-<div class="service-icon">
-⌨
-</div>
+<img
+    src="windows-linux.png"
+    class="service-picture"
+    alt="Windows and Linux">
 
 <h3>
 Windows and Linux
@@ -1866,19 +1902,22 @@ Windows and Linux
 
 <p>
 
-Experience with user accounts, permissions,
-commands, files, folders, and system settings.
+Experience with user accounts,
+permissions, commands, files,
+folders, and system settings.
 
 </p>
 
 </article>
 
+<!-- GITHUB -->
 
 <article class="service-card">
 
-<div class="service-icon">
-◆
-</div>
+<img
+    src="github.png"
+    class="service-picture"
+    alt="GitHub Publishing">
 
 <h3>
 GitHub Publishing
@@ -1886,213 +1925,140 @@ GitHub Publishing
 
 <p>
 
-Uploading code, managing repositories, connecting
-domains, and publishing with GitHub Pages.
+Uploading code, managing repositories,
+connecting domains, and publishing
+with GitHub Pages.
 
 </p>
 
 </article>
 
-
 </div>
 
 </div>
 
 </section>
 
-
-<!-- ===============================
+<!-- ================================
      SKILLS
 ================================ -->
 
 <section
-class="skills"
-id="skills">
-
+    class="skills"
+    id="skills">
 
 <div class="container">
 
-
 <div class="section-heading">
-
 
 <p>
 Technical Knowledge
 </p>
 
-
 <h2>
-
 Growing
-
-<span>
-IT Skills
-</span>
-
+<span>IT Skills</span>
 </h2>
 
-
 </div>
-
 
 <div class="skills-grid">
 
+<div class="skill-item">
+
+<div class="skill-title">
+<span>HTML &amp; CSS</span>
+<span>96%</span>
+</div>
+
+<div class="skill-bar">
+<div
+    class="skill-level"
+    style="width:96%;">
+</div>
+</div>
+
+</div>
 
 <div class="skill-item">
 
 <div class="skill-title">
-
-<span>
-HTML &amp; CSS
-</span>
-
-<span>
-96%
-</span>
-
+<span>Responsive Web Design</span>
+<span>95%</span>
 </div>
 
 <div class="skill-bar">
-
 <div
-class="skill-level"
-style="width: 96%;">
+    class="skill-level"
+    style="width:95%;">
+</div>
 </div>
 
 </div>
-
-</div>
-
 
 <div class="skill-item">
 
 <div class="skill-title">
-
-<span>
-Responsive Web Design
-</span>
-
-<span>
-95%
-</span>
-
+<span>JavaScript</span>
+<span>92%</span>
 </div>
 
 <div class="skill-bar">
-
 <div
-class="skill-level"
-style="width: 95%;">
+    class="skill-level"
+    style="width:92%;">
+</div>
 </div>
 
 </div>
-
-</div>
-
 
 <div class="skill-item">
 
 <div class="skill-title">
-
-<span>
-JavaScript
-</span>
-
-<span>
-92%
-</span>
-
+<span>GitHub &amp; GitHub Pages</span>
+<span>94%</span>
 </div>
 
 <div class="skill-bar">
-
 <div
-class="skill-level"
-style="width: 92%;">
+    class="skill-level"
+    style="width:94%;">
+</div>
 </div>
 
 </div>
-
-</div>
-
 
 <div class="skill-item">
 
 <div class="skill-title">
-
-<span>
-GitHub &amp; GitHub Pages
-</span>
-
-<span>
-94%
-</span>
-
+<span>SQL &amp; Databases</span>
+<span>93%</span>
 </div>
 
 <div class="skill-bar">
-
 <div
-class="skill-level"
-style="width: 94%;">
+    class="skill-level"
+    style="width:93%;">
+</div>
 </div>
 
 </div>
-
-</div>
-
 
 <div class="skill-item">
 
 <div class="skill-title">
-
-<span>
-SQL &amp; Databases
-</span>
-
-<span>
-93%
-</span>
-
+<span>Networking &amp; Security</span>
+<span>91%</span>
 </div>
 
 <div class="skill-bar">
-
 <div
-class="skill-level"
-style="width: 93%;">
+    class="skill-level"
+    style="width:91%;">
+</div>
 </div>
 
 </div>
-
-</div>
-
-
-<div class="skill-item">
-
-<div class="skill-title">
-
-<span>
-Networking &amp; Security
-</span>
-
-<span>
-91%
-</span>
-
-</div>
-
-<div class="skill-bar">
-
-<div
-class="skill-level"
-style="width: 91%;">
-</div>
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -2100,41 +2066,28 @@ style="width: 91%;">
 
 </section>
 
-
-<!-- ===============================
+<!-- ================================
      PROCESS
 ================================ -->
 
 <section class="process">
 
-
 <div class="container">
 
-
 <div class="section-heading">
-
 
 <p>
 Our Process
 </p>
 
-
 <h2>
-
 From Idea to
-
-<span>
-Finished Website
-</span>
-
+<span>Finished Website</span>
 </h2>
-
 
 </div>
 
-
 <div class="process-grid">
-
 
 <div class="process-card">
 
@@ -2148,13 +2101,13 @@ Plan
 
 <p>
 
-We discuss your business, services, goals,
-colors, pages, and preferred style.
+We discuss your business, services,
+goals, colors, pages,
+and preferred style.
 
 </p>
 
 </div>
-
 
 <div class="process-card">
 
@@ -2168,13 +2121,13 @@ Design
 
 <p>
 
-We create an organized design that represents
-your brand professionally.
+We create an organized design
+that represents your brand
+professionally.
 
 </p>
 
 </div>
-
 
 <div class="process-card">
 
@@ -2189,12 +2142,12 @@ Build
 <p>
 
 We build the website, add your information,
-connect the pages, and test the features.
+connect the pages, and test
+the features.
 
 </p>
 
 </div>
-
 
 <div class="process-card">
 
@@ -2208,13 +2161,12 @@ Launch
 
 <p>
 
-The finished website is published and tested
-across different devices.
+The finished website is published
+and tested across different devices.
 
 </p>
 
 </div>
-
 
 </div>
 
@@ -2222,89 +2174,65 @@ across different devices.
 
 </section>
 
-
-<!-- ===============================
+<!-- ================================
      CONTACT
 ================================ -->
 
 <section
-class="contact"
-id="contact">
-
+    class="contact"
+    id="contact">
 
 <div class="container">
 
-
 <div class="contact-box">
 
-
 <p class="small-heading">
-Let’s Build Something
+Let's Build Something
 </p>
 
-
 <h2>
-
 Ready to improve your
-
-<span>
-online presence?
-</span>
-
+<span>online presence?</span>
 </h2>
-
 
 <p>
 
-Contact JR Web &amp; IT Solutions to discuss your
-website, technology issue, or upcoming project.
+Contact JR Web &amp; IT Solutions
+to discuss your website,
+technology issue, or upcoming project.
 Initial consultations are free.
 
 </p>
 
-
 <div class="contact-details">
 
-
-<!-- NEW PHONE NUMBER -->
-
-<a href="tel:17573276978">
-
-📞 757-327-6978
-
+<a href="tel:17573670471">
+📞 757-367-0471
 </a>
-
 
 <a href="mailto:Jermainerobinson815@gmail.com">
-
 ✉ Jermainerobinson815@gmail.com
-
 </a>
-
 
 </div>
 
-
 <button
-type="button"
-class="button primary-button open-contact-form">
+    type="button"
+    class="button primary-button open-contact-form">
 
 Request a Free Consultation
 
 </button>
 
-
 </div>
 
 </div>
 
 </section>
 
-
 </main>
 
-
-<!-- ===============================
+<!-- ================================
      FOOTER
 ================================ -->
 
@@ -2313,7 +2241,6 @@ Request a Free Consultation
 <p>
 
 ©
-
 <span id="year"></span>
 
 <span>
@@ -2326,254 +2253,207 @@ Founded by Jermaine Robinson.
 
 </footer>
 
-
-<!-- ===============================
-     CONTACT FORM POPUP
+<!-- ================================
+     CONTACT MODAL
 ================================ -->
 
 <div
-class="contact-modal"
-id="contactModal"
-aria-hidden="true">
-
+    class="contact-modal"
+    id="contactModal"
+    aria-hidden="true">
 
 <div class="modal-content">
 
-
 <button
-type="button"
-class="close-modal"
-id="closeContactForm"
-aria-label="Close contact form">
-
+    type="button"
+    class="close-modal"
+    id="closeContactForm"
+    aria-label="Close contact form">
 ×
-
 </button>
-
 
 <p class="small-heading">
 Free Consultation
 </p>
 
-
 <h2>
 Tell Us About Your Project
 </h2>
 
-
 <p class="modal-description">
 
-Enter your information below, and Jermaine will contact you
+Enter your information below,
+and Jermaine will contact you
 to discuss your website or IT needs.
 
 </p>
 
-
 <form
-action="https://formspree.io/f/mjgnejgq"
-method="POST">
-
+    action="https://formspree.io/f/mjgnejgq"
+    method="POST">
 
 <label for="customerName">
 Full Name
 </label>
 
-
 <input
-type="text"
-id="customerName"
-name="name"
-placeholder="Enter your full name"
-required>
-
+    type="text"
+    id="customerName"
+    name="name"
+    placeholder="Enter your full name"
+    required>
 
 <label for="customerPhone">
 Phone Number
 </label>
 
-
 <input
-type="tel"
-id="customerPhone"
-name="phone"
-placeholder="Enter your phone number"
-required>
-
+    type="tel"
+    id="customerPhone"
+    name="phone"
+    placeholder="Enter your phone number"
+    required>
 
 <label for="customerEmail">
 Email Address
 </label>
 
-
 <input
-type="email"
-id="customerEmail"
-name="email"
-placeholder="Enter your email address"
-required>
-
+    type="email"
+    id="customerEmail"
+    name="email"
+    placeholder="Enter your email address"
+    required>
 
 <label for="businessName">
 Business Name
 </label>
 
-
 <input
-type="text"
-id="businessName"
-name="business"
-placeholder="Enter your business name">
-
+    type="text"
+    id="businessName"
+    name="business"
+    placeholder="Enter your business name">
 
 <label for="projectType">
 What Do You Need?
 </label>
 
-
 <select
-id="projectType"
-name="project_type"
-required>
-
+    id="projectType"
+    name="project_type"
+    required>
 
 <option value="">
 Choose a service
 </option>
 
-
 <option value="New business website">
 New Business Website
 </option>
-
 
 <option value="Personal website">
 Personal Website
 </option>
 
-
 <option value="Website redesign">
 Website Redesign
 </option>
-
 
 <option value="Website updates">
 Website Updates
 </option>
 
-
 <option value="Computer support">
 Computer Support
 </option>
-
 
 <option value="Networking support">
 Networking Support
 </option>
 
-
 <option value="General IT support">
 General IT Support
 </option>
-
 
 <option value="Other">
 Other
 </option>
 
-
 </select>
-
 
 <label for="projectMessage">
 Tell Us About Your Project
 </label>
 
-
 <textarea
-id="projectMessage"
-name="message"
-rows="6"
-placeholder="Describe the website or IT help you need"
-required></textarea>
-
+    id="projectMessage"
+    name="message"
+    rows="6"
+    placeholder="Describe the website or IT help you need"
+    required></textarea>
 
 <input
-type="hidden"
-name="_subject"
-value="New JR Web and IT Consultation Request">
-
+    type="hidden"
+    name="_subject"
+    value="New JR Web and IT Consultation Request">
 
 <button
-type="submit"
-class="button primary-button submit-request">
+    type="submit"
+    class="button primary-button submit-request">
 
 Send My Request
 
 </button>
 
-
 </form>
 
-
 </div>
 
 </div>
 
-
-<!-- ===============================
-     CHAT BUTTON
+<!-- ================================
+     JERMAINE CHAT
 ================================ -->
 
 <button
-class="chat-launcher"
-id="chatLauncher"
-type="button"
-aria-label="Open JR Web and IT Solutions chat">
+    class="chat-launcher"
+    id="chatLauncher"
+    type="button"
+    aria-label="Open JR Web and IT Solutions chat">
 
-💬
-
-
-<span
-class="chat-notification"
-id="chatNotification">
-
-1
-
-</span>
-
+<img
+    src="chat-pic.jpg"
+    alt="Jermaine"
+    class="launcher-picture">
 
 </button>
 
-
-<!-- ===============================
-     CHAT WINDOW
-================================ -->
+<span
+    class="chat-notification"
+    id="chatNotification">
+1
+</span>
 
 <div
-class="chat-box"
-id="chatBox"
-aria-hidden="true">
-
+    class="chat-box"
+    id="chatBox"
+    aria-hidden="true">
 
 <div class="chat-header">
 
-
 <div class="chat-profile">
 
-
 <img
-src="maine.jpg"
-alt="Jermaine Robinson"
-class="chat-avatar">
-
+    src="chat-pic.jpg"
+    alt="Jermaine Robinson"
+    class="chat-avatar">
 
 <div>
-
 
 <strong>
 Jermaine
 </strong>
-
 
 <span class="chat-status">
 
@@ -2583,26 +2463,19 @@ JR Web &amp; IT Solutions
 
 </span>
 
-
 </div>
 
-
 </div>
-
 
 <button
-type="button"
-class="chat-header-close"
-id="closeChat"
-aria-label="Close chat">
-
+    type="button"
+    class="chat-header-close"
+    id="closeChat"
+    aria-label="Close chat">
 ×
-
 </button>
 
-
 </div>
-
 
 <div class="chat-disclosure">
 
@@ -2611,227 +2484,200 @@ Use the consultation form to contact Jermaine directly.
 
 </div>
 
-
 <div
-class="chat-messages"
-id="chatMessages">
-
+    class="chat-messages"
+    id="chatMessages">
 
 <div class="message jermaine-message">
 
 Welcome to JR Web &amp; IT Solutions.
-Choose a question below to learn more about our website
-and IT services.
+Choose a question below to learn more
+about our website and IT services.
 
 </div>
 
-
 </div>
-
 
 <div class="quick-questions">
 
-
 <button
-type="button"
-data-question="What kind of websites do you build?"
-data-answer="JR Web & IT Solutions builds professional, mobile-friendly websites for small businesses, personal brands, restaurants, portfolios, organizations, and other projects.">
+    type="button"
+    data-question="What kind of websites do you build?"
+    data-answer="JR Web & IT Solutions builds professional, mobile-friendly websites for small businesses, personal brands, restaurants, portfolios, organizations, and other projects.">
 
 Website services
 
 </button>
 
-
 <button
-type="button"
-data-question="How much does a website cost?"
-data-answer="Pricing depends on the number of pages, features, design, and content needed. Your consultation is free, and Jermaine can provide a personalized estimate after discussing your project.">
+    type="button"
+    data-question="How much does a website cost?"
+    data-answer="Pricing depends on the number of pages, features, design, and content needed. Your consultation is free, and Jermaine can provide a personalized estimate after discussing your project.">
 
 Website pricing
 
 </button>
 
-
 <button
-type="button"
-data-question="Do you offer payment plans?"
-data-answer="Yes, payment plans are available depending on the project. Contact Jermaine to discuss your needs, timeline, budget, and available payment arrangements. The consultation is free.">
+    type="button"
+    data-question="Do you offer payment plans?"
+    data-answer="Payment plans may be available depending on the project. Contact Jermaine to discuss your needs, timeline, budget, and available payment arrangements.">
 
 Payment plans
 
 </button>
 
-
 <button
-type="button"
-data-question="How long does a website take?"
-data-answer="A basic website may take several days, while a larger project may take longer. The timeline depends on the number of pages, features, and how quickly the project information is provided.">
+    type="button"
+    data-question="How long does a website take?"
+    data-answer="A basic website may take several days, while a larger project may take longer. The timeline depends on the number of pages, features, and how quickly the project information is provided.">
 
 Completion time
 
 </button>
 
-
 <button
-type="button"
-data-question="Can you update an existing website?"
-data-answer="Yes. JR Web & IT Solutions can update pictures, text, contact details, colors, buttons, pages, navigation menus, and other website content.">
+    type="button"
+    data-question="Can you update an existing website?"
+    data-answer="Yes. JR Web & IT Solutions can update pictures, text, contact details, colors, buttons, pages, navigation menus, and other website content.">
 
 Website updates
 
 </button>
 
-
 <button
-type="button"
-data-question="Will my website work on phones?"
-data-answer="Yes. Websites are designed to work properly on smartphones, tablets, laptops, and desktop computers.">
+    type="button"
+    data-question="Will my website work on phones?"
+    data-answer="Yes. Websites are designed to work properly on smartphones, tablets, laptops, and desktop computers.">
 
 Mobile-friendly design
 
 </button>
 
-
 <button
-type="button"
-data-question="What IT help do you provide?"
-data-answer="JR Web & IT Solutions provides basic computer support, software help, file organization, browser assistance, GitHub support, networking assistance, and general technology troubleshooting.">
+    type="button"
+    data-question="What IT help do you provide?"
+    data-answer="JR Web & IT Solutions provides basic computer support, software help, file organization, browser assistance, GitHub support, networking assistance, and general technology troubleshooting.">
 
 IT support
 
 </button>
 
-
 <button
-type="button"
-data-question="Can you help publish my website?"
-data-answer="Yes. JR Web & IT Solutions can organize your files, publish your website with GitHub Pages, and help connect a professional custom domain such as a .com address.">
+    type="button"
+    data-question="Can you help publish my website?"
+    data-answer="Yes. JR Web & IT Solutions can organize your files, publish your website with GitHub Pages, and help connect a professional custom domain such as a .com address.">
 
 Domain and publishing
 
 </button>
 
-
 <button
-type="button"
-data-question="What information do you need from me?"
-data-answer="Please provide your business name, services, contact information, preferred colors, pictures, logo, page ideas, and any written content you want included.">
+    type="button"
+    data-question="What information do you need from me?"
+    data-answer="Please provide your business name, services, contact information, preferred colors, pictures, logo, page ideas, and any written content you want included.">
 
 What you need
 
 </button>
 
-
 <button
-type="button"
-data-question="Do you provide ongoing support?"
-data-answer="Yes. Ongoing support may include website updates, content changes, basic maintenance, and troubleshooting after your website launches.">
+    type="button"
+    data-question="Do you provide ongoing support?"
+    data-answer="Ongoing support may include website updates, content changes, basic maintenance, and troubleshooting after your website launches.">
 
 Ongoing support
 
 </button>
 
-
 <button
-type="button"
-data-question="Do you work outside Virginia?"
-data-answer="Yes. Website design and many IT services can be provided remotely, depending on the type of assistance needed.">
+    type="button"
+    data-question="Do you work outside Virginia?"
+    data-answer="Yes. Website design and many IT services can be provided remotely, depending on the type of assistance needed.">
 
 Service area
 
 </button>
 
-
-<!-- NEW PHONE NUMBER IN CHAT -->
-
 <button
-type="button"
-data-question="How can I contact Jermaine?"
-data-answer="You can call 757-327-6978, email Jermainerobinson815@gmail.com, or use the free consultation form on this website.">
+    type="button"
+    data-question="How can I contact Jermaine?"
+    data-answer="Use the phone number, email address, or free consultation form on this website to contact Jermaine directly.">
 
 Talk to Jermaine
 
 </button>
 
-
 <button
-type="button"
-class="consultation-chat-button"
-id="chatConsultationButton">
+    type="button"
+    class="consultation-chat-button"
+    id="chatConsultationButton">
 
 Request a Free Consultation
 
 </button>
 
+</div>
 
 </div>
 
-
-</div>
-
+<!-- ================================
+     JAVASCRIPT
+================================ -->
 
 <script>
 
-/* ===============================
-   MOBILE MENU
-================================ */
+/* MOBILE MENU */
 
 const menuButton =
-    document.getElementById("menuButton");
+document.getElementById("menuButton");
 
 const navLinks =
-    document.getElementById("navLinks");
-
+document.getElementById("navLinks");
 
 menuButton.addEventListener(
-    "click",
-    function () {
+"click",
+function() {
 
-        navLinks.classList.toggle("active");
+    navLinks.classList.toggle("active");
 
-    }
+}
 );
 
-
 document
-    .querySelectorAll(".nav-links a")
-    .forEach(function (link) {
+.querySelectorAll(".nav-links a")
+.forEach(function(link) {
 
-        link.addEventListener(
-            "click",
-            function () {
+    link.addEventListener(
+    "click",
+    function() {
 
-                navLinks.classList.remove("active");
+        navLinks.classList.remove("active");
 
-            }
-        );
+    }
+    );
 
-    });
+});
 
+/* YEAR */
 
 document.getElementById("year").textContent =
-    new Date().getFullYear();
+new Date().getFullYear();
 
-
-/* ===============================
-   CONTACT FORM
-================================ */
+/* CONTACT FORM */
 
 const contactModal =
-    document.getElementById("contactModal");
-
+document.getElementById("contactModal");
 
 const openContactButtons =
-    document.querySelectorAll(
-        ".open-contact-form"
-    );
-
+document.querySelectorAll(
+".open-contact-form"
+);
 
 const closeContactForm =
-    document.getElementById(
-        "closeContactForm"
-    );
-
+document.getElementById(
+"closeContactForm"
+);
 
 function openModal() {
 
@@ -2848,12 +2694,9 @@ function openModal() {
 
 }
 
-
 function closeModal() {
 
-    contactModal.classList.remove(
-        "active"
-    );
+    contactModal.classList.remove("active");
 
     contactModal.setAttribute(
         "aria-hidden",
@@ -2866,87 +2709,71 @@ function closeModal() {
 
 }
 
-
 openContactButtons.forEach(
-    function (button) {
+function(button) {
 
-        button.addEventListener(
-            "click",
-            openModal
-        );
+    button.addEventListener(
+        "click",
+        openModal
+    );
 
-    }
+}
 );
-
 
 closeContactForm.addEventListener(
     "click",
     closeModal
 );
 
-
 contactModal.addEventListener(
-    "click",
-    function (event) {
+"click",
+function(event) {
 
-        if (event.target === contactModal) {
-
-            closeModal();
-
-        }
-
+    if(event.target === contactModal) {
+        closeModal();
     }
+
+}
 );
 
-
-/* ===============================
-   CHAT
-================================ */
+/* CHAT */
 
 const chatLauncher =
-    document.getElementById(
-        "chatLauncher"
-    );
-
+document.getElementById(
+"chatLauncher"
+);
 
 const chatNotification =
-    document.getElementById(
-        "chatNotification"
-    );
-
+document.getElementById(
+"chatNotification"
+);
 
 const chatBox =
-    document.getElementById(
-        "chatBox"
-    );
-
+document.getElementById(
+"chatBox"
+);
 
 const closeChat =
-    document.getElementById(
-        "closeChat"
-    );
-
+document.getElementById(
+"closeChat"
+);
 
 const chatMessages =
-    document.getElementById(
-        "chatMessages"
-    );
-
+document.getElementById(
+"chatMessages"
+);
 
 const quickQuestionButtons =
-    document.querySelectorAll(
-        ".quick-questions button[data-answer]"
-    );
-
+document.querySelectorAll(
+".quick-questions button[data-answer]"
+);
 
 const chatConsultationButton =
-    document.getElementById(
-        "chatConsultationButton"
-    );
-
+document.getElementById(
+"chatConsultationButton"
+);
 
 let chatIsResponding = false;
-
 
 function openChat() {
 
@@ -2964,7 +2791,6 @@ function openChat() {
 
 }
 
-
 function closeWebsiteChat() {
 
     chatBox.classList.remove(
@@ -2978,9 +2804,8 @@ function closeWebsiteChat() {
 
 }
 
-
 function addChatMessage(
-    text,
+    messageText,
     className
 ) {
 
@@ -2989,28 +2814,22 @@ function addChatMessage(
             "div"
         );
 
-
     message.className =
         "message " + className;
 
-
     message.textContent =
-        text;
-
+        messageText;
 
     chatMessages.appendChild(
         message
     );
 
-
     chatMessages.scrollTop =
         chatMessages.scrollHeight;
-
 
     return message;
 
 }
-
 
 function showTypingIndicator() {
 
@@ -3019,214 +2838,175 @@ function showTypingIndicator() {
             "div"
         );
 
-
     typingMessage.className =
         "message jermaine-message typing-message";
 
-
     typingMessage.innerHTML = `
-
         <span class="typing-dot"></span>
-
         <span class="typing-dot"></span>
-
         <span class="typing-dot"></span>
-
     `;
-
 
     chatMessages.appendChild(
         typingMessage
     );
 
-
     chatMessages.scrollTop =
         chatMessages.scrollHeight;
-
 
     return typingMessage;
 
 }
 
-
 chatLauncher.addEventListener(
-    "click",
-    function () {
+"click",
+function() {
 
-        if (
-            chatBox.classList.contains(
-                "active"
-            )
-        ) {
+    if(
+        chatBox.classList.contains(
+            "active"
+        )
+    ) {
 
-            closeWebsiteChat();
+        closeWebsiteChat();
 
-        } else {
+    } else {
 
-            openChat();
-
-        }
+        openChat();
 
     }
-);
 
+}
+);
 
 closeChat.addEventListener(
     "click",
     closeWebsiteChat
 );
 
-
 quickQuestionButtons.forEach(
-    function (button) {
+function(button) {
 
-        button.addEventListener(
-            "click",
-            function () {
+    button.addEventListener(
+    "click",
+    function() {
 
+        if(chatIsResponding) {
+            return;
+        }
 
-                if (chatIsResponding) {
+        chatIsResponding = true;
 
-                    return;
+        const question =
+            button.dataset.question;
 
-                }
+        const answer =
+            button.dataset.answer;
 
+        addChatMessage(
+            question,
+            "customer-message"
+        );
 
-                chatIsResponding =
-                    true;
+        const typingIndicator =
+            showTypingIndicator();
 
+        window.setTimeout(
+        function() {
 
-                const question =
-                    button.dataset.question;
+            typingIndicator.remove();
 
+            addChatMessage(
+                answer,
+                "jermaine-message"
+            );
 
-                const answer =
-                    button.dataset.answer;
+            chatIsResponding = false;
 
-
-                addChatMessage(
-                    question,
-                    "customer-message"
-                );
-
-
-                const typingIndicator =
-                    showTypingIndicator();
-
-
-                window.setTimeout(
-                    function () {
-
-
-                        typingIndicator.remove();
-
-
-                        addChatMessage(
-                            answer,
-                            "jermaine-message"
-                        );
-
-
-                        chatIsResponding =
-                            false;
-
-
-                    },
-                    900
-                );
-
-
-            }
+        },
+        900
         );
 
     }
+    );
+
+}
 );
 
-
 chatConsultationButton.addEventListener(
-    "click",
-    function () {
+"click",
+function() {
+
+    closeWebsiteChat();
+
+    openModal();
+
+}
+);
+
+/* ESCAPE KEY */
+
+document.addEventListener(
+"keydown",
+function(event) {
+
+    if(event.key === "Escape") {
+
+        closeModal();
 
         closeWebsiteChat();
 
-        openModal();
-
     }
+
+}
 );
 
-
-document.addEventListener(
-    "keydown",
-    function (event) {
-
-        if (event.key === "Escape") {
-
-            closeModal();
-
-            closeWebsiteChat();
-
-        }
-
-    }
-);
-
-
-/* ===============================
-   OPEN CHAT AUTOMATICALLY ONCE
-================================ */
+/* SHOW CHAT AUTOMATICALLY ONCE */
 
 window.setTimeout(
-    function () {
+function() {
 
-        if (
-            !sessionStorage.getItem(
-                "jrChatShown"
-            )
-        ) {
+    if(
+        !sessionStorage.getItem(
+            "jrChatShown"
+        )
+    ) {
 
-            openChat();
+        openChat();
 
+        sessionStorage.setItem(
+            "jrChatShown",
+            "yes"
+        );
 
-            sessionStorage.setItem(
-                "jrChatShown",
-                "yes"
-            );
+    }
 
-        }
-
-    },
-    3500
+},
+3500
 );
 
 </script>
 
+<!-- SERVICE WORKER -->
 
 <script>
 
-/* ===============================
-   SERVICE WORKER
-================================ */
-
-if ("serviceWorker" in navigator) {
+if("serviceWorker" in navigator) {
 
     window.addEventListener(
-        "load",
-        function () {
+    "load",
+    function() {
 
-            navigator
-                .serviceWorker
-                .register(
-                    "service-worker.js"
-                );
+        navigator.serviceWorker.register(
+            "service-worker.js"
+        );
 
-        }
+    }
     );
 
 }
 
 </script>
 
-
 </body>
-
 </html>
