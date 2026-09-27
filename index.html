@@ -457,85 +457,6 @@ section {
 
 
 /* =========================
-   JR CLICKABLE LOGO + MUSIC
-========================= */
-
-.music-section {
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(0,217,255,.15),
-            transparent 50%
-        ),
-        #050b14;
-}
-
-.music-intro {
-    color: #b8cad8;
-    margin-bottom: 25px;
-}
-
-.jr-logo-button {
-    width: min(390px, 85vw);
-    aspect-ratio: 1 / 1;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    padding: 0;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-    background: #061321;
-    border: 3px solid #00d9ff;
-
-    box-shadow:
-        0 0 15px #00d9ff,
-        0 0 35px rgba(0,217,255,.55),
-        0 0 70px rgba(0,217,255,.25);
-
-    transition: .3s;
-}
-
-.jr-logo-button:hover {
-    transform: scale(1.04);
-
-    box-shadow:
-        0 0 25px #00d9ff,
-        0 0 55px rgba(0,217,255,.7);
-}
-
-.jr-logo-button img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.youtube-player {
-    display: none;
-    width: min(800px, 90vw);
-    margin: 35px auto 0;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 2px solid #00d9ff;
-    box-shadow: 0 0 25px rgba(0,217,255,.4);
-}
-
-.youtube-player.open {
-    display: block;
-}
-
-.youtube-player iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    display: block;
-    border: 0;
-}
-
-
-/* =========================
    CONTACT
 ========================= */
 
@@ -815,10 +736,13 @@ footer {
 </style>
 </head>
 
+
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -831,15 +755,10 @@ JR <span>WEB & I.T. SOLUTIONS</span>
 <ul class="nav-links">
 
 <li><a href="#home">Home</a></li>
-
 <li><a href="#jermaine">Jermaine</a></li>
-
 <li><a href="#about">About</a></li>
-
 <li><a href="#services">Services</a></li>
-
 <li><a href="#skills">Skills</a></li>
-
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -849,7 +768,9 @@ JR <span>WEB & I.T. SOLUTIONS</span>
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -867,26 +788,20 @@ Modern websites with an
 </h1>
 
 <p class="hero-description">
-
 JR Web &amp; IT Solutions provides
 professional website design, responsive
 development, website maintenance,
 computer support, and practical
 technology solutions.
-
 </p>
 
 <div class="hero-buttons">
 
-<a
-href="#services"
-class="button primary-button">
+<a href="#services" class="button primary-button">
 View Services
 </a>
 
-<a
-href="#contact"
-class="button secondary-button">
+<a href="#contact" class="button secondary-button">
 Request Help
 </a>
 
@@ -909,7 +824,9 @@ class="hero-image">
 </section>
 
 
-<!-- JERMAINE -->
+<!-- =========================
+     JERMAINE
+========================= -->
 
 <section id="jermaine">
 
@@ -966,9 +883,7 @@ technology solutions that are easy for
 clients to understand and use.
 </p>
 
-<a
-href="#contact"
-class="button primary-button">
+<a href="#contact" class="button primary-button">
 Work With Me
 </a>
 
@@ -981,11 +896,11 @@ Work With Me
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section
-class="about"
-id="about">
+<section class="about" id="about">
 
 <div class="container">
 
@@ -1003,7 +918,6 @@ JR Web &amp; <span>IT Solutions</span>
 <div class="about-box">
 
 <p>
-
 JR Web &amp; IT Solutions focuses on
 professional website design and practical
 technology support. Whether you need a
@@ -1013,7 +927,6 @@ basic computer assistance, or support
 understanding technology, the goal is
 to provide a clear and professional
 solution.
-
 </p>
 
 </div>
@@ -1023,11 +936,11 @@ solution.
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
-<section
-class="services"
-id="services">
+<section class="services" id="services">
 
 <div class="container">
 
@@ -1214,11 +1127,11 @@ with GitHub Pages.
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
-<section
-class="skills"
-id="skills">
+<section class="skills" id="skills">
 
 <div class="container">
 
@@ -1327,7 +1240,9 @@ Growing My <span>IT Skills</span>
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESS
+========================= -->
 
 <section>
 
@@ -1396,65 +1311,10 @@ when necessary.
 
 
 <!-- =========================
-     JR LOGO / MUSIC
+     CONTACT
 ========================= -->
 
-<section class="music-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<p>JR Web & IT Solutions</p>
-
-<h2>
-Build • Solve • <span>Improve</span>
-</h2>
-
-</div>
-
-<p class="music-intro">
-Click the JR logo to play the music.
-</p>
-
-
-<button
-class="jr-logo-button"
-id="jrLogoButton"
-type="button"
-aria-label="Click JR logo to play music">
-
-<img
-src="jr-logo.png"
-alt="JR Web and IT Solutions Logo">
-
-</button>
-
-
-<div
-class="youtube-player"
-id="youtubePlayer">
-
-<iframe
-id="musicFrame"
-src=""
-title="JR Web and IT Solutions Music"
-allow="autoplay; encrypted-media; picture-in-picture"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section
-class="contact"
-id="contact">
+<section class="contact" id="contact">
 
 <div class="container">
 
@@ -1485,9 +1345,11 @@ Send a request.
 
 <p>
 <strong>Phone:</strong><br>
+
 <a href="tel:7573670471">
 757-367-0471
 </a>
+
 </p>
 
 <p>
@@ -1571,7 +1433,9 @@ Send Request
 </section>
 
 
-<!-- CHAT -->
+<!-- =========================
+     CHAT
+========================= -->
 
 <button
 class="chat-launcher"
@@ -1673,7 +1537,9 @@ id="chatAnswer">
 </div>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1688,11 +1554,16 @@ Build • Solve • Improve
 </footer>
 
 
-<!-- JAVASCRIPT -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-/* CHAT */
+
+/* =========================
+   CHAT
+========================= */
 
 const chatLauncher =
 document.getElementById("chatLauncher");
@@ -1737,7 +1608,9 @@ chatOptions.forEach(
 );
 
 
-/* OPEN CHAT ONCE PER SESSION */
+/* =========================
+   OPEN CHAT ONCE PER SESSION
+========================= */
 
 if (
     !sessionStorage.getItem(
@@ -1763,51 +1636,60 @@ if (
 
 
 /* =========================
-   CLICK JR LOGO TO PLAY MUSIC
+   START MUSIC ON FIRST CLICK
 ========================= */
-
-const jrLogoButton =
-document.getElementById("jrLogoButton");
-
-const youtubePlayer =
-document.getElementById("youtubePlayer");
-
-const musicFrame =
-document.getElementById("musicFrame");
 
 let musicStarted = false;
 
+function startJRMusic() {
 
-jrLogoButton.addEventListener(
+    if (musicStarted) {
+        return;
+    }
+
+    musicStarted = true;
+
+    const musicPlayer =
+        document.createElement("iframe");
+
+    musicPlayer.src =
+        "https://www.youtube.com/embed/ePL7jvYKuCM?autoplay=1&playsinline=1";
+
+    musicPlayer.allow =
+        "autoplay; encrypted-media";
+
+    musicPlayer.setAttribute(
+        "allowfullscreen",
+        ""
+    );
+
+    musicPlayer.style.position = "fixed";
+    musicPlayer.style.width = "1px";
+    musicPlayer.style.height = "1px";
+    musicPlayer.style.opacity = "0";
+    musicPlayer.style.pointerEvents = "none";
+    musicPlayer.style.left = "0";
+    musicPlayer.style.bottom = "0";
+    musicPlayer.style.border = "0";
+
+    document.body.appendChild(
+        musicPlayer
+    );
+
+}
+
+document.addEventListener(
     "click",
-    function () {
-
-        if (!musicStarted) {
-
-            musicFrame.src =
-                "https://www.youtube.com/embed/ePL7jvYKuCM?autoplay=1&playsinline=1";
-
-            youtubePlayer.classList.add(
-                "open"
-            );
-
-            musicStarted = true;
-
-        }
-
-        else {
-
-            youtubePlayer.classList.toggle(
-                "open"
-            );
-
-        }
-
+    startJRMusic,
+    {
+        once: true
     }
 );
 
 
-/* SERVICE WORKER */
+/* =========================
+   SERVICE WORKER
+========================= */
 
 if (
     "serviceWorker" in navigator
