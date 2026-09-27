@@ -37,6 +37,10 @@ body {
     line-height: 1.6;
 }
 
+body.entrance-open {
+    overflow: hidden;
+}
+
 img {
     max-width: 100%;
 }
@@ -48,6 +52,119 @@ img {
 
 
 /* =========================
+   JR ENTRANCE SCREEN
+========================= */
+
+#jrEntrance {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,217,255,.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #07111f,
+            #02060b
+        );
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+#jrEntrance.entrance-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.entrance-content {
+    width: min(520px, 90%);
+    text-align: center;
+}
+
+.entrance-title {
+    color: #00d9ff;
+    font-size: .95rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+#enterWebsite {
+    display: block;
+    width: min(390px, 82vw);
+    margin: auto;
+
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#enterWebsite img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid #00d9ff;
+
+    box-shadow:
+        0 0 15px #00d9ff,
+        0 0 40px rgba(0,217,255,.65),
+        0 0 90px rgba(0,217,255,.30);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+#enterWebsite:hover img,
+#enterWebsite:active img {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 25px #00d9ff,
+        0 0 60px rgba(0,217,255,.85),
+        0 0 110px rgba(0,217,255,.40);
+}
+
+.enter-text {
+    display: block;
+    margin-top: 24px;
+
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 12px rgba(0,217,255,.9);
+}
+
+.enter-subtext {
+    margin-top: 10px;
+    color: #91aabd;
+    font-size: .9rem;
+}
+
+
+/* =========================
    HEADER
 ========================= */
 
@@ -55,17 +172,22 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: rgba(5, 11, 20, .95);
+
     border-bottom: 1px solid #17334d;
+
     backdrop-filter: blur(12px);
 }
 
 .navbar {
     width: min(1200px, 92%);
     margin: auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     min-height: 75px;
 }
 
@@ -102,14 +224,16 @@ header {
 
 .hero {
     min-height: 88vh;
+
     display: flex;
     align-items: center;
+
     padding: 80px 5%;
 
     background:
         radial-gradient(
             circle at 70% 35%,
-            rgba(0, 217, 255, .15),
+            rgba(0,217,255,.15),
             transparent 35%
         ),
         linear-gradient(
@@ -122,9 +246,11 @@ header {
 .hero-inner {
     width: min(1150px, 100%);
     margin: auto;
+
     display: grid;
     grid-template-columns: 1.1fr .9fr;
     gap: 60px;
+
     align-items: center;
 }
 
@@ -137,18 +263,22 @@ header {
 
 .hero h1 {
     margin: 10px 0 20px;
+
     font-size: clamp(2.8rem, 6vw, 5.2rem);
     line-height: 1;
 }
 
 .hero h1 span {
     color: #00d9ff;
-    text-shadow: 0 0 18px rgba(0,217,255,.6);
+
+    text-shadow:
+        0 0 18px rgba(0,217,255,.6);
 }
 
 .hero-description {
     color: #c7d7e5;
     font-size: 1.08rem;
+
     max-width: 650px;
     margin-bottom: 28px;
 }
@@ -161,22 +291,30 @@ header {
 
 .button {
     display: inline-block;
+
     padding: 13px 24px;
+
     border-radius: 30px;
+
     text-decoration: none;
     font-weight: 900;
+
     transition: .25s;
 }
 
 .primary-button {
     color: #001018;
     background: #00d9ff;
-    box-shadow: 0 0 18px rgba(0,217,255,.45);
+
+    box-shadow:
+        0 0 18px rgba(0,217,255,.45);
 }
 
 .secondary-button {
     color: #ffffff;
+
     border: 1px solid #00d9ff;
+
     background: transparent;
 }
 
@@ -187,9 +325,12 @@ header {
 .hero-image {
     width: 100%;
     max-width: 430px;
+
     display: block;
     margin: auto;
+
     border-radius: 24px;
+
     border: 2px solid #00d9ff;
 
     box-shadow:
@@ -199,7 +340,7 @@ header {
 
 
 /* =========================
-   GENERAL
+   GENERAL SECTIONS
 ========================= */
 
 section {
@@ -213,9 +354,12 @@ section {
 
 .section-heading > p {
     color: #00d9ff;
+
     font-weight: 900;
+
     text-transform: uppercase;
     letter-spacing: 2px;
+
     margin-bottom: 6px;
 }
 
@@ -234,16 +378,23 @@ section {
 
 .jermaine-grid {
     display: grid;
+
     grid-template-columns: .8fr 1.2fr;
+
     align-items: center;
+
     gap: 55px;
 }
 
 .jermaine-picture {
     width: 100%;
+
     border-radius: 22px;
+
     border: 2px solid #00d9ff;
-    box-shadow: 0 0 25px rgba(0,217,255,.4);
+
+    box-shadow:
+        0 0 25px rgba(0,217,255,.4);
 }
 
 .jermaine-content h2 {
@@ -271,10 +422,15 @@ section {
 
 .about-box {
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
+
     padding: 40px;
+
     border: 1px solid #17334d;
+
     border-radius: 20px;
 
     background:
@@ -301,7 +457,10 @@ section {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 25px;
 }
 
@@ -316,8 +475,11 @@ section {
         );
 
     border: 1px solid #17334d;
+
     border-radius: 15px;
+
     overflow: hidden;
+
     cursor: pointer;
 
     transition:
@@ -329,11 +491,16 @@ section {
 .service-picture {
     width: 100%;
     height: 190px;
+
     object-fit: cover;
     object-position: center;
+
     border-radius: 12px;
+
     margin-bottom: 20px;
-    border: 1px solid rgba(0,217,255,.45);
+
+    border:
+        1px solid rgba(0,217,255,.45);
 
     transition:
         transform .35s ease,
@@ -351,7 +518,10 @@ section {
 }
 
 .service-card:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
     border-color: #00d9ff;
 
     box-shadow:
@@ -368,15 +538,6 @@ section {
         0 0 28px rgba(0,217,255,.7);
 
     filter: brightness(1.12);
-}
-
-.service-card:active {
-    transform: scale(.98);
-    border-color: #00d9ff;
-
-    box-shadow:
-        0 0 15px #00d9ff,
-        0 0 35px rgba(0,217,255,.65);
 }
 
 
@@ -400,15 +561,20 @@ section {
 .skill-info {
     display: flex;
     justify-content: space-between;
+
     margin-bottom: 8px;
+
     font-weight: 700;
 }
 
 .skill-track {
     width: 100%;
     height: 11px;
+
     background: #0e2135;
+
     border-radius: 20px;
+
     overflow: hidden;
 }
 
@@ -422,7 +588,9 @@ section {
             #00d9ff
         );
 
-    box-shadow: 0 0 12px #00d9ff;
+    box-shadow:
+        0 0 12px #00d9ff;
+
     border-radius: 20px;
 }
 
@@ -433,21 +601,29 @@ section {
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 25px;
 }
 
 .process-card {
     padding: 30px;
+
     border: 1px solid #17334d;
+
     border-radius: 16px;
+
     background: #091625;
 }
 
 .process-number {
     color: #00d9ff;
+
     font-size: 2rem;
     font-weight: 900;
+
     margin-bottom: 10px;
 }
 
@@ -466,17 +642,25 @@ section {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: .8fr 1.2fr;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
     gap: 40px;
+
     max-width: 1000px;
+
     margin: auto;
 }
 
 .contact-info,
 .contact-form {
     padding: 30px;
+
     border: 1px solid #17334d;
+
     border-radius: 18px;
+
     background: #091625;
 }
 
@@ -502,18 +686,26 @@ section {
 .form-group input,
 .form-group textarea {
     width: 100%;
+
     padding: 14px;
+
     color: #ffffff;
+
     background: #050b14;
+
     border: 1px solid #23435e;
+
     border-radius: 9px;
+
     outline: none;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: #00d9ff;
-    box-shadow: 0 0 10px rgba(0,217,255,.3);
+
+    box-shadow:
+        0 0 10px rgba(0,217,255,.3);
 }
 
 .form-group textarea {
@@ -523,13 +715,21 @@ section {
 
 .submit-button {
     width: 100%;
+
     padding: 14px;
+
     border: 0;
+
     border-radius: 30px;
+
     cursor: pointer;
+
     background: #00d9ff;
+
     color: #001018;
+
     font-size: 1rem;
+
     font-weight: 900;
 }
 
@@ -540,15 +740,23 @@ section {
 
 .chat-launcher {
     position: fixed;
+
     right: 22px;
     bottom: 22px;
+
     width: 72px;
     height: 72px;
+
     padding: 0;
+
     border-radius: 50%;
+
     overflow: hidden;
+
     cursor: pointer;
+
     background: #07101c;
+
     border: 3px solid #00d9ff;
 
     box-shadow:
@@ -561,23 +769,40 @@ section {
 .launcher-picture {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
     object-position: center top;
+
     border-radius: 50%;
 }
 
 .chat-panel {
     position: fixed;
+
     right: 22px;
     bottom: 105px;
-    width: min(360px, calc(100vw - 30px));
+
+    width:
+        min(
+            360px,
+            calc(100vw - 30px)
+        );
+
     display: none;
+
     overflow: hidden;
+
     border-radius: 18px;
+
     background: #07101c;
+
     border: 2px solid #00d9ff;
-    box-shadow: 0 0 30px rgba(0,217,255,.55);
+
+    box-shadow:
+        0 0 30px rgba(0,217,255,.55);
+
     z-index: 1999;
 }
 
@@ -587,8 +812,11 @@ section {
 
 .chat-header {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
     padding: 15px;
 
     background:
@@ -598,15 +826,19 @@ section {
             #07101c
         );
 
-    border-bottom: 1px solid #17334d;
+    border-bottom:
+        1px solid #17334d;
 }
 
 .chat-avatar {
     width: 52px;
     height: 52px;
+
     object-fit: cover;
     object-position: center top;
+
     border: 2px solid white;
+
     border-radius: 50%;
 }
 
@@ -630,12 +862,19 @@ section {
 
 .chat-option {
     width: 100%;
+
     padding: 11px;
+
     text-align: left;
+
     color: #ffffff;
+
     background: #0b1c2d;
+
     border: 1px solid #21435f;
+
     border-radius: 8px;
+
     cursor: pointer;
 }
 
@@ -646,12 +885,19 @@ section {
 
 .chat-answer {
     margin-top: 14px;
+
     padding: 12px;
+
     display: none;
+
     color: #d9e8f2;
+
     background: #050b14;
+
     border-radius: 9px;
-    border-left: 3px solid #00d9ff;
+
+    border-left:
+        3px solid #00d9ff;
 }
 
 
@@ -661,10 +907,15 @@ section {
 
 footer {
     padding: 35px 20px;
+
     text-align: center;
+
     color: #8198aa;
+
     background: #02060b;
-    border-top: 1px solid #17334d;
+
+    border-top:
+        1px solid #17334d;
 }
 
 
@@ -694,7 +945,8 @@ footer {
     }
 
     .service-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .process-grid {
@@ -731,15 +983,62 @@ footer {
         width: 66px;
         height: 66px;
     }
+
+    .entrance-title {
+        font-size: .8rem;
+    }
+
+    .enter-text {
+        font-size: .9rem;
+    }
 }
 
 </style>
 </head>
 
-<body>
+
+<body class="entrance-open">
 
 
-<!-- HEADER -->
+<!-- =========================
+     JR LOGO ENTRANCE
+========================= -->
+
+<div id="jrEntrance">
+
+    <div class="entrance-content">
+
+        <p class="entrance-title">
+            JR Web &amp; IT Solutions
+        </p>
+
+        <button
+            id="enterWebsite"
+            type="button"
+            aria-label="Enter JR Web and IT Solutions">
+
+            <img
+                src="jr-logo.png"
+                alt="JR Web and IT Solutions Logo">
+
+            <span class="enter-text">
+                CLICK LOGO TO ENTER
+            </span>
+
+        </button>
+
+        <p class="enter-subtext">
+            Build • Solve • Improve
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -765,9 +1064,13 @@ JR <span>WEB & I.T. SOLUTIONS</span>
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero" id="home">
+<section
+class="hero"
+id="home">
 
 <div class="hero-inner">
 
@@ -783,26 +1086,38 @@ Modern websites with an
 </h1>
 
 <p class="hero-description">
+
 JR Web &amp; IT Solutions provides
-professional website design, responsive
-development, website maintenance,
-computer support, and practical
-technology solutions.
+professional website design,
+responsive development,
+website maintenance,
+computer support,
+and practical technology solutions.
+
 </p>
 
 <div class="hero-buttons">
 
-<a href="#services" class="button primary-button">
+<a
+href="#services"
+class="button primary-button">
+
 View Services
+
 </a>
 
-<a href="#contact" class="button secondary-button">
+<a
+href="#contact"
+class="button secondary-button">
+
 Request Help
+
 </a>
 
 </div>
 
 </div>
+
 
 <div>
 
@@ -818,7 +1133,9 @@ class="hero-image">
 </section>
 
 
-<!-- JERMAINE -->
+<!-- =========================
+     JERMAINE
+========================= -->
 
 <section id="jermaine">
 
@@ -826,13 +1143,16 @@ class="hero-image">
 
 <div class="section-heading">
 
-<p>Owner & IT Specialist</p>
+<p>
+Owner &amp; IT Specialist
+</p>
 
 <h2>
 Meet <span>Jermaine</span>
 </h2>
 
 </div>
+
 
 <div class="jermaine-grid">
 
@@ -844,6 +1164,7 @@ alt="Jermaine Robinson"
 class="jermaine-picture">
 
 </div>
+
 
 <div class="jermaine-content">
 
@@ -873,8 +1194,12 @@ technology solutions that are easy for
 clients to understand and use.
 </p>
 
-<a href="#contact" class="button primary-button">
+<a
+href="#contact"
+class="button primary-button">
+
 Work With Me
+
 </a>
 
 </div>
@@ -886,34 +1211,43 @@ Work With Me
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section class="about" id="about">
+<section
+class="about"
+id="about">
 
 <div class="container">
 
 <div class="section-heading">
 
-<p>About The Business</p>
+<p>
+About The Business
+</p>
 
 <h2>
-JR Web &amp; <span>IT Solutions</span>
+JR Web &amp;
+<span>IT Solutions</span>
 </h2>
 
 </div>
+
 
 <div class="about-box">
 
 <p>
 JR Web &amp; IT Solutions focuses on
-professional website design and practical
-technology support. Whether you need a
-website for your business or personal
-brand, help publishing a project,
-basic computer assistance, or support
-understanding technology, the goal is
-to provide a clear and professional
-solution.
+professional website design and
+practical technology support.
+Whether you need a website for your
+business or personal brand,
+help publishing a project,
+basic computer assistance,
+or support understanding technology,
+the goal is to provide a clear and
+professional solution.
 </p>
 
 </div>
@@ -923,23 +1257,32 @@ solution.
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
-<section class="services" id="services">
+<section
+class="services"
+id="services">
 
 <div class="container">
 
 <div class="section-heading">
 
-<p>What We Provide</p>
+<p>
+What We Provide
+</p>
 
 <h2>
-Web and <span>IT Services</span>
+Web and
+<span>IT Services</span>
 </h2>
 
 </div>
 
+
 <div class="service-grid">
+
 
 <article class="service-card">
 
@@ -948,11 +1291,14 @@ src="website-design.png"
 class="service-picture"
 alt="Website Design">
 
-<h3>Website Design</h3>
+<h3>
+Website Design
+</h3>
 
 <p>
-Professional websites for small businesses,
-personal brands, restaurants, portfolios,
+Professional websites for small
+businesses, personal brands,
+restaurants, portfolios,
 organizations, and other projects.
 </p>
 
@@ -966,11 +1312,14 @@ src="mobile-design.png"
 class="service-picture"
 alt="Mobile-Friendly Design">
 
-<h3>Mobile-Friendly Design</h3>
+<h3>
+Mobile-Friendly Design
+</h3>
 
 <p>
-Responsive layouts designed to work properly
-on phones, tablets, laptops, and desktop computers.
+Responsive layouts designed to work
+properly on phones, tablets,
+laptops, and desktop computers.
 </p>
 
 </article>
@@ -983,11 +1332,14 @@ src="maintenance.png"
 class="service-picture"
 alt="Website Maintenance">
 
-<h3>Website Maintenance</h3>
+<h3>
+Website Maintenance
+</h3>
 
 <p>
-Updates to pictures, text, pages, buttons,
-contact information, colors, menus, and content.
+Updates to pictures, text,
+pages, buttons, contact information,
+colors, menus, and content.
 </p>
 
 </article>
@@ -1000,11 +1352,15 @@ src="database.png"
 class="service-picture"
 alt="Database Fundamentals">
 
-<h3>Database Fundamentals</h3>
+<h3>
+Database Fundamentals
+</h3>
 
 <p>
-Basic SQL data entry, queries, updates,
-deletes, table relationships, and data organization.
+Basic SQL data entry,
+queries, updates, deletes,
+table relationships,
+and data organization.
 </p>
 
 </article>
@@ -1017,12 +1373,15 @@ src="networking.png"
 class="service-picture"
 alt="Networking Support">
 
-<h3>Networking Support</h3>
+<h3>
+Networking Support
+</h3>
 
 <p>
 Basic assistance with networks,
-IP addresses, DNS, DHCP, routers,
-switches, and connectivity.
+IP addresses, DNS, DHCP,
+routers, switches,
+and connectivity.
 </p>
 
 </article>
@@ -1035,11 +1394,15 @@ src="cybersecurity.png"
 class="service-picture"
 alt="Cybersecurity Awareness">
 
-<h3>Cybersecurity Awareness</h3>
+<h3>
+Cybersecurity Awareness
+</h3>
 
 <p>
-Assistance with passwords, phishing awareness,
-secure browsing, updates, backups, and security.
+Assistance with passwords,
+phishing awareness,
+secure browsing, updates,
+backups, and security.
 </p>
 
 </article>
@@ -1052,11 +1415,15 @@ src="computer-support.png"
 class="service-picture"
 alt="Computer Support">
 
-<h3>Computer Support</h3>
+<h3>
+Computer Support
+</h3>
 
 <p>
-Basic Windows support, software help,
-file organization, cleanup, and troubleshooting.
+Basic Windows support,
+software help,
+file organization,
+cleanup, and troubleshooting.
 </p>
 
 </article>
@@ -1069,12 +1436,15 @@ src="windows-linux.png"
 class="service-picture"
 alt="Windows and Linux">
 
-<h3>Windows and Linux</h3>
+<h3>
+Windows and Linux
+</h3>
 
 <p>
 Experience with user accounts,
-permissions, commands, files,
-folders, and system settings.
+permissions, commands,
+files, folders,
+and system settings.
 </p>
 
 </article>
@@ -1087,15 +1457,19 @@ src="github.png"
 class="service-picture"
 alt="GitHub Publishing">
 
-<h3>GitHub Publishing</h3>
+<h3>
+GitHub Publishing
+</h3>
 
 <p>
-Uploading code, managing repositories,
-connecting domains, and publishing
-with GitHub Pages.
+Uploading code,
+managing repositories,
+connecting domains,
+and publishing with GitHub Pages.
 </p>
 
 </article>
+
 
 </div>
 
@@ -1104,88 +1478,168 @@ with GitHub Pages.
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
-<section class="skills" id="skills">
+<section
+class="skills"
+id="skills">
 
 <div class="container">
 
 <div class="section-heading">
 
-<p>Technical Knowledge</p>
+<p>
+Technical Knowledge
+</p>
 
 <h2>
-Growing My <span>IT Skills</span>
+Growing My
+<span>IT Skills</span>
 </h2>
 
 </div>
+
 
 <div class="skills-container">
 
 
 <div class="skill-row">
+
 <div class="skill-info">
+
 <span>HTML / CSS</span>
 <span>90%</span>
+
 </div>
+
 <div class="skill-track">
-<div class="skill-fill" style="width:90%"></div>
+
+<div
+class="skill-fill"
+style="width:90%">
 </div>
+
+</div>
+
 </div>
 
 
 <div class="skill-row">
+
 <div class="skill-info">
+
 <span>Website Design</span>
 <span>88%</span>
+
 </div>
+
 <div class="skill-track">
-<div class="skill-fill" style="width:88%"></div>
+
+<div
+class="skill-fill"
+style="width:88%">
 </div>
+
+</div>
+
 </div>
 
 
 <div class="skill-row">
+
 <div class="skill-info">
-<span>GitHub / GitHub Pages</span>
+
+<span>
+GitHub / GitHub Pages
+</span>
+
 <span>85%</span>
+
 </div>
+
 <div class="skill-track">
-<div class="skill-fill" style="width:85%"></div>
+
+<div
+class="skill-fill"
+style="width:85%">
 </div>
+
+</div>
+
 </div>
 
 
 <div class="skill-row">
+
 <div class="skill-info">
-<span>SQL / Databases</span>
+
+<span>
+SQL / Databases
+</span>
+
 <span>80%</span>
+
 </div>
+
 <div class="skill-track">
-<div class="skill-fill" style="width:80%"></div>
+
+<div
+class="skill-fill"
+style="width:80%">
 </div>
+
+</div>
+
 </div>
 
 
 <div class="skill-row">
+
 <div class="skill-info">
-<span>Windows / Linux</span>
+
+<span>
+Windows / Linux
+</span>
+
 <span>80%</span>
+
 </div>
+
 <div class="skill-track">
-<div class="skill-fill" style="width:80%"></div>
+
+<div
+class="skill-fill"
+style="width:80%">
 </div>
+
+</div>
+
 </div>
 
 
 <div class="skill-row">
+
 <div class="skill-info">
-<span>Networking Fundamentals</span>
+
+<span>
+Networking Fundamentals
+</span>
+
 <span>78%</span>
+
 </div>
+
 <div class="skill-track">
-<div class="skill-fill" style="width:78%"></div>
+
+<div
+class="skill-fill"
+style="width:78%">
 </div>
+
+</div>
+
 </div>
 
 
@@ -1196,7 +1650,9 @@ Growing My <span>IT Skills</span>
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESS
+========================= -->
 
 <section>
 
@@ -1204,24 +1660,34 @@ Growing My <span>IT Skills</span>
 
 <div class="section-heading">
 
-<p>How It Works</p>
+<p>
+How It Works
+</p>
 
 <h2>
-Simple <span>Process</span>
+Simple
+<span>Process</span>
 </h2>
 
 </div>
 
+
 <div class="process-grid">
+
 
 <div class="process-card">
 
-<div class="process-number">01</div>
+<div class="process-number">
+01
+</div>
 
-<h3>Tell Me What You Need</h3>
+<h3>
+Tell Me What You Need
+</h3>
 
 <p>
-Explain your website, computer,
+Explain your website,
+computer,
 or technology project.
 </p>
 
@@ -1230,13 +1696,18 @@ or technology project.
 
 <div class="process-card">
 
-<div class="process-number">02</div>
+<div class="process-number">
+02
+</div>
 
-<h3>Build The Solution</h3>
+<h3>
+Build The Solution
+</h3>
 
 <p>
 We determine the best approach
-for your project and requirements.
+for your project
+and requirements.
 </p>
 
 </div>
@@ -1244,17 +1715,22 @@ for your project and requirements.
 
 <div class="process-card">
 
-<div class="process-number">03</div>
+<div class="process-number">
+03
+</div>
 
-<h3>Launch & Improve</h3>
+<h3>
+Launch &amp; Improve
+</h3>
 
 <p>
 Your project is completed,
-tested, published, and improved
-when necessary.
+tested, published,
+and improved when necessary.
 </p>
 
 </div>
+
 
 </div>
 
@@ -1263,23 +1739,32 @@ when necessary.
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
-<section class="contact" id="contact">
+<section
+class="contact"
+id="contact">
 
 <div class="container">
 
 <div class="section-heading">
 
-<p>Let's Work Together</p>
+<p>
+Let's Work Together
+</p>
 
 <h2>
-Request <span>Help</span>
+Request
+<span>Help</span>
 </h2>
 
 </div>
 
+
 <div class="contact-grid">
+
 
 <div class="contact-info">
 
@@ -1288,23 +1773,43 @@ JR Web &amp; IT Solutions
 </h3>
 
 <p>
-Have a website idea or need help
-with a computer or technology project?
+Have a website idea
+or need help with a computer
+or technology project?
 Send a request.
 </p>
 
+
 <p>
-<strong>Phone:</strong><br>
+
+<strong>
+Phone:
+</strong>
+
+<br>
+
 <a href="tel:7573670471">
 757-367-0471
 </a>
+
 </p>
 
+
 <p>
-<strong>Email:</strong><br>
-<a href="mailto:Jermainerobinson815@gmail.com">
+
+<strong>
+Email:
+</strong>
+
+<br>
+
+<a
+href="mailto:Jermainerobinson815@gmail.com">
+
 Jermainerobinson815@gmail.com
+
 </a>
+
 </p>
 
 </div>
@@ -1319,6 +1824,7 @@ method="POST">
 Free Consultation
 </h3>
 
+
 <div class="form-group">
 
 <input
@@ -1328,6 +1834,7 @@ placeholder="Your Name"
 required>
 
 </div>
+
 
 <div class="form-group">
 
@@ -1339,6 +1846,7 @@ required>
 
 </div>
 
+
 <div class="form-group">
 
 <input
@@ -1348,6 +1856,7 @@ placeholder="What do you need help with?">
 
 </div>
 
+
 <div class="form-group">
 
 <textarea
@@ -1356,6 +1865,7 @@ placeholder="Tell me about your project..."
 required></textarea>
 
 </div>
+
 
 <button
 class="submit-button"
@@ -1367,6 +1877,7 @@ Send Request
 
 </form>
 
+
 </div>
 
 </div>
@@ -1374,7 +1885,9 @@ Send Request
 </section>
 
 
-<!-- CHAT -->
+<!-- =========================
+     CHAT
+========================= -->
 
 <button
 class="chat-launcher"
@@ -1425,7 +1938,9 @@ Hi! 👋 I'm Jermaine.
 How can I help you today?
 </p>
 
+
 <div class="chat-options">
+
 
 <button
 class="chat-option"
@@ -1462,6 +1977,7 @@ I want a consultation
 
 </button>
 
+
 </div>
 
 
@@ -1470,12 +1986,15 @@ class="chat-answer"
 id="chatAnswer">
 </div>
 
-</div>
 
 </div>
 
+</div>
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1490,47 +2009,158 @@ Build • Solve • Improve
 </footer>
 
 
-<!-- MUSIC PLAYER - HIDDEN -->
+<!-- =========================
+     HIDDEN MUSIC PLAYER
+========================= -->
 
 <div
-id="jrMusicHolder"
+id="musicHolder"
 style="
 position:fixed;
+left:-9999px;
+bottom:0;
 width:1px;
 height:1px;
 overflow:hidden;
 opacity:0;
 pointer-events:none;
-left:-9999px;
-bottom:0;
 ">
 </div>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
+
+/* =========================
+   LOGO ENTRANCE + MUSIC
+========================= */
+
+const jrEntrance =
+document.getElementById(
+    "jrEntrance"
+);
+
+const enterWebsite =
+document.getElementById(
+    "enterWebsite"
+);
+
+const musicHolder =
+document.getElementById(
+    "musicHolder"
+);
+
+
+enterWebsite.addEventListener(
+    "click",
+    function () {
+
+        /*
+        Start the new YouTube song
+        using the logo click.
+        */
+
+        const musicPlayer =
+        document.createElement(
+            "iframe"
+        );
+
+        musicPlayer.src =
+        "https://www.youtube.com/embed/S_Zn7Cqe6ZM?autoplay=1&playsinline=1";
+
+        musicPlayer.allow =
+        "autoplay; encrypted-media";
+
+        musicPlayer.setAttribute(
+            "title",
+            "JR Web and IT Solutions Music"
+        );
+
+        musicPlayer.style.width =
+        "1px";
+
+        musicPlayer.style.height =
+        "1px";
+
+        musicPlayer.style.border =
+        "0";
+
+        musicHolder.appendChild(
+            musicPlayer
+        );
+
+
+        /*
+        Unlock page scrolling.
+        */
+
+        document.body.classList.remove(
+            "entrance-open"
+        );
+
+
+        /*
+        Fade the logo entrance away.
+        */
+
+        jrEntrance.classList.add(
+            "entrance-hide"
+        );
+
+
+        /*
+        Remove entrance after fade.
+        */
+
+        setTimeout(
+            function () {
+
+                jrEntrance.remove();
+
+            },
+            700
+        );
+
+    }
+);
+
 
 /* =========================
    CHAT
 ========================= */
 
 const chatLauncher =
-document.getElementById("chatLauncher");
+document.getElementById(
+    "chatLauncher"
+);
 
 const chatPanel =
-document.getElementById("chatPanel");
+document.getElementById(
+    "chatPanel"
+);
 
 const chatAnswer =
-document.getElementById("chatAnswer");
+document.getElementById(
+    "chatAnswer"
+);
 
 const chatOptions =
-document.querySelectorAll(".chat-option");
+document.querySelectorAll(
+    ".chat-option"
+);
 
 
 chatLauncher.addEventListener(
     "click",
     function () {
 
-        chatPanel.classList.toggle("open");
+        chatPanel.classList.toggle(
+            "open"
+        );
 
     }
 );
@@ -1544,10 +2174,10 @@ chatOptions.forEach(
             function () {
 
                 chatAnswer.textContent =
-                    button.dataset.answer;
+                button.dataset.answer;
 
                 chatAnswer.style.display =
-                    "block";
+                "block";
 
             }
         );
@@ -1556,7 +2186,9 @@ chatOptions.forEach(
 );
 
 
-/* OPEN CHAT ONCE PER SESSION */
+/* =========================
+   OPEN CHAT ONCE
+========================= */
 
 if (
     !sessionStorage.getItem(
@@ -1567,7 +2199,22 @@ if (
     setTimeout(
         function () {
 
-            chatPanel.classList.add("open");
+            /*
+            Only open chat if
+            entrance is already gone.
+            */
+
+            if (
+                !document.getElementById(
+                    "jrEntrance"
+                )
+            ) {
+
+                chatPanel.classList.add(
+                    "open"
+                );
+
+            }
 
             sessionStorage.setItem(
                 "jrChatOpened",
@@ -1582,110 +2229,20 @@ if (
 
 
 /* =========================
-   WEBSITE MUSIC
-   NEW SONG:
-   S_Zn7Cqe6ZM
-========================= */
-
-let jrMusicStarted = false;
-
-function startJRMusic() {
-
-    if (jrMusicStarted) {
-        return;
-    }
-
-    jrMusicStarted = true;
-
-    const holder =
-        document.getElementById(
-            "jrMusicHolder"
-        );
-
-    const player =
-        document.createElement(
-            "iframe"
-        );
-
-    player.src =
-        "https://www.youtube.com/embed/S_Zn7Cqe6ZM?autoplay=1&playsinline=1";
-
-    player.allow =
-        "autoplay; encrypted-media";
-
-    player.setAttribute(
-        "title",
-        "JR Web and IT Solutions Music"
-    );
-
-    player.style.width = "1px";
-    player.style.height = "1px";
-    player.style.border = "0";
-
-    holder.appendChild(player);
-}
-
-
-/*
-Try to start when the website opens.
-Some browsers may block audible autoplay.
-*/
-
-window.addEventListener(
-    "load",
-    function () {
-
-        startJRMusic();
-
-    }
-);
-
-
-/*
-If autoplay was blocked, the visitor's
-first click/tap gives the browser a
-user interaction.
-*/
-
-document.addEventListener(
-    "click",
-    function () {
-
-        const holder =
-            document.getElementById(
-                "jrMusicHolder"
-            );
-
-        if (
-            holder &&
-            holder.children.length === 0
-        ) {
-
-            jrMusicStarted = false;
-            startJRMusic();
-
-        }
-
-    },
-    {
-        once: true
-    }
-);
-
-
-/* =========================
    SERVICE WORKER
 ========================= */
 
 if (
-    "serviceWorker" in navigator
+    "serviceWorker"
+    in navigator
 ) {
 
     window.addEventListener(
         "load",
         function () {
 
-            navigator.serviceWorker
+            navigator
+            .serviceWorker
             .register(
                 "service-worker.js"
             )
