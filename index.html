@@ -1,49 +1,555 @@
-/* ================================
-   JR CLICK-TO-PLAY LOGO
-================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.jr-music-section {
-    padding: 70px 25px;
+<title>JR Web & IT Solutions</title>
+
+<meta
+    name="description"
+    content="JR Web & IT Solutions provides website design, responsive development, website maintenance, and IT support."
+>
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(5, 11, 20, .95);
+    border-bottom: 1px solid #17334d;
+
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 75px;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: #00d9ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #00d9ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 88vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 5%;
+
+    background:
+        radial-gradient(
+            circle at 70% 35%,
+            rgba(0, 217, 255, .15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #07111f,
+            #030810
+        );
+}
+
+.hero-inner {
+    width: min(1150px, 100%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+.hero-tag {
+    color: #00d9ff;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 10px 0 20px;
+
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1;
+}
+
+.hero h1 span {
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 18px rgba(0,217,255,.6);
+}
+
+.hero-description {
+    color: #c7d7e5;
+    font-size: 1.08rem;
+
+    max-width: 650px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: 900;
+
+    transition: .25s;
+}
+
+.primary-button {
+    color: #001018;
+    background: #00d9ff;
+
+    box-shadow:
+        0 0 18px rgba(0,217,255,.45);
+}
+
+.secondary-button {
+    color: #ffffff;
+
+    border: 1px solid #00d9ff;
+    background: transparent;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 430px;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 24px;
+
+    border: 2px solid #00d9ff;
+
+    box-shadow:
+        0 0 20px rgba(0,217,255,.55),
+        0 0 55px rgba(0,217,255,.20);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading > p {
+    color: #00d9ff;
+
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-heading h2 span {
+    color: #00d9ff;
+}
+
+
+/* =========================
+   JERMAINE
+========================= */
+
+.jermaine-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+
+    align-items: center;
+    gap: 55px;
+}
+
+.jermaine-picture {
+    width: 100%;
+
+    border-radius: 22px;
+
+    border: 2px solid #00d9ff;
+
+    box-shadow:
+        0 0 25px rgba(0,217,255,.4);
+}
+
+.jermaine-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+}
+
+.jermaine-content h2 span {
+    color: #00d9ff;
+}
+
+.jermaine-content p {
+    color: #c7d7e5;
+    margin-bottom: 16px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #07101c;
+}
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+
+    text-align: center;
+
+    padding: 40px;
+
+    border: 1px solid #17334d;
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0a1626,
+            #07101c
+        );
+}
+
+.about-box p {
+    color: #c7d7e5;
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #050b14;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0a1626,
+            #07101c
+        );
+
+    border: 1px solid #17334d;
+    border-radius: 15px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.service-picture {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid rgba(0,217,255,.45);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    color: #b8cad8;
+}
+
+.service-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 12px rgba(0,217,255,.8),
+        0 0 30px rgba(0,217,255,.45),
+        0 15px 45px rgba(0,217,255,.20);
+}
+
+.service-card:hover .service-picture {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 12px #00d9ff,
+        0 0 28px rgba(0,217,255,.7);
+
+    filter: brightness(1.12);
+}
+
+.service-card:active {
+    transform: scale(.98);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px #00d9ff,
+        0 0 35px rgba(0,217,255,.65);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    background: #07101c;
+}
+
+.skills-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.skill-row {
+    margin-bottom: 22px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+.skill-track {
+    width: 100%;
+    height: 11px;
+
+    background: #0e2135;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #008cff,
+            #00d9ff
+        );
+
+    box-shadow:
+        0 0 12px #00d9ff;
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.process-card {
+    padding: 30px;
+
+    border: 1px solid #17334d;
+    border-radius: 16px;
+
+    background: #091625;
+}
+
+.process-number {
+    color: #00d9ff;
+
+    font-size: 2rem;
+    font-weight: 900;
+
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    color: #b8cad8;
+}
+
+
+/* =========================
+   JR LOGO + MUSIC
+========================= */
+
+.music-section {
+    text-align: center;
+
     background:
         radial-gradient(
             circle,
-            rgba(0, 217, 255, 0.15),
-            transparent 55%
+            rgba(0,217,255,.15),
+            transparent 50%
         ),
-        #050b16;
-
-    text-align: center;
+        #050b14;
 }
 
-.jr-music-container {
-    max-width: 700px;
-    margin: auto;
-}
-
-.jr-music-container h2 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 8px;
-}
-
-.music-text {
-    color: #00d9ff;
+.music-intro {
+    color: #b8cad8;
     margin-bottom: 25px;
-    font-weight: bold;
 }
 
-.jr-logo-wrapper {
-    position: relative;
-
-    width: min(430px, 90vw);
+.jr-logo-button {
+    width: min(390px, 85vw);
     aspect-ratio: 1 / 1;
 
-    margin: auto;
+    display: block;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    border: 0;
+    padding: 0;
 
     border-radius: 50%;
     overflow: hidden;
 
     cursor: pointer;
+
+    background: #061321;
 
     border: 3px solid #00d9ff;
 
@@ -52,90 +558,1538 @@
         0 0 35px rgba(0,217,255,.55),
         0 0 70px rgba(0,217,255,.25);
 
-    transition: .35s ease;
+    transition: .3s;
 }
 
-.jr-logo-wrapper:hover {
+.jr-logo-button:hover {
     transform: scale(1.04);
 
     box-shadow:
         0 0 25px #00d9ff,
-        0 0 55px rgba(0,217,255,.8),
-        0 0 90px rgba(0,217,255,.4);
+        0 0 55px rgba(0,217,255,.7);
 }
 
-.jr-logo-image {
+.jr-logo-button img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    display: block;
 
-    border-radius: 50%;
+    object-fit: cover;
 }
 
-.play-overlay {
+.logo-play {
     position: absolute;
 
-    top: 50%;
     left: 50%;
+    top: 50%;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
     width: 78px;
     height: 78px;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    padding-left: 6px;
+    padding-left: 5px;
 
-    background: rgba(0,0,0,.72);
+    border-radius: 50%;
+
     color: #00d9ff;
 
-    border: 2px solid #00d9ff;
-    border-radius: 50%;
+    background:
+        rgba(0,0,0,.72);
+
+    border:
+        2px solid #00d9ff;
 
     font-size: 2rem;
 
     box-shadow:
         0 0 20px #00d9ff;
-
-    transition: .3s;
-}
-
-.jr-logo-wrapper:hover .play-overlay {
-    background: #00d9ff;
-    color: #04101d;
-
-    transform:
-        translate(-50%, -50%)
-        scale(1.12);
 }
 
 .youtube-player {
     display: none;
 
-    max-width: 700px;
-    margin: 35px auto 0;
+    width: min(800px, 90vw);
 
-    border: 2px solid #00d9ff;
-    border-radius: 15px;
+    margin:
+        35px auto 0;
+
+    border-radius: 16px;
 
     overflow: hidden;
 
+    border:
+        2px solid #00d9ff;
+
     box-shadow:
-        0 0 25px rgba(0,217,255,.45);
+        0 0 25px rgba(0,217,255,.4);
 }
 
-.youtube-player.active {
+.youtube-player.open {
     display: block;
 }
 
 .youtube-player iframe {
-    display: block;
-
     width: 100%;
     aspect-ratio: 16 / 9;
 
+    display: block;
+
     border: 0;
 }
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #07101c;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 40px;
+
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-info,
+.contact-form {
+    padding: 30px;
+
+    border:
+        1px solid #17334d;
+
+    border-radius: 18px;
+
+    background: #091625;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    color: #c7d7e5;
+}
+
+.contact-info a {
+    color: #00d9ff;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    color: #ffffff;
+
+    background: #050b14;
+
+    border:
+        1px solid #23435e;
+
+    border-radius: 9px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 10px rgba(0,217,255,.3);
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 0;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    background: #00d9ff;
+    color: #001018;
+
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+
+/* =========================
+   CHAT
+========================= */
+
+.chat-launcher {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 72px;
+    height: 72px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #07101c;
+
+    border:
+        3px solid #00d9ff;
+
+    box-shadow:
+        0 0 15px #00d9ff,
+        0 0 35px rgba(0,217,255,.55);
+
+    z-index: 2000;
+}
+
+.launcher-picture {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 50%;
+}
+
+.chat-panel {
+    position: fixed;
+
+    right: 22px;
+    bottom: 105px;
+
+    width: min(360px, calc(100vw - 30px));
+
+    display: none;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #07101c;
+
+    border:
+        2px solid #00d9ff;
+
+    box-shadow:
+        0 0 30px rgba(0,217,255,.55);
+
+    z-index: 1999;
+}
+
+.chat-panel.open {
+    display: block;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2740,
+            #07101c
+        );
+
+    border-bottom:
+        1px solid #17334d;
+}
+
+.chat-avatar {
+    width: 52px;
+    height: 52px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border:
+        2px solid white;
+
+    border-radius: 50%;
+}
+
+.chat-header small {
+    color: #00d9ff;
+}
+
+.chat-body {
+    padding: 18px;
+}
+
+.chat-body p {
+    color: #c7d7e5;
+    margin-bottom: 15px;
+}
+
+.chat-options {
+    display: grid;
+    gap: 8px;
+}
+
+.chat-option {
+    width: 100%;
+
+    padding: 11px;
+
+    text-align: left;
+
+    color: #ffffff;
+
+    background: #0b1c2d;
+
+    border:
+        1px solid #21435f;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.chat-option:hover {
+    border-color: #00d9ff;
+    color: #00d9ff;
+}
+
+.chat-answer {
+    margin-top: 14px;
+
+    padding: 12px;
+
+    display: none;
+
+    color: #d9e8f2;
+
+    background: #050b14;
+
+    border-radius: 9px;
+
+    border-left:
+        3px solid #00d9ff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: #8198aa;
+
+    background: #02060b;
+
+    border-top:
+        1px solid #17334d;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-inner,
+    .jermaine-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 14px 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-picture {
+        height: 200px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .chat-launcher {
+        width: 66px;
+        height: 66px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="brand">
+JR <span>WEB & I.T. SOLUTIONS</span>
+</div>
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#jermaine">Jermaine</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#skills">Skills</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-inner">
+
+<div>
+
+<p class="hero-tag">
+Smart Websites • Stronger Business
+</p>
+
+<h1>
+Modern websites with an
+<span>IT mindset.</span>
+</h1>
+
+<p class="hero-description">
+
+JR Web &amp; IT Solutions provides
+professional website design, responsive
+development, website maintenance,
+computer support, and practical
+technology solutions.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="#services"
+class="button primary-button">
+View Services
+</a>
+
+<a
+href="#contact"
+class="button secondary-button">
+Request Help
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<img
+src="maine.jpg"
+alt="Jermaine Robinson"
+class="hero-image">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     JERMAINE
+========================= -->
+
+<section id="jermaine">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>Owner & IT Specialist</p>
+
+<h2>
+Meet <span>Jermaine</span>
+</h2>
+
+</div>
+
+
+<div class="jermaine-grid">
+
+<div>
+
+<img
+src="maine1.jpg"
+alt="Jermaine Robinson"
+class="jermaine-picture">
+
+</div>
+
+
+<div class="jermaine-content">
+
+<h2>
+Jermaine <span>Robinson</span>
+</h2>
+
+<p>
+Welcome to JR Web &amp; IT Solutions.
+I am an Information Technology student
+with experience building websites and
+working with computer systems,
+databases, networking, and technology.
+</p>
+
+<p>
+I enjoy creating clean, modern websites
+for businesses, personal brands,
+restaurants, portfolios, artists,
+organizations, and other projects.
+</p>
+
+<p>
+My goal is to continue developing my
+IT experience while providing practical
+technology solutions that are easy for
+clients to understand and use.
+</p>
+
+<a
+href="#contact"
+class="button primary-button">
+Work With Me
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+class="about"
+id="about">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>About The Business</p>
+
+<h2>
+JR Web &amp; <span>IT Solutions</span>
+</h2>
+
+</div>
+
+
+<div class="about-box">
+
+<p>
+
+JR Web &amp; IT Solutions focuses on
+professional website design and practical
+technology support. Whether you need a
+website for your business or personal
+brand, help publishing a project,
+basic computer assistance, or support
+understanding technology, the goal is
+to provide a clear and professional
+solution.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+class="services"
+id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>What We Provide</p>
+
+<h2>
+Web and <span>IT Services</span>
+</h2>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<article class="service-card">
+
+<img
+src="website-design.png"
+class="service-picture"
+alt="Website Design">
+
+<h3>Website Design</h3>
+
+<p>
+Professional websites for small businesses,
+personal brands, restaurants, portfolios,
+organizations, and other projects.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="mobile-design.png"
+class="service-picture"
+alt="Mobile-Friendly Design">
+
+<h3>Mobile-Friendly Design</h3>
+
+<p>
+Responsive layouts designed to work properly
+on phones, tablets, laptops, and desktop
+computers.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="maintenance.png"
+class="service-picture"
+alt="Website Maintenance">
+
+<h3>Website Maintenance</h3>
+
+<p>
+Updates to pictures, text, pages, buttons,
+contact information, colors, menus,
+and content.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="database.png"
+class="service-picture"
+alt="Database Fundamentals">
+
+<h3>Database Fundamentals</h3>
+
+<p>
+Basic SQL data entry, queries, updates,
+deletes, table relationships, and
+data organization.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="networking.png"
+class="service-picture"
+alt="Networking Support">
+
+<h3>Networking Support</h3>
+
+<p>
+Basic assistance with networks,
+IP addresses, DNS, DHCP, routers,
+switches, and connectivity.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="cybersecurity.png"
+class="service-picture"
+alt="Cybersecurity Awareness">
+
+<h3>Cybersecurity Awareness</h3>
+
+<p>
+Assistance with passwords, phishing
+awareness, secure browsing, updates,
+backups, and security.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="computer-support.png"
+class="service-picture"
+alt="Computer Support">
+
+<h3>Computer Support</h3>
+
+<p>
+Basic Windows support, software help,
+file organization, cleanup,
+and troubleshooting.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="windows-linux.png"
+class="service-picture"
+alt="Windows and Linux">
+
+<h3>Windows and Linux</h3>
+
+<p>
+Experience with user accounts,
+permissions, commands, files,
+folders, and system settings.
+</p>
+
+</article>
+
+
+<article class="service-card">
+
+<img
+src="github.png"
+class="service-picture"
+alt="GitHub Publishing">
+
+<h3>GitHub Publishing</h3>
+
+<p>
+Uploading code, managing repositories,
+connecting domains, and publishing
+with GitHub Pages.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section
+class="skills"
+id="skills">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>Technical Knowledge</p>
+
+<h2>
+Growing My <span>IT Skills</span>
+</h2>
+
+</div>
+
+
+<div class="skills-container">
+
+
+<div class="skill-row">
+
+<div class="skill-info">
+<span>HTML / CSS</span>
+<span>90%</span>
+</div>
+
+<div class="skill-track">
+<div
+class="skill-fill"
+style="width:90%">
+</div>
+</div>
+
+</div>
+
+
+<div class="skill-row">
+
+<div class="skill-info">
+<span>Website Design</span>
+<span>88%</span>
+</div>
+
+<div class="skill-track">
+<div
+class="skill-fill"
+style="width:88%">
+</div>
+</div>
+
+</div>
+
+
+<div class="skill-row">
+
+<div class="skill-info">
+<span>GitHub / GitHub Pages</span>
+<span>85%</span>
+</div>
+
+<div class="skill-track">
+<div
+class="skill-fill"
+style="width:85%">
+</div>
+</div>
+
+</div>
+
+
+<div class="skill-row">
+
+<div class="skill-info">
+<span>SQL / Databases</span>
+<span>80%</span>
+</div>
+
+<div class="skill-track">
+<div
+class="skill-fill"
+style="width:80%">
+</div>
+</div>
+
+</div>
+
+
+<div class="skill-row">
+
+<div class="skill-info">
+<span>Windows / Linux</span>
+<span>80%</span>
+</div>
+
+<div class="skill-track">
+<div
+class="skill-fill"
+style="width:80%">
+</div>
+</div>
+
+</div>
+
+
+<div class="skill-row">
+
+<div class="skill-info">
+<span>Networking Fundamentals</span>
+<span>78%</span>
+</div>
+
+<div class="skill-track">
+<div
+class="skill-fill"
+style="width:78%">
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>How It Works</p>
+
+<h2>
+Simple <span>Process</span>
+</h2>
+
+</div>
+
+
+<div class="process-grid">
+
+<div class="process-card">
+
+<div class="process-number">01</div>
+
+<h3>Tell Me What You Need</h3>
+
+<p>
+Explain your website, computer,
+or technology project.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">02</div>
+
+<h3>Build The Solution</h3>
+
+<p>
+We determine the best approach
+for your project and requirements.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">03</div>
+
+<h3>Launch & Improve</h3>
+
+<p>
+Your project is completed,
+tested, published, and improved
+when necessary.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     JR LOGO / MUSIC
+========================= -->
+
+<section class="music-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>JR Web & IT Solutions</p>
+
+<h2>
+Build • Solve • <span>Improve</span>
+</h2>
+
+</div>
+
+<p class="music-intro">
+Click the JR logo to play the song.
+</p>
+
+
+<button
+class="jr-logo-button"
+id="jrLogoButton"
+type="button"
+aria-label="Play music">
+
+<img
+src="jr-logo.png"
+alt="JR Web and IT Solutions Logo">
+
+<span
+class="logo-play"
+id="logoPlayIcon">
+▶
+</span>
+
+</button>
+
+
+<div
+class="youtube-player"
+id="youtubePlayer">
+
+<iframe
+id="musicFrame"
+src=""
+title="JR Web and IT Solutions Music"
+allow="autoplay; encrypted-media; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p>Let's Work Together</p>
+
+<h2>
+Request <span>Help</span>
+</h2>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>
+JR Web &amp; IT Solutions
+</h3>
+
+<p>
+Have a website idea or need help
+with a computer or technology project?
+Send a request.
+</p>
+
+<p>
+<strong>Phone:</strong><br>
+<a href="tel:7573670471">
+757-367-0471
+</a>
+</p>
+
+<p>
+<strong>Email:</strong><br>
+
+<a href="mailto:Jermainerobinson815@gmail.com">
+Jermainerobinson815@gmail.com
+</a>
+
+</p>
+
+</div>
+
+
+<form
+class="contact-form"
+action="https://formspree.io/f/mjgnejgq"
+method="POST">
+
+<h3>
+Free Consultation
+</h3>
+
+
+<div class="form-group">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+type="text"
+name="service"
+placeholder="What do you need help with?">
+
+</div>
+
+
+<div class="form-group">
+
+<textarea
+name="message"
+placeholder="Tell me about your project..."
+required></textarea>
+
+</div>
+
+
+<button
+class="submit-button"
+type="submit">
+
+Send Request
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CHAT
+========================= -->
+
+<button
+class="chat-launcher"
+id="chatLauncher"
+type="button"
+aria-label="Open chat">
+
+<img
+src="chat-pic.jpg"
+alt="Jermaine"
+class="launcher-picture">
+
+</button>
+
+
+<div
+class="chat-panel"
+id="chatPanel">
+
+<div class="chat-header">
+
+<img
+src="chat-pic.jpg"
+alt="Jermaine Robinson"
+class="chat-avatar">
+
+<div>
+
+<strong>
+Jermaine
+</strong>
+
+<br>
+
+<small>
+JR Web &amp; IT Solutions
+</small>
+
+</div>
+
+</div>
+
+
+<div class="chat-body">
+
+<p>
+Hi! 👋 I'm Jermaine.
+How can I help you today?
+</p>
+
+
+<div class="chat-options">
+
+<button
+class="chat-option"
+data-answer="I can help you build a professional website for your business, brand, portfolio, restaurant, organization, or personal project.">
+
+I need a website
+
+</button>
+
+
+<button
+class="chat-option"
+data-answer="I can help with basic computer support, Windows issues, file organization, software help, and troubleshooting.">
+
+I need computer help
+
+</button>
+
+
+<button
+class="chat-option"
+data-answer="I can help with GitHub repositories, uploading website files, custom domains, and publishing with GitHub Pages.">
+
+I need GitHub help
+
+</button>
+
+
+<button
+class="chat-option"
+data-answer="Use the Request Help section below to send me the details about your project.">
+
+I want a consultation
+
+</button>
+
+</div>
+
+
+<div
+class="chat-answer"
+id="chatAnswer">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 JR Web &amp; IT Solutions
+</p>
+
+<p>
+Build • Solve • Improve
+</p>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   CHAT
+========================= */
+
+const chatLauncher =
+document.getElementById("chatLauncher");
+
+const chatPanel =
+document.getElementById("chatPanel");
+
+const chatAnswer =
+document.getElementById("chatAnswer");
+
+const chatOptions =
+document.querySelectorAll(".chat-option");
+
+
+chatLauncher.addEventListener(
+    "click",
+    function () {
+
+        chatPanel.classList.toggle("open");
+
+    }
+);
+
+
+chatOptions.forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                chatAnswer.textContent =
+                    button.dataset.answer;
+
+                chatAnswer.style.display =
+                    "block";
+
+            }
+        );
+
+    }
+);
+
+
+/* OPEN CHAT ONCE PER SESSION */
+
+if (
+    !sessionStorage.getItem(
+        "jrChatOpened"
+    )
+) {
+
+    setTimeout(
+        function () {
+
+            chatPanel.classList.add("open");
+
+            sessionStorage.setItem(
+                "jrChatOpened",
+                "yes"
+            );
+
+        },
+        3500
+    );
+
+}
+
+
+/* =========================
+   CLICK JR LOGO TO PLAY
+========================= */
+
+const jrLogoButton =
+document.getElementById("jrLogoButton");
+
+const youtubePlayer =
+document.getElementById("youtubePlayer");
+
+const musicFrame =
+document.getElementById("musicFrame");
+
+const logoPlayIcon =
+document.getElementById("logoPlayIcon");
+
+let musicStarted = false;
+
+
+jrLogoButton.addEventListener(
+    "click",
+    function () {
+
+        if (!musicStarted) {
+
+            musicFrame.src =
+                "https://www.youtube.com/embed/ePL7jvYKuCM?autoplay=1&playsinline=1";
+
+            youtubePlayer.classList.add(
+                "open"
+            );
+
+            logoPlayIcon.textContent =
+                "♫";
+
+            musicStarted = true;
+
+        }
+
+        else {
+
+            youtubePlayer.classList.toggle(
+                "open"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================
+   SERVICE WORKER
+========================= */
+
+if (
+    "serviceWorker" in navigator
+) {
+
+    window.addEventListener(
+        "load",
+        function () {
+
+            navigator.serviceWorker
+            .register(
+                "service-worker.js"
+            )
+            .catch(
+                function (error) {
+
+                    console.log(
+                        "Service worker error:",
+                        error
+                    );
+
+                }
+            );
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
+</html>
